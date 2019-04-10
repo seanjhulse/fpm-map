@@ -1,0 +1,144 @@
+body { 
+	margin:0; 
+	padding:0; 
+}
+#map { 
+	position:absolute; 
+	top:0; 
+	bottom:0; 
+	width:100%; 
+	visibility: hidden; 
+}
+#loader {
+	width: 200px;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	transform: translate(-50%, -50%);
+}
+#toolbar {
+  position: fixed;
+  background: white;
+  height: 300px;
+  width: 175px;
+  display: block;
+  margin: 2vw;
+  border: 2px solid #969696;
+  box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.14);
+}
+#toolbar > ul > li {
+  list-style: none;
+}
+.fpm-popup-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.35);
+	display: none;
+}
+.fpm-popup-container.open-popup {
+	display: block;
+}
+.fpm-popup {
+	position: relative;
+	top: 50%;
+	height: 800px;
+	transform: translateY(-50%);
+	background: white;
+	border-radius: 10px;
+	padding: 50px;
+	font-family: Arial;
+	overflow: hidden;
+	overflow-y: scroll;
+	width: 1000px;
+	margin-right: 200px;
+	margin-left: 200px;
+}
+.fpm-popup h2 {
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+}
+.fpm-popup .date {
+	font-size: 16px;
+}
+.fpm-popup .status-ok {
+	background: #b8fcb8;
+	padding: 5px;
+}
+.fpm-popup .status-low-warning {
+	background: #ffff96;
+	padding: 5px;
+}
+.fpm-popup-close-button {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 10px;
+}
+.fpm-marker {
+  width: 35px;
+	height: 35px;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 10px solid white;
+}
+.marker-compressed-air::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('https://img.icons8.com/ios/50/000000/air-element-filled.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.marker-electrical::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+  background-image: url('https://img.icons8.com/office/256/000000/lightning-bolt.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.marker-steam-condensate::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+  background-image: url('https://img.icons8.com/color/256/000000/central-heating.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.marker-chilled-water::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+  background-image: url('https://img.icons8.com/office/256/000000/winter.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.status-container {
+	padding: 5px;
+	font-size: 14px;
+}
+.green-status {
+	background: #b4ffb4;
+}
