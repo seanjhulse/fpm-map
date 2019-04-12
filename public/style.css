@@ -19,7 +19,7 @@ body {
 }
 #toolbar {
   position: fixed;
-  background: white;
+  background: transparent;
   height: 300px;
   width: 175px;
   display: block;
@@ -48,7 +48,7 @@ body {
 	left: 50%;
 	height: 800px;
 	transform: translate(-50%, -50%);
-	background: white;
+  background: white;
 	border-radius: 10px;
 	padding: 50px;
 	font-family: Arial;
@@ -82,20 +82,19 @@ body {
 }
 .fpm-marker {
   width: 50px;
-	height: 50px;
+	height: 80px;
 	cursor: pointer;
 	border-radius: 50%;
-	border: 10px solid white;
 }
 .marker-compressed-air::before {
 	content: '';
 	width: 100%;
 	height: 100%;
-	background: white;
+  background: transparent;
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url('https://img.icons8.com/ios/50/000000/air-element-filled.png');
+	background-image: url('https://api.mapbox.com/v4/marker/pin-s+ffffff@2x.png?access_token=pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -103,11 +102,11 @@ body {
 	content: '';
 	width: 100%;
 	height: 100%;
-	background: white;
+  background: transparent;
 	position: absolute;
 	top: 0;
 	left: 0;
-  background-image: url('https://img.icons8.com/office/256/000000/lightning-bolt.png');
+  background-image: url('https://api.mapbox.com/v4/marker/pin-s+ffff00@2x.png?access_token=pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -115,11 +114,11 @@ body {
 	content: '';
 	width: 100%;
 	height: 100%;
-	background: white;
+  background: transparent;
 	position: absolute;
 	top: 0;
 	left: 0;
-  background-image: url('https://img.icons8.com/color/256/000000/central-heating.png');
+  background-image: url('https://api.mapbox.com/v4/marker/pin-s+f44@2x.png?access_token=pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -127,11 +126,11 @@ body {
 	content: '';
 	width: 100%;
 	height: 100%;
-	background: white;
+  background: transparent;
 	position: absolute;
 	top: 0;
 	left: 0;
-  background-image: url('https://img.icons8.com/office/256/000000/winter.png');
+  background-image: url('https://api.mapbox.com/v4/marker/pin-s+3bb2d0@2x.png?access_token=pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA');
 	background-size: cover;
 	background-repeat: no-repeat;
 }

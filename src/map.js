@@ -8,7 +8,7 @@ class Map extends React.Component {
 
 		this.state = {
 			access_token: 'pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA',
-			style: 'mapbox://styles/mapbox/streets-v11',
+			style: 'mapbox://styles/mapbox/light-v9',
 			center: [-89.396127, 43.071299],
 			zoom: 12,
 			// maxBounds: [
@@ -40,18 +40,21 @@ class Map extends React.Component {
 
 		var that = this;
 		map.on('load', function () {
-			document.getElementById('map').style.visibility = 'visible';
-			that.setState({ map: map });
 			
-			fetch("https://map.wisc.edu/api/v1/map_objects/mapbox.geojson")
+			fetch("https://staging.map.wisc.edu/api/v1/map_objects/mapbox.geojson")
 				.then((rawJSON) => rawJSON.json())
 				.then((geojson) => that.setState({ buildings: geojson.features }))
+				.then(() => {
+					document.getElementById('map').style.visibility = 'visible';
+					that.setState({ map: map })
+				})
 				.catch((error) => console.log(error))
 
 			// add the building to the actual map
 			map.addSource("fpm-buildings", {
 				"type": "geojson",
-				"data": "https://map.wisc.edu/api/v1/map_objects/mapbox.geojson"
+				"data": "https://staging.map.wisc.edu/api/v1/map_objects/mapbox.geojson",
+				"tolerance": 2
 			});
 
 			map.addLayer({
@@ -59,8 +62,8 @@ class Map extends React.Component {
 				"type": "fill",
 				"source": "fpm-buildings",
 				"paint": {
-					"fill-color": "#c5050c",
-					"fill-opacity": 0.4
+					"fill-color": "#000",
+					"fill-opacity": 0.25
 				}
 			});
 			
