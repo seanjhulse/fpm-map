@@ -19,6 +19,7 @@ class CHaDInstance extends Component {
 		this.createDataPoints = this.createDataPoints.bind(this);
 		this.markerClickHandler = this.markerClickHandler.bind(this);
 		this.createPopup = this.createPopup.bind(this);
+		this.removePopupContainers = this.removePopupContainers.bind(this);
 		this.getCHaDInstanceDataPoints = this.getCHaDInstanceDataPoints.bind(this);
 	}
 
@@ -30,6 +31,7 @@ class CHaDInstance extends Component {
 
 	componentWillUnmount() {
 		this.controller.abort();
+		this.removePopupContainers();
 		if (this.state.marker) {
 			this.state.marker.remove();
 		}
@@ -72,6 +74,12 @@ class CHaDInstance extends Component {
 			});
 	}
 
+	removePopupContainers() {
+		document.querySelectorAll('.fpm-popup-container').forEach((container) => {
+			container.remove();
+		})
+	}
+
 	createDataPoints(dataPoints) {
 		dataPoints.forEach((dataPoint) => {
 			let ptNumber = dataPoint.querySelector('PtNumber').innerHTML.toString();
@@ -100,7 +108,7 @@ class CHaDInstance extends Component {
 	}
 
 	createMarker() {
-		let coordinates = getCoordinates(this.props.instance.name.split(" ")[0]);
+		let coordinates = getCoordinates(this.props.instance.name.split(" ")[0].toUpperCase());
 		let coordinateOffsetX = parseFloat((Math.random() * (0.000100 + 0.000100) - 0.000100));
 		let coordinateOffsetY = parseFloat((Math.random() * (0.000100 + 0.000100) - 0.000100));
 		let coordinateX = parseFloat(coordinates[0]) + coordinateOffsetX;

@@ -87,6 +87,9 @@ class Map extends React.Component {
 			let buildings = this.state.buildings.map((building) => {
 				let id = building.properties.id;
 				let clicked = id == this.state.clickedId && id != null;
+				if (clicked) {
+					console.log(building.properties.name, building.properties.id)
+				}
 				if (id == null) {
 					id = "randomly-gen-id-" + Math.random();
 				}
