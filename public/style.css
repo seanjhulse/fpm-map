@@ -2,143 +2,68 @@ body {
 	margin:0; 
 	padding:0; 
 }
+input[type=checkbox]:hover {
+	cursor: pointer;
+}
+ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
 #map { 
 	position:absolute; 
 	top:0; 
 	bottom:0; 
 	width:100%; 
-	visibility: hidden; 
 }
 #loader {
-	width: 200px;
-	height: auto;
+	width: 100%;
+	height: 100%;
 	top: 50%;
 	left: 50%;
 	position: fixed;
+	background: transparent;
 	transform: translate(-50%, -50%);
 }
 #toolbar {
   position: fixed;
-  background: transparent;
-  height: 300px;
-  width: 175px;
+  background: white;
+  height: 400px;
+  width: 300px;
   display: block;
   margin: 2vw;
   border: 2px solid #969696;
-  box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.14);
+	box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.14);
+	padding: 25px;
 }
-#toolbar > ul > li {
-  list-style: none;
+.dropdown {
+	margin-bottom: 10px;
 }
-.fpm-popup-container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.35);
+.dropdown:hover {
+	cursor: pointer;
+}
+.dropdown > .dropdown-items {
+	opacity: 0;
 	display: none;
+	transition: opacity 1s ease-in-out;
 }
-.fpm-popup-container.open-popup {
+.dropdown.active > .dropdown-items {
+	opacity: 1;
 	display: block;
 }
+.fpm-popup-container {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 600px;
+	justify-content: space-evenly;
+}
 .fpm-popup {
-	position: relative;
-	top: 50%;
-	left: 50%;
-	height: 800px;
-	transform: translate(-50%, -50%);
-  background: white;
-	border-radius: 10px;
-	padding: 50px;
-	font-family: Arial;
-	overflow: hidden;
-	overflow-y: scroll;
-	width: 1000px;
-	padding-bottom: 100px;
-
+	margin: 5px;
+	padding: 5px;
+	border: 3px solid #c1c1c1;
+	border-radius: 7px;
+	width: 150px;
 }
-.fpm-popup h2 {
-	font-size: 18px;
-	margin: 0;
-	padding: 0;
-}
-.fpm-popup .date {
+.popup-title {
 	font-size: 16px;
-}
-.fpm-popup .status-ok {
-	background: #b8fcb8;
-	padding: 5px;
-}
-.fpm-popup .status-low-warning {
-	background: #ffff96;
-	padding: 5px;
-}
-.fpm-popup-close-button {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	padding: 10px;
-}
-.fpm-marker {
-  width: 50px;
-	height: 80px;
-	cursor: pointer;
-	border-radius: 50%;
-}
-.marker-compressed-air::before {
-	content: '';
-	width: 100%;
-	height: 100%;
-  background: transparent;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-image: url('https://api.mapbox.com/v4/marker/pin-s+ffffff@2x.png?access_token=pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA');
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.marker-electrical::before {
-	content: '';
-	width: 100%;
-	height: 100%;
-  background: transparent;
-	position: absolute;
-	top: 0;
-	left: 0;
-  background-image: url('https://api.mapbox.com/v4/marker/pin-s+ffff00@2x.png?access_token=pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA');
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.marker-steam-condensate::before {
-	content: '';
-	width: 100%;
-	height: 100%;
-  background: transparent;
-	position: absolute;
-	top: 0;
-	left: 0;
-  background-image: url('https://api.mapbox.com/v4/marker/pin-s+f44@2x.png?access_token=pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA');
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.marker-chilled-water::before {
-	content: '';
-	width: 100%;
-	height: 100%;
-  background: transparent;
-	position: absolute;
-	top: 0;
-	left: 0;
-  background-image: url('https://api.mapbox.com/v4/marker/pin-s+3bb2d0@2x.png?access_token=pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA');
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-.status-container {
-	padding: 5px;
-	font-size: 14px;
-}
-.green-status {
-	background: #b4ffb4;
 }

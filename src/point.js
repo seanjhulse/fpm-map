@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { MapContext } from './map_context';
+import API from './api';
 
 const formatDateTime = function (date) {
 	var hours = date.getHours();
@@ -19,52 +21,15 @@ class Point extends Component {
 			loading: true,
 		}
 
-		this.fetchPoint = this.fetchPoint.bind(this);
-		this.createPoint = this.createPoint.bind(this);
 		this.addToPopup = this.addToPopup.bind(this);
+		this.createMarker = this.createMarker.bind(this);
 	}
 
 	componentDidMount() {
-		this.fetchPoint();
-	}
-	
-	fetchPoint() {
-		let url = "http://ednaweb.fpm.wisc.edu/webservice/Service.asmx";
-		let headers = new Headers();
-		headers.append('Content-Type', 'text/xml');
-		headers.append('Authorization', 'Basic ' + window.btoa("TODO: ADD AUTHORIZATION HEADER"));
-		headers.append('SOAPAction', 'http://instepsoftware.com/webservices/GetCurrentValues');
-		let body =
-		`<?xml version="1.0" encoding="utf-8"?>
-			<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-				<soap:Body>
-					<GetCurrentValues xmlns="http://instepsoftware.com/webservices">
-						<PointIDs>${this.props.point.ptcode}</PointIDs>
-					</GetCurrentValues>
-				</soap:Body>
-			</soap:Envelope>`;
-		
-		fetch(url, {
-			headers: headers,
-			method: 'POST',
-			credentials: 'include',
-			body: body
-		})
-			.then(response => response.text())
-			.then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
-			.then(data => data.documentElement.querySelector('Point'))
-			.then(dataPoint => this.createPoint(dataPoint))
-			.then(() => this.addToPopup())
-			.then(() => this.setState({ loading: false }))
-	}
-
-	createPoint(dataPoint) {
-		Array.from(dataPoint.children).forEach((point) => {
-			this.setState({
-				...this.state,
-				[point.tagName.toLowerCase()]: point.innerHTML.toString()
-			})
-		})
+		API.getCurrentValues(this.props.point.ptcode, function (point) {
+			this.setState({ point: point, loading: false });
+			this.createMarker();
+		}.bind(this));
 	}
 
 	addToPopup() {
@@ -87,10 +52,40 @@ class Point extends Component {
 		this.props.popup.append(status);
 	}
 
+	/**
+	 * creates a marker with some coordinate fuzzing so that they don't overlap too much
+	 */
+	createMarker() {
+		console.log(this.state)
+		let coordinates = this.props.coordinates;
+		let coordinateOffsetX = parseFloat((Math.random() * (0.000100 + 0.000100) - 0.000100));
+		let coordinateOffsetY = parseFloat((Math.random() * (0.000100 + 0.000100) - 0.000100));
+		let coordinateX = parseFloat(coordinates[0]) + coordinateOffsetX;
+		let coordinateY = parseFloat(coordinates[1]) + coordinateOffsetY;
+		coordinates = [coordinateX, coordinateY];
+
+		let el = document.createElement('div');
+		el.innerHTML = this.state.point.value;
+		el.classList.add('fpm-marker');
+
+		this.context.getSource('points').setData({
+			"type": "FeatureCollection",
+			"features": [{
+				"type": "Feature",
+				"properties": { "name": this.state.point.value },
+				"geometry": {
+					"type": "Point",
+					"coordinates": coordinates
+				}
+			}]
+		})
+	}
+
 	render() {
 		if (this.state.loading) return null;
 		return null;
 	}
 }
+Point.contextType = MapContext;
 
 export default Point;

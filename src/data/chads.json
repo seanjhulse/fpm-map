@@ -1,0 +1,7175 @@
+[
+	{
+		"instanceid": "1019",
+		"path": "!Metering-Monitoring!Compressed Air",
+		"name": "Compressed Air",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1020",
+		"path": "!Metering-Monitoring!Chilled Water",
+		"name": "Chilled Water",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1021",
+		"path": "!Metering-Monitoring!City Water",
+		"name": "City Water",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1022",
+		"path": "!Metering-Monitoring!Lake Water",
+		"name": "Lake Water",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1023",
+		"path": "!Metering-Monitoring!Electrical",
+		"name": "Electrical",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1024",
+		"path": "!Metering-Monitoring!Electrical Substation",
+		"name": "Electrical Substation",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1025",
+		"path": "!Metering-Monitoring!Hot Water",
+		"name": "Hot Water",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1026",
+		"path": "!Metering-Monitoring!Steam-Condensate",
+		"name": "Steam-Condensate",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1027",
+		"path": "!Metering-Monitoring!Compressed Air!1410 EngDr",
+		"name": "1410 EngDr",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1019",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1028",
+		"path": "!Metering-Monitoring!Compressed Air!AFCH",
+		"name": "AFCH",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1019",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1029",
+		"path": "!Metering-Monitoring!Compressed Air!BioChem Addition",
+		"name": "BioChem Addition",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1019",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1030",
+		"path": "!Metering-Monitoring!Compressed Air!Biotech",
+		"name": "Biotech",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1019",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1031",
+		"path": "!Metering-Monitoring!Compressed Air!CSC",
+		"name": "CSC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1019",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1032",
+		"path": "!Metering-Monitoring!Compressed Air!Service Bldg.",
+		"name": "Service Bldg.",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1019",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1033",
+		"path": "!Metering-Monitoring!Compressed Air!WARF",
+		"name": "WARF",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1019",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1034",
+		"path": "!Metering-Monitoring!Compressed Air!WEI",
+		"name": "WEI",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1019",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1035",
+		"path": "!Metering-Monitoring!Chilled Water!AFCH",
+		"name": "AFCH",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1036",
+		"path": "!Metering-Monitoring!Chilled Water!Animal Sciences",
+		"name": "Animal Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1037",
+		"path": "!Metering-Monitoring!Chilled Water!AOSS",
+		"name": "AOSS",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1038",
+		"path": "!Metering-Monitoring!Chilled Water!Arts Loft",
+		"name": "Arts Loft",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1039",
+		"path": "!Metering-Monitoring!Electrical!AFCH",
+		"name": "AFCH",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1041",
+		"path": "!Metering-Monitoring!Chilled Water!Babcock",
+		"name": "Babcock",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1042",
+		"path": "!Metering-Monitoring!Chilled Water!Bascom Hall",
+		"name": "Bascom Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1043",
+		"path": "!Metering-Monitoring!Chilled Water!BioChem Addition",
+		"name": "BioChem Addition",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1044",
+		"path": "!Metering-Monitoring!Chilled Water!BioChem Sci (204)",
+		"name": "BioChem Sci (204)",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1045",
+		"path": "!Metering-Monitoring!Chilled Water!BioTech",
+		"name": "BioTech",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1046",
+		"path": "!Metering-Monitoring!Chilled Water!Biotron",
+		"name": "Biotron",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1047",
+		"path": "!Metering-Monitoring!Chilled Water!Birge Hall",
+		"name": "Birge Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1048",
+		"path": "!Metering-Monitoring!Chilled Water!Bock Labs",
+		"name": "Bock Labs",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1049",
+		"path": "!Metering-Monitoring!Chilled Water!CSC",
+		"name": "CSC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1050",
+		"path": "!Metering-Monitoring!Chilled Water!Carson Gully",
+		"name": "Carson Gully",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1051",
+		"path": "!Metering-Monitoring!Chilled Water!Cereal Crops",
+		"name": "Cereal Crops",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1052",
+		"path": "!Metering-Monitoring!Chilled Water!Chadbourne",
+		"name": "Chadbourne",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1053",
+		"path": "!Metering-Monitoring!Chilled Water!Chamberlin Hall",
+		"name": "Chamberlin Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1054",
+		"path": "!Metering-Monitoring!Chilled Water!Charter St",
+		"name": "Charter St",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1055",
+		"path": "!Metering-Monitoring!Chilled Water!Chazen",
+		"name": "Chazen",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1056",
+		"path": "!Metering-Monitoring!Chilled Water!Chemistry",
+		"name": "Chemistry",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1057",
+		"path": "!Metering-Monitoring!Chilled Water!Computer Sciences",
+		"name": "Computer Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1058",
+		"path": "!Metering-Monitoring!Chilled Water!Cooper Hall",
+		"name": "Cooper Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1059",
+		"path": "!Metering-Monitoring!Chilled Water!Dejope",
+		"name": "Dejope",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1064",
+		"path": "!Metering-Monitoring!Chilled Water!Education",
+		"name": "Education",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1065",
+		"path": "!Metering-Monitoring!Chilled Water!ECB",
+		"name": "ECB",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1066",
+		"path": "!Metering-Monitoring!Chilled Water!Engineering Hall",
+		"name": "Engineering Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1067",
+		"path": "!Metering-Monitoring!Chilled Water!FPL Bldg #1",
+		"name": "FPL Bldg #1",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1068",
+		"path": "!Metering-Monitoring!Chilled Water!FPL Multi Use #50",
+		"name": "FPL Multi Use #50",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1069",
+		"path": "!Metering-Monitoring!Chilled Water!Genetics",
+		"name": "Genetics",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1070",
+		"path": "!Metering-Monitoring!Chilled Water!Gordon Commons",
+		"name": "Gordon Commons",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1071",
+		"path": "!Metering-Monitoring!Chilled Water!Grainger Hall",
+		"name": "Grainger Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1072",
+		"path": "!Metering-Monitoring!Chilled Water!Hiram Smith Hall",
+		"name": "Hiram Smith Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1073",
+		"path": "!Metering-Monitoring!Chilled Water!Historical Society",
+		"name": "Historical Society",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1074",
+		"path": "!Metering-Monitoring!Chilled Water!Horticulture",
+		"name": "Horticulture",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1075",
+		"path": "!Metering-Monitoring!Chilled Water!HSLC",
+		"name": "HSLC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1076",
+		"path": "!Metering-Monitoring!Chilled Water!Kohl Center",
+		"name": "Kohl Center",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1077",
+		"path": "!Metering-Monitoring!Chilled Water!LaBahn Arena",
+		"name": "LaBahn Arena",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1078",
+		"path": "!Metering-Monitoring!Chilled Water!Limnology",
+		"name": "Limnology",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1079",
+		"path": "!Metering-Monitoring!Chilled Water!Liz Waters",
+		"name": "Liz Waters",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1080",
+		"path": "!Metering-Monitoring!Chilled Water!Material Sciences",
+		"name": "Material Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1081",
+		"path": "!Metering-Monitoring!Chilled Water!Mechanical Enginerring",
+		"name": "Mechanical Enginerring",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1082",
+		"path": "!Metering-Monitoring!Chilled Water!Memorial Library",
+		"name": "Memorial Library",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1083",
+		"path": "!Metering-Monitoring!Chilled Water!Merit House",
+		"name": "Merit House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1084",
+		"path": "!Metering-Monitoring!Chilled Water!Microbial Sciences",
+		"name": "Microbial Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1085",
+		"path": "!Metering-Monitoring!Chilled Water!MFCB",
+		"name": "MFCB",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1086",
+		"path": "!Metering-Monitoring!Chilled Water!Natatorium",
+		"name": "Natatorium",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1087",
+		"path": "!Metering-Monitoring!Chilled Water!Newell Smith",
+		"name": "Newell Smith",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1088",
+		"path": "!Metering-Monitoring!Chilled Water!North Hall",
+		"name": "North Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1089",
+		"path": "!Metering-Monitoring!Chilled Water!Ogg Hall",
+		"name": "Ogg Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1090",
+		"path": "!Metering-Monitoring!Chilled Water!Phillips Hall",
+		"name": "Phillips Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1091",
+		"path": "!Metering-Monitoring!Chilled Water!Pyle Center",
+		"name": "Pyle Center",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1092",
+		"path": "!Metering-Monitoring!Chilled Water!Rennebohm",
+		"name": "Rennebohm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1093",
+		"path": "!Metering-Monitoring!Chilled Water!SOHE",
+		"name": "SOHE",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1094",
+		"path": "!Metering-Monitoring!Chilled Water!Steenbock Library",
+		"name": "Steenbock Library",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1095",
+		"path": "!Metering-Monitoring!Chilled Water!Sterling Hall",
+		"name": "Sterling Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1096",
+		"path": "!Metering-Monitoring!Chilled Water!Stock Pavilion",
+		"name": "Stock Pavilion",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1097",
+		"path": "!Metering-Monitoring!Chilled Water!Teachers Ed",
+		"name": "Teachers Ed",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1098",
+		"path": "!Metering-Monitoring!Chilled Water!Union South",
+		"name": "Union South",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1099",
+		"path": "!Metering-Monitoring!Chilled Water!UW-Hospital",
+		"name": "UW-Hospital",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1100",
+		"path": "!Metering-Monitoring!Chilled Water!VA",
+		"name": "VA",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1101",
+		"path": "!Metering-Monitoring!Chilled Water!Van Hise",
+		"name": "Van Hise",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1102",
+		"path": "!Metering-Monitoring!Chilled Water!Vet Diag Lab",
+		"name": "Vet Diag Lab",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1103",
+		"path": "!Metering-Monitoring!Chilled Water!Waisman Center",
+		"name": "Waisman Center",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1104",
+		"path": "!Metering-Monitoring!Chilled Water!Walnut Greenhouse",
+		"name": "Walnut Greenhouse",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1105",
+		"path": "!Metering-Monitoring!Chilled Water!WARF",
+		"name": "WARF",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1106",
+		"path": "!Metering-Monitoring!Chilled Water!Weeks Hall",
+		"name": "Weeks Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1107",
+		"path": "!Metering-Monitoring!Chilled Water!WEI",
+		"name": "WEI",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1108",
+		"path": "!Metering-Monitoring!Chilled Water!WID",
+		"name": "WID",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1109",
+		"path": "!Metering-Monitoring!Chilled Water!WIMR",
+		"name": "WIMR",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1110",
+		"path": "!Metering-Monitoring!City Water!Charter St",
+		"name": "Charter St",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1021",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1111",
+		"path": "!Metering-Monitoring!City Water!Walnut",
+		"name": "Walnut",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1021",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1112",
+		"path": "!Metering-Monitoring!Lake Water!Charter St",
+		"name": "Charter St",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1022",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1113",
+		"path": "!Metering-Monitoring!Lake Water!Walnut",
+		"name": "Walnut",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1022",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1114",
+		"path": "!Metering-Monitoring!Electrical!AHABS",
+		"name": "AHABS",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1115",
+		"path": "!Metering-Monitoring!Electrical!Alumni Center",
+		"name": "Alumni Center",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1116",
+		"path": "!Metering-Monitoring!Electrical!Animal Sciences",
+		"name": "Animal Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1117",
+		"path": "!Metering-Monitoring!Electrical!Athletic Ops-Field House-Kellner Hall",
+		"name": "Athletic Ops-Field House-Kellner Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1118",
+		"path": "!Metering-Monitoring!Electrical!BioChem Sci (204)",
+		"name": "BioChem Sci (204)",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1119",
+		"path": "!Metering-Monitoring!Electrical!Biotron",
+		"name": "Biotron",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1120",
+		"path": "!Metering-Monitoring!Electrical!Camp Randall",
+		"name": "Camp Randall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1121",
+		"path": "!Metering-Monitoring!Electrical!Carson Gully",
+		"name": "Carson Gully",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1122",
+		"path": "!Metering-Monitoring!Electrical!Chamberlin",
+		"name": "Chamberlin",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1123",
+		"path": "!Metering-Monitoring!Electrical!Chazen",
+		"name": "Chazen",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1124",
+		"path": "!Metering-Monitoring!Electrical!Chemistry",
+		"name": "Chemistry",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1125",
+		"path": "!Metering-Monitoring!Electrical!Cooper",
+		"name": "Cooper",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1126",
+		"path": "!Metering-Monitoring!Electrical!Education",
+		"name": "Education",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1127",
+		"path": "!Metering-Monitoring!Electrical!ECB",
+		"name": "ECB",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1128",
+		"path": "!Metering-Monitoring!Electrical!Engineering Hall",
+		"name": "Engineering Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1129",
+		"path": "!Metering-Monitoring!Electrical!Historical Society",
+		"name": "Historical Society",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1130",
+		"path": "!Metering-Monitoring!Electrical!Horticulture",
+		"name": "Horticulture",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1131",
+		"path": "!Metering-Monitoring!Electrical!HSLC",
+		"name": "HSLC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1132",
+		"path": "!Metering-Monitoring!Electrical!LaBahn Arena",
+		"name": "LaBahn Arena",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1133",
+		"path": "!Metering-Monitoring!Electrical!Liz Waters",
+		"name": "Liz Waters",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1134",
+		"path": "!Metering-Monitoring!Electrical!McClain Center",
+		"name": "McClain Center",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1135",
+		"path": "!Metering-Monitoring!Electrical!Mechanical Engineering",
+		"name": "Mechanical Engineering",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1136",
+		"path": "!Metering-Monitoring!Electrical!Memorial Union",
+		"name": "Memorial Union",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1137",
+		"path": "!Metering-Monitoring!Electrical!Microbial Sciences",
+		"name": "Microbial Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1138",
+		"path": "!Metering-Monitoring!Electrical!MFCB",
+		"name": "MFCB",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1139",
+		"path": "!Metering-Monitoring!Electrical!Newell Smith",
+		"name": "Newell Smith",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1140",
+		"path": "!Metering-Monitoring!Electrical!SOHE",
+		"name": "SOHE",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1141",
+		"path": "!Metering-Monitoring!Electrical!Teachers Ed",
+		"name": "Teachers Ed",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1142",
+		"path": "!Metering-Monitoring!Electrical!Union South",
+		"name": "Union South",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1143",
+		"path": "!Metering-Monitoring!Electrical!Vet Diag Lab",
+		"name": "Vet Diag Lab",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1144",
+		"path": "!Metering-Monitoring!Electrical!WARF",
+		"name": "WARF",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1145",
+		"path": "!Metering-Monitoring!Electrical!WEI",
+		"name": "WEI",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1146",
+		"path": "!Metering-Monitoring!Electrical!WIMR",
+		"name": "WIMR",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1147",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering",
+		"name": "Campus Peak Demand Metering",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1148",
+		"path": "!Metering-Monitoring!Electrical Substation!Camp Randall",
+		"name": "Camp Randall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1149",
+		"path": "!Metering-Monitoring!Electrical Substation!Charter Sub",
+		"name": "Charter Sub",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1150",
+		"path": "!Metering-Monitoring!Electrical Substation!10 Megawatt Generator",
+		"name": "10 Megawatt Generator",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1151",
+		"path": "!Metering-Monitoring!Electrical Substation!CSC",
+		"name": "CSC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1152",
+		"path": "!Metering-Monitoring!Electrical Substation!CSC Generator",
+		"name": "CSC Generator",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1153",
+		"path": "!Metering-Monitoring!Electrical Substation!Daniels Sub",
+		"name": "Daniels Sub",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1154",
+		"path": "!Metering-Monitoring!Electrical Substation!East Campus Sub",
+		"name": "East Campus Sub",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1155",
+		"path": "!Metering-Monitoring!Electrical Substation!Field House",
+		"name": "Field House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1156",
+		"path": "!Metering-Monitoring!Electrical Substation!Kellner Hall",
+		"name": "Kellner Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1157",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn",
+		"name": "LaBahn",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1158",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial",
+		"name": "Microbial",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1159",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations",
+		"name": "Microbial Substations",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1160",
+		"path": "!Metering-Monitoring!Electrical Substation!Radio Hall Sub",
+		"name": "Radio Hall Sub",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1161",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch",
+		"name": "Rennebohm Switch",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1162",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation",
+		"name": "Walnut Substation",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1163",
+		"path": "!Metering-Monitoring!Electrical Substation!West Campus Sub",
+		"name": "West Campus Sub",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1164",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR",
+		"name": "WIMR",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1024",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1165",
+		"path": "!Metering-Monitoring!Hot Water!Cooper Hall",
+		"name": "Cooper Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1025",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1166",
+		"path": "!Metering-Monitoring!Hot Water!Genetics",
+		"name": "Genetics",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1025",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1167",
+		"path": "!Metering-Monitoring!Hot Water!MFCB",
+		"name": "MFCB",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1025",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1168",
+		"path": "!Metering-Monitoring!Hot Water!WIMR",
+		"name": "WIMR",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1025",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1169",
+		"path": "!Metering-Monitoring!Steam-Condensate!432 E. Campus Mall 0515A Rm B3",
+		"name": "432 E. Campus Mall 0515A Rm B3",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1170",
+		"path": "!Metering-Monitoring!Steam-Condensate!1410 Engineering Drive",
+		"name": "1410 Engineering Drive",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1171",
+		"path": "!Metering-Monitoring!Steam-Condensate!21 N Park",
+		"name": "21 N Park",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1172",
+		"path": "!Metering-Monitoring!Steam-Condensate!Adams",
+		"name": "Adams",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1173",
+		"path": "!Metering-Monitoring!Steam-Condensate!Ag Bulletin",
+		"name": "Ag Bulletin",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1174",
+		"path": "!Metering-Monitoring!Steam-Condensate!Ag Engineering Bldg",
+		"name": "Ag Engineering Bldg",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1175",
+		"path": "!Metering-Monitoring!Steam-Condensate!Ag Hall",
+		"name": "Ag Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1176",
+		"path": "!Metering-Monitoring!Steam-Condensate!AFCH",
+		"name": "AFCH",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1177",
+		"path": "!Metering-Monitoring!Steam-Condensate!Animal Sciences",
+		"name": "Animal Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1178",
+		"path": "!Metering-Monitoring!Steam-Condensate!AOSS",
+		"name": "AOSS",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1179",
+		"path": "!Metering-Monitoring!Steam-Condensate!Babcock",
+		"name": "Babcock",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1180",
+		"path": "!Metering-Monitoring!Steam-Condensate!Bascom Hall",
+		"name": "Bascom Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1181",
+		"path": "!Metering-Monitoring!Steam-Condensate!BioChem Addition",
+		"name": "BioChem Addition",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1182",
+		"path": "!Metering-Monitoring!Steam-Condensate!BioChem Sci (204)",
+		"name": "BioChem Sci (204)",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1183",
+		"path": "!Metering-Monitoring!Steam-Condensate!BioTech",
+		"name": "BioTech",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1184",
+		"path": "!Metering-Monitoring!Steam-Condensate!Biotron",
+		"name": "Biotron",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1185",
+		"path": "!Metering-Monitoring!Steam-Condensate!Birge Hall",
+		"name": "Birge Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1186",
+		"path": "!Metering-Monitoring!Steam-Condensate!Bradley",
+		"name": "Bradley",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1187",
+		"path": "!Metering-Monitoring!Steam-Condensate!Carson Gully",
+		"name": "Carson Gully",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1188",
+		"path": "!Metering-Monitoring!Steam-Condensate!Cereal Crops",
+		"name": "Cereal Crops",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1189",
+		"path": "!Metering-Monitoring!Steam-Condensate!Chadbourne",
+		"name": "Chadbourne",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1190",
+		"path": "!Metering-Monitoring!Steam-Condensate!Chamberlin Hall",
+		"name": "Chamberlin Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1191",
+		"path": "!Metering-Monitoring!Steam-Condensate!Cham House",
+		"name": "Cham House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1192",
+		"path": "!Metering-Monitoring!Steam-Condensate!Chazen",
+		"name": "Chazen",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1193",
+		"path": "!Metering-Monitoring!Steam-Condensate!Chemistry",
+		"name": "Chemistry",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1194",
+		"path": "!Metering-Monitoring!Steam-Condensate!Cole Hall",
+		"name": "Cole Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1195",
+		"path": "!Metering-Monitoring!Steam-Condensate!Computer Sci",
+		"name": "Computer Sci",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1196",
+		"path": "!Metering-Monitoring!Steam-Condensate!Cooper Hall",
+		"name": "Cooper Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1197",
+		"path": "!Metering-Monitoring!Steam-Condensate!CSC",
+		"name": "CSC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1198",
+		"path": "!Metering-Monitoring!Steam-Condensate!Dairy Cattle",
+		"name": "Dairy Cattle",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1199",
+		"path": "!Metering-Monitoring!Steam-Condensate!Dejope",
+		"name": "Dejope",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1200",
+		"path": "!Metering-Monitoring!Steam-Condensate!Education",
+		"name": "Education",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1201",
+		"path": "!Metering-Monitoring!Steam-Condensate!Education Sciences",
+		"name": "Education Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1202",
+		"path": "!Metering-Monitoring!Steam-Condensate!ECB",
+		"name": "ECB",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1203",
+		"path": "!Metering-Monitoring!Steam-Condensate!Engineering Hall",
+		"name": "Engineering Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1204",
+		"path": "!Metering-Monitoring!Steam-Condensate!Eng Research Bldg",
+		"name": "Eng Research Bldg",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1205",
+		"path": "!Metering-Monitoring!Steam-Condensate!Fleet",
+		"name": "Fleet",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1206",
+		"path": "!Metering-Monitoring!Steam-Condensate!FPL Bldg #1",
+		"name": "FPL Bldg #1",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1207",
+		"path": "!Metering-Monitoring!Steam-Condensate!FPL Multi Use #50",
+		"name": "FPL Multi Use #50",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1208",
+		"path": "!Metering-Monitoring!Steam-Condensate!Genetics",
+		"name": "Genetics",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1209",
+		"path": "!Metering-Monitoring!Steam-Condensate!Goodnight Hall",
+		"name": "Goodnight Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1210",
+		"path": "!Metering-Monitoring!Steam-Condensate!Gordon Commons",
+		"name": "Gordon Commons",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1211",
+		"path": "!Metering-Monitoring!Steam-Condensate!Grainger Hall",
+		"name": "Grainger Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1212",
+		"path": "!Metering-Monitoring!Steam-Condensate!HC White",
+		"name": "HC White",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1213",
+		"path": "!Metering-Monitoring!Steam-Condensate!Hiram Smith Hall",
+		"name": "Hiram Smith Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1214",
+		"path": "!Metering-Monitoring!Steam-Condensate!Hiram Annex",
+		"name": "Hiram Annex",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1215",
+		"path": "!Metering-Monitoring!Steam-Condensate!Historical Society",
+		"name": "Historical Society",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1216",
+		"path": "!Metering-Monitoring!Steam-Condensate!HSLC",
+		"name": "HSLC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1217",
+		"path": "!Metering-Monitoring!Steam-Condensate!Humphrey",
+		"name": "Humphrey",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1218",
+		"path": "!Metering-Monitoring!Steam-Condensate!Jorns Hall",
+		"name": "Jorns Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1219",
+		"path": "!Metering-Monitoring!Steam-Condensate!Kohl Center",
+		"name": "Kohl Center",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1220",
+		"path": "!Metering-Monitoring!Steam-Condensate!LaBahn Arena",
+		"name": "LaBahn Arena",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1221",
+		"path": "!Metering-Monitoring!Steam-Condensate!LAH",
+		"name": "LAH",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1222",
+		"path": "!Metering-Monitoring!Steam-Condensate!Law",
+		"name": "Law",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1223",
+		"path": "!Metering-Monitoring!Steam-Condensate!Limnology",
+		"name": "Limnology",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1224",
+		"path": "!Metering-Monitoring!Steam-Condensate!Material Sciences",
+		"name": "Material Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1225",
+		"path": "!Metering-Monitoring!Steam-Condensate!McArdle Labs",
+		"name": "McArdle Labs",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1226",
+		"path": "!Metering-Monitoring!Steam-Condensate!Meat &amp; Muscle",
+		"name": "Meat &amp; Muscle",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1227",
+		"path": "!Metering-Monitoring!Steam-Condensate!Mechanical Engineering",
+		"name": "Mechanical Engineering",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1228",
+		"path": "!Metering-Monitoring!Steam-Condensate!Memorial Library",
+		"name": "Memorial Library",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1229",
+		"path": "!Metering-Monitoring!Steam-Condensate!Memorial Union",
+		"name": "Memorial Union",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1230",
+		"path": "!Metering-Monitoring!Steam-Condensate!Microbial Sciences",
+		"name": "Microbial Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1231",
+		"path": "!Metering-Monitoring!Steam-Condensate!Middleton Library",
+		"name": "Middleton Library",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1232",
+		"path": "!Metering-Monitoring!Steam-Condensate!MFCB",
+		"name": "MFCB",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1233",
+		"path": "!Metering-Monitoring!Steam-Condensate!Music Hall",
+		"name": "Music Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1234",
+		"path": "!Metering-Monitoring!Steam-Condensate!Natatorium",
+		"name": "Natatorium",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1235",
+		"path": "!Metering-Monitoring!Steam-Condensate!Newell Smith",
+		"name": "Newell Smith",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1236",
+		"path": "!Metering-Monitoring!Steam-Condensate!Noland Hall",
+		"name": "Noland Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1237",
+		"path": "!Metering-Monitoring!Steam-Condensate!Observatory Hill",
+		"name": "Observatory Hill",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1238",
+		"path": "!Metering-Monitoring!Steam-Condensate!Ogg Hall",
+		"name": "Ogg Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1239",
+		"path": "!Metering-Monitoring!Steam-Condensate!Old Heating Plant",
+		"name": "Old Heating Plant",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1240",
+		"path": "!Metering-Monitoring!Steam-Condensate!Primate Annex (0782)",
+		"name": "Primate Annex (0782)",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1241",
+		"path": "!Metering-Monitoring!Steam-Condensate!Primate Center (0526)",
+		"name": "Primate Center (0526)",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1242",
+		"path": "!Metering-Monitoring!Steam-Condensate!Pyle Center",
+		"name": "Pyle Center",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1243",
+		"path": "!Metering-Monitoring!Steam-Condensate!Radio Hall",
+		"name": "Radio Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1244",
+		"path": "!Metering-Monitoring!Steam-Condensate!Red Gym",
+		"name": "Red Gym",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1245",
+		"path": "!Metering-Monitoring!Steam-Condensate!Rennebohm",
+		"name": "Rennebohm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1246",
+		"path": "!Metering-Monitoring!Steam-Condensate!Russel Labs",
+		"name": "Russel Labs",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1247",
+		"path": "!Metering-Monitoring!Steam-Condensate!Social Science",
+		"name": "Social Science",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1248",
+		"path": "!Metering-Monitoring!Steam-Condensate!SOHE",
+		"name": "SOHE",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1249",
+		"path": "!Metering-Monitoring!Steam-Condensate!South Hall",
+		"name": "South Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1250",
+		"path": "!Metering-Monitoring!Steam-Condensate!Steenbock Library",
+		"name": "Steenbock Library",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1251",
+		"path": "!Metering-Monitoring!Steam-Condensate!Sterling Hall",
+		"name": "Sterling Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1252",
+		"path": "!Metering-Monitoring!Steam-Condensate!Stock Pavilion",
+		"name": "Stock Pavilion",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1253",
+		"path": "!Metering-Monitoring!Steam-Condensate!Union South",
+		"name": "Union South",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1254",
+		"path": "!Metering-Monitoring!Steam-Condensate!University Club",
+		"name": "University Club",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1255",
+		"path": "!Metering-Monitoring!Steam-Condensate!VA",
+		"name": "VA",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1256",
+		"path": "!Metering-Monitoring!Steam-Condensate!Van Hise",
+		"name": "Van Hise",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1257",
+		"path": "!Metering-Monitoring!Steam-Condensate!Vet Diag Lab",
+		"name": "Vet Diag Lab",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1258",
+		"path": "!Metering-Monitoring!Steam-Condensate!Vet Med",
+		"name": "Vet Med",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1259",
+		"path": "!Metering-Monitoring!Steam-Condensate!Waisman Center",
+		"name": "Waisman Center",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1260",
+		"path": "!Metering-Monitoring!Steam-Condensate!Walnut Greenhouse",
+		"name": "Walnut Greenhouse",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1261",
+		"path": "!Metering-Monitoring!Steam-Condensate!WARF",
+		"name": "WARF",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1262",
+		"path": "!Metering-Monitoring!Steam-Condensate!WEI",
+		"name": "WEI",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1263",
+		"path": "!Metering-Monitoring!Steam-Condensate!WID",
+		"name": "WID",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1264",
+		"path": "!Metering-Monitoring!Steam-Condensate!WIMR",
+		"name": "WIMR",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1265",
+		"path": "!Metering-Monitoring!Steam-Condensate!Witte Hall",
+		"name": "Witte Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1266",
+		"path": "!Metering-Monitoring!Steam-Condensate!Zoo Research",
+		"name": "Zoo Research",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1276",
+		"path": "!Metering-Monitoring!Chilled Water!Chadbourne!BTU-5 Rm B9",
+		"name": "BTU-5 Rm B9",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1052",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1277",
+		"path": "!Metering-Monitoring!Chilled Water!Chadbourne!BTU-6 Rm B26",
+		"name": "BTU-6 Rm B26",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1052",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1278",
+		"path": "!Metering-Monitoring!Chilled Water!Chadbourne!BTU-7 Rm B51",
+		"name": "BTU-7 Rm B51",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1052",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1280",
+		"path": "!Metering-Monitoring!Chilled Water!Chemistry!Rm S201",
+		"name": "Rm S201",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1056",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1281",
+		"path": "!Metering-Monitoring!Chilled Water!Chemistry!Rm S345",
+		"name": "Rm S345",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1056",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1282",
+		"path": "!Metering-Monitoring!Chilled Water!Chemistry!Rm B124-Campus",
+		"name": "Rm B124-Campus",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1056",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1283",
+		"path": "!Metering-Monitoring!Chilled Water!Chemistry!Rm B124-Process",
+		"name": "Rm B124-Process",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1056",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1284",
+		"path": "!Metering-Monitoring!Chilled Water!Chemistry!Monitor",
+		"name": "Monitor",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1056",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1285",
+		"path": "!Metering-Monitoring!Chilled Water!Computer Sciences!Campus BTU Rm B113",
+		"name": "Campus BTU Rm B113",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1057",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1286",
+		"path": "!Metering-Monitoring!Chilled Water!Computer Sciences!Data Center BTU Rm B360 &amp; 380",
+		"name": "Data Center BTU Rm B360 &amp; 380",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1057",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1287",
+		"path": "!Metering-Monitoring!Chilled Water!Computer Sciences!UW-WEST Campus BUU 1&amp;2 Rm B268",
+		"name": "UW-WEST Campus BUU 1&amp;2 Rm B268",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1057",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1288",
+		"path": "!Metering-Monitoring!Chilled Water!Computer Sciences!UW-WEST Data Center Rm B240",
+		"name": "UW-WEST Data Center Rm B240",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1057",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1289",
+		"path": "!Metering-Monitoring!Chilled Water!Cooper Hall!BTU Rm B1233",
+		"name": "BTU Rm B1233",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1058",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1290",
+		"path": "!Metering-Monitoring!Chilled Water!CSC!CHW H6",
+		"name": "CHW H6",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1049",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1291",
+		"path": "!Metering-Monitoring!Chilled Water!CSC!CHW Tunnel",
+		"name": "CHW Tunnel",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1049",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1292",
+		"path": "!Metering-Monitoring!Chilled Water!CSC!Misc-shared points",
+		"name": "Misc-shared points",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1049",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1293",
+		"path": "!Metering-Monitoring!Chilled Water!Dejope!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1059",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1294",
+		"path": "!Metering-Monitoring!Chilled Water!ECB!BTU Rm B1028",
+		"name": "BTU Rm B1028",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1065",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1295",
+		"path": "!Metering-Monitoring!Chilled Water!Education!BTU Rm L373",
+		"name": "BTU Rm L373",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1064",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1296",
+		"path": "!Metering-Monitoring!Chilled Water!Engineering Hall!BTU 1 Rm B1",
+		"name": "BTU 1 Rm B1",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1066",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1297",
+		"path": "!Metering-Monitoring!Chilled Water!Engineering Hall!BTU 2 Rm B22",
+		"name": "BTU 2 Rm B22",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1066",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1298",
+		"path": "!Metering-Monitoring!Chilled Water!Engineering Hall!BTU 3 Rm B546",
+		"name": "BTU 3 Rm B546",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1066",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1299",
+		"path": "!Metering-Monitoring!Chilled Water!Engineering Hall!BTU 4 Rm B1",
+		"name": "BTU 4 Rm B1",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1066",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1300",
+		"path": "!Metering-Monitoring!Chilled Water!FPL Bldg #1!Input Data",
+		"name": "Input Data",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1067",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1301",
+		"path": "!Metering-Monitoring!Chilled Water!Genetics!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1069",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1302",
+		"path": "!Metering-Monitoring!Chilled Water!Gordon Commons!BTU Rm B150",
+		"name": "BTU Rm B150",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1070",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1303",
+		"path": "!Metering-Monitoring!Chilled Water!Grainger Hall!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1071",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1304",
+		"path": "!Metering-Monitoring!Chilled Water!Hiram Smith Hall!BTU Rm 3",
+		"name": "BTU Rm 3",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1072",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1305",
+		"path": "!Metering-Monitoring!Chilled Water!Historical Society!BTU Rm 67",
+		"name": "BTU Rm 67",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1073",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1306",
+		"path": "!Metering-Monitoring!Chilled Water!Horticulture!BTU Rm 123",
+		"name": "BTU Rm 123",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1074",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1307",
+		"path": "!Metering-Monitoring!Chilled Water!HSLC!BTU for VA",
+		"name": "BTU for VA",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1075",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1308",
+		"path": "!Metering-Monitoring!Chilled Water!HSLC!BTU for VA-02",
+		"name": "BTU for VA-02",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1075",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1309",
+		"path": "!Metering-Monitoring!Chilled Water!Kohl Center!RTA Rm LL1461",
+		"name": "RTA Rm LL1461",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1076",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1310",
+		"path": "!Metering-Monitoring!Chilled Water!LaBahn Arena!BTU Rm LL 1734",
+		"name": "BTU Rm LL 1734",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1077",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1311",
+		"path": "!Metering-Monitoring!Chilled Water!Limnology!BTU Rm B3B",
+		"name": "BTU Rm B3B",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1078",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1312",
+		"path": "!Metering-Monitoring!Chilled Water!Liz Waters!BTU Sprinkler Rm",
+		"name": "BTU Sprinkler Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1079",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1313",
+		"path": "!Metering-Monitoring!Chilled Water!Material Sciences!Rm 150A",
+		"name": "Rm 150A",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1080",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1314",
+		"path": "!Metering-Monitoring!Chilled Water!Mechanical Enginerring!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1081",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1315",
+		"path": "!Metering-Monitoring!Chilled Water!Memorial Library!Rm B120",
+		"name": "Rm B120",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1082",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1316",
+		"path": "!Metering-Monitoring!Chilled Water!Merit House!BTU Rm B9",
+		"name": "BTU Rm B9",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1083",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1317",
+		"path": "!Metering-Monitoring!Chilled Water!Microbial Sciences!BTU Rm B2305",
+		"name": "BTU Rm B2305",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1084",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1318",
+		"path": "!Metering-Monitoring!Chilled Water!MFCB!Campus BTU Meter",
+		"name": "Campus BTU Meter",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1085",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1319",
+		"path": "!Metering-Monitoring!Chilled Water!MFCB!Chiller BTU Meter",
+		"name": "Chiller BTU Meter",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1085",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1320",
+		"path": "!Metering-Monitoring!Chilled Water!MFCB!Hot Water BTU Meter",
+		"name": "Hot Water BTU Meter",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1085",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1321",
+		"path": "!Metering-Monitoring!Chilled Water!Natatorium!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1086",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1322",
+		"path": "!Metering-Monitoring!Chilled Water!Newell Smith!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1087",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1323",
+		"path": "!Metering-Monitoring!Chilled Water!North Hall!Rm B7",
+		"name": "Rm B7",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1088",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1324",
+		"path": "!Metering-Monitoring!Chilled Water!Ogg Hall!Rm 3040",
+		"name": "Rm 3040",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1089",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1325",
+		"path": "!Metering-Monitoring!Chilled Water!Ogg Hall!Rm B1340 BTU",
+		"name": "Rm B1340 BTU",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1089",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1326",
+		"path": "!Metering-Monitoring!Chilled Water!Phillips Hall!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1090",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1327",
+		"path": "!Metering-Monitoring!Chilled Water!Pyle Center!Pyle Center BTU Rm L07",
+		"name": "Pyle Center BTU Rm L07",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1091",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1328",
+		"path": "!Metering-Monitoring!Chilled Water!Pyle Center!Alumni House BTU Rm L17",
+		"name": "Alumni House BTU Rm L17",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1091",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1329",
+		"path": "!Metering-Monitoring!Chilled Water!Rennebohm!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1092",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1330",
+		"path": "!Metering-Monitoring!Chilled Water!SOHE!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1093",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1331",
+		"path": "!Metering-Monitoring!Chilled Water!Steenbock Library!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1094",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1332",
+		"path": "!Metering-Monitoring!Chilled Water!Sterling Hall!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1095",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1333",
+		"path": "!Metering-Monitoring!Chilled Water!Stock Pavilion!BTU Rm 26",
+		"name": "BTU Rm 26",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1096",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1334",
+		"path": "!Metering-Monitoring!Chilled Water!Teachers Ed!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1097",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1335",
+		"path": "!Metering-Monitoring!Chilled Water!Union South!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1098",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1336",
+		"path": "!Metering-Monitoring!Chilled Water!UW-Hospital!Shared Points",
+		"name": "Shared Points",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1099",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1337",
+		"path": "!Metering-Monitoring!Chilled Water!VA!BTU For VA Rm",
+		"name": "BTU For VA Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1100",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1338",
+		"path": "!Metering-Monitoring!Chilled Water!Van Hise!BTU Rm 170",
+		"name": "BTU Rm 170",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1101",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1339",
+		"path": "!Metering-Monitoring!Chilled Water!Vet Diag Lab!BTU 1",
+		"name": "BTU 1",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1102",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1340",
+		"path": "!Metering-Monitoring!Chilled Water!Vet Diag Lab!BTU 3 Rm 1107",
+		"name": "BTU 3 Rm 1107",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1102",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1341",
+		"path": "!Metering-Monitoring!Chilled Water!Waisman Center!BTU 1 Rm 177",
+		"name": "BTU 1 Rm 177",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1103",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1342",
+		"path": "!Metering-Monitoring!Chilled Water!WARF!Crown Castle",
+		"name": "Crown Castle",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1105",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1343",
+		"path": "!Metering-Monitoring!Chilled Water!WARF!DoIT",
+		"name": "DoIT",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1105",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1344",
+		"path": "!Metering-Monitoring!Chilled Water!WARF!WARF",
+		"name": "WARF",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1105",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1345",
+		"path": "!Metering-Monitoring!Chilled Water!WARF!Misc",
+		"name": "Misc",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1105",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1346",
+		"path": "!Metering-Monitoring!Chilled Water!Walnut Greenhouse!BTU Rm G100",
+		"name": "BTU Rm G100",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1104",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1347",
+		"path": "!Metering-Monitoring!Chilled Water!Weeks Hall!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1106",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1348",
+		"path": "!Metering-Monitoring!Chilled Water!Weeks Hall!BTU Rm!BTU 1",
+		"name": "BTU 1",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1347",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1349",
+		"path": "!Metering-Monitoring!Chilled Water!WEI!BTU Rm B1180",
+		"name": "BTU Rm B1180",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1107",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1350",
+		"path": "!Metering-Monitoring!Chilled Water!WID!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1108",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1351",
+		"path": "!Metering-Monitoring!Chilled Water!WID!BTU Rm!IOM 4",
+		"name": "IOM 4",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1350",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1352",
+		"path": "!Metering-Monitoring!Chilled Water!WIMR!CT-Meter 15",
+		"name": "CT-Meter 15",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1109",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1353",
+		"path": "!Metering-Monitoring!Chilled Water!WIMR!East Tower",
+		"name": "East Tower",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1109",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1354",
+		"path": "!Metering-Monitoring!Chilled Water!WIMR!CT-Meter 20",
+		"name": "CT-Meter 20",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1109",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1355",
+		"path": "!Metering-Monitoring!Chilled Water!WIMR!CT-Campus CHW",
+		"name": "CT-Campus CHW",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1109",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1356",
+		"path": "!Metering-Monitoring!Chilled Water!WIMR!CT Process CHW",
+		"name": "CT Process CHW",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1109",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1357",
+		"path": "!Metering-Monitoring!Chilled Water!WIMR!ET",
+		"name": "ET",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1109",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1358",
+		"path": "!Metering-Monitoring!Chilled Water!WIMR!Surge Path Rm M2707",
+		"name": "Surge Path Rm M2707",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1109",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1359",
+		"path": "!Metering-Monitoring!Chilled Water!WIMR!Surge Path-Process CHW Rm M2703",
+		"name": "Surge Path-Process CHW Rm M2703",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1109",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1360",
+		"path": "!Metering-Monitoring!Chilled Water!WIMR!Misc-shared points",
+		"name": "Misc-shared points",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1109",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1361",
+		"path": "!Metering-Monitoring!Electrical!AFCH!PQM-E588",
+		"name": "PQM-E588",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1039",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1362",
+		"path": "!Metering-Monitoring!Electrical!AFCH!PQM-E589",
+		"name": "PQM-E589",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1039",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1363",
+		"path": "!Metering-Monitoring!Electrical!AFCH!PQM-E590",
+		"name": "PQM-E590",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1039",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1364",
+		"path": "!Metering-Monitoring!Electrical!AFCH!PQM-E591",
+		"name": "PQM-E591",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1039",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1365",
+		"path": "!Metering-Monitoring!Electrical!AHABS!Elec",
+		"name": "Elec",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1114",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1366",
+		"path": "!Metering-Monitoring!Electrical!AHABS!Elec!Powertrak Rm B15 480V",
+		"name": "Powertrak Rm B15 480V",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1365",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1367",
+		"path": "!Metering-Monitoring!Electrical!AHABS!Elec!Powertrak Rm B15 208V",
+		"name": "Powertrak Rm B15 208V",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1365",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1368",
+		"path": "!Metering-Monitoring!Electrical!Alumni Center!SEL-E709",
+		"name": "SEL-E709",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1115",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1369",
+		"path": "!Metering-Monitoring!Electrical!Animal Sciences!Generator",
+		"name": "Generator",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1116",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1370",
+		"path": "!Metering-Monitoring!Electrical!Athletic Ops-Field House-Kellner Hall!PQM-E505-Fieldhouse Rm 102",
+		"name": "PQM-E505-Fieldhouse Rm 102",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1117",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1371",
+		"path": "!Metering-Monitoring!Electrical!Athletic Ops-Field House-Kellner Hall!PQM-E506-Kellner Hall RM B1113",
+		"name": "PQM-E506-Kellner Hall RM B1113",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1117",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1372",
+		"path": "!Metering-Monitoring!Electrical!Athletic Ops-Field House-Kellner Hall!PQM-E535-Kellner Hall Rm B1113",
+		"name": "PQM-E535-Kellner Hall Rm B1113",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1117",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1373",
+		"path": "!Metering-Monitoring!Electrical!BioChem Sci (204)!PQM-E623",
+		"name": "PQM-E623",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1118",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1374",
+		"path": "!Metering-Monitoring!Electrical!BioChem Sci (204)!PQM-E624",
+		"name": "PQM-E624",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1118",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1375",
+		"path": "!Metering-Monitoring!Electrical!Biotron!Meter 84",
+		"name": "Meter 84",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1119",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1376",
+		"path": "!Metering-Monitoring!Electrical!Biotron!Meter 85",
+		"name": "Meter 85",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1119",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1377",
+		"path": "!Metering-Monitoring!Electrical!Biotron!Meter 86",
+		"name": "Meter 86",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1119",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1378",
+		"path": "!Metering-Monitoring!Electrical!Camp Randall!PQM-10 MTR Rm 102 FLD-HSE",
+		"name": "PQM-10 MTR Rm 102 FLD-HSE",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1120",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1379",
+		"path": "!Metering-Monitoring!Electrical!Camp Randall!PQM-11 B-USS/PC MTR Rm B1115",
+		"name": "PQM-11 B-USS/PC MTR Rm B1115",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1120",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1380",
+		"path": "!Metering-Monitoring!Electrical!Camp Randall!PQM-12 B-USS/PD MTR Rm B1115",
+		"name": "PQM-12 B-USS/PD MTR Rm B1115",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1120",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1381",
+		"path": "!Metering-Monitoring!Electrical!Camp Randall!PQM-13 -USS/PB MTR Rm 1264",
+		"name": "PQM-13 -USS/PB MTR Rm 1264",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1120",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1382",
+		"path": "!Metering-Monitoring!Electrical!Camp Randall!PQM-14 B-USS/PA MTR Rm 1264",
+		"name": "PQM-14 B-USS/PA MTR Rm 1264",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1120",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1386",
+		"path": "!Metering-Monitoring!Electrical!Camp Randall!PQM-15 C-USS/PB MTR Rm 1334",
+		"name": "PQM-15 C-USS/PB MTR Rm 1334",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1120",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1387",
+		"path": "!Metering-Monitoring!Electrical!Camp Randall!PQM-16 C-USS/PC MTR Rm 1334",
+		"name": "PQM-16 C-USS/PC MTR Rm 1334",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1120",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1388",
+		"path": "!Metering-Monitoring!Electrical!Chamberlin!Input Data",
+		"name": "Input Data",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1122",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1389",
+		"path": "!Metering-Monitoring!Electrical!Chamberlin!Input Data!Powertrak Rm B1300BA",
+		"name": "Powertrak Rm B1300BA",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1388",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1390",
+		"path": "!Metering-Monitoring!Electrical!Chazen!PQM-E632",
+		"name": "PQM-E632",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1123",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1391",
+		"path": "!Metering-Monitoring!Electrical!Chemistry!Input Data",
+		"name": "Input Data",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1124",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1392",
+		"path": "!Metering-Monitoring!Electrical!Chemistry!Input Data!Powertrak 1 Rm B110",
+		"name": "Powertrak 1 Rm B110",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1391",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1393",
+		"path": "!Metering-Monitoring!Electrical!Chemistry!Input Data!Powertrak 2 Rm B110",
+		"name": "Powertrak 2 Rm B110",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1391",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1394",
+		"path": "!Metering-Monitoring!Electrical!Chemistry!Input Data!Powertrak 3 Rm B110",
+		"name": "Powertrak 3 Rm B110",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1391",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1395",
+		"path": "!Metering-Monitoring!Electrical!Chemistry!Input Data!Powertrak 4 Rm B110",
+		"name": "Powertrak 4 Rm B110",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1391",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1396",
+		"path": "!Metering-Monitoring!Electrical!Chemistry!Input Data!Powertrak 5 Rm B110",
+		"name": "Powertrak 5 Rm B110",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1391",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1397",
+		"path": "!Metering-Monitoring!Electrical!Cooper!PQM-Babel01",
+		"name": "PQM-Babel01",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1125",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1399",
+		"path": "!Metering-Monitoring!Electrical!Education!PQM-E621",
+		"name": "PQM-E621",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1126",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1400",
+		"path": "!Metering-Monitoring!Electrical!ECB!PQM-E470",
+		"name": "PQM-E470",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1127",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1401",
+		"path": "!Metering-Monitoring!Electrical!ECB!PQM-E471",
+		"name": "PQM-E471",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1127",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1402",
+		"path": "!Metering-Monitoring!Electrical!ECB!PQM-E472",
+		"name": "PQM-E472",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1127",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1403",
+		"path": "!Metering-Monitoring!Electrical!ECB!PQM-E473",
+		"name": "PQM-E473",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1127",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1404",
+		"path": "!Metering-Monitoring!Electrical!Engineering Hall!Input Data",
+		"name": "Input Data",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1128",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1405",
+		"path": "!Metering-Monitoring!Electrical!Engineering Hall!Input Data!Powertrak Rm B146 USS-L2",
+		"name": "Powertrak Rm B146 USS-L2",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1404",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1406",
+		"path": "!Metering-Monitoring!Electrical!Engineering Hall!Input Data!Powertrak Rm B655 USS-L1",
+		"name": "Powertrak Rm B655 USS-L1",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1404",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1407",
+		"path": "!Metering-Monitoring!Electrical!Engineering Hall!Input Data!Powertrak Rm B655 USS-P1",
+		"name": "Powertrak Rm B655 USS-P1",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1404",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1408",
+		"path": "!Metering-Monitoring!Electrical!Engineering Hall!Input Data!Powertrak Rm 5602 USS-P2",
+		"name": "Powertrak Rm 5602 USS-P2",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1404",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1409",
+		"path": "!Metering-Monitoring!Electrical!Historical Society!PQM-E565",
+		"name": "PQM-E565",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1129",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1410",
+		"path": "!Metering-Monitoring!Electrical!Historical Society!PQM-E566",
+		"name": "PQM-E566",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1129",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1411",
+		"path": "!Metering-Monitoring!Electrical!Historical Society!PQM-E567",
+		"name": "PQM-E567",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1129",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1412",
+		"path": "!Metering-Monitoring!Electrical!Horticulture!Powertrak Rm 268",
+		"name": "Powertrak Rm 268",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1130",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1413",
+		"path": "!Metering-Monitoring!Electrical!HSLC!PQM-E531",
+		"name": "PQM-E531",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1131",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1414",
+		"path": "!Metering-Monitoring!Electrical!HSLC!PQM-E532",
+		"name": "PQM-E532",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1131",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1415",
+		"path": "!Metering-Monitoring!Electrical!HSLC!PWM-E529",
+		"name": "PWM-E529",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1131",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1416",
+		"path": "!Metering-Monitoring!Electrical!Liz Waters!PQM-E382",
+		"name": "PQM-E382",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1133",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1417",
+		"path": "!Metering-Monitoring!Electrical!McClain Center!PQM-E314 USS/MCP",
+		"name": "PQM-E314 USS/MCP",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1134",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1418",
+		"path": "!Metering-Monitoring!Electrical!Mechanical Engineering!PQM-E568",
+		"name": "PQM-E568",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1135",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1419",
+		"path": "!Metering-Monitoring!Electrical!Mechanical Engineering!PQM-E569",
+		"name": "PQM-E569",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1135",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1420",
+		"path": "!Metering-Monitoring!Electrical!Memorial Union!PQM-E706",
+		"name": "PQM-E706",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1136",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1421",
+		"path": "!Metering-Monitoring!Electrical!Memorial Union!PQM-E707",
+		"name": "PQM-E707",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1136",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1422",
+		"path": "!Metering-Monitoring!Electrical!Microbial Sciences!GE PQM USS/B Rm B2315",
+		"name": "GE PQM USS/B Rm B2315",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1137",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1423",
+		"path": "!Metering-Monitoring!Electrical!Microbial Sciences!GE PQM USS/D Rm B2315",
+		"name": "GE PQM USS/D Rm B2315",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1137",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1424",
+		"path": "!Metering-Monitoring!Electrical!Microbial Sciences!GE PQM USS/C Rm 7325",
+		"name": "GE PQM USS/C Rm 7325",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1137",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1425",
+		"path": "!Metering-Monitoring!Electrical!MFCB!E-616",
+		"name": "E-616",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1138",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1426",
+		"path": "!Metering-Monitoring!Electrical!MFCB!PNL 1DCL",
+		"name": "PNL 1DCL",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1138",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1427",
+		"path": "!Metering-Monitoring!Electrical!MFCB!PNL1 1DHC",
+		"name": "PNL1 1DHC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1138",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1428",
+		"path": "!Metering-Monitoring!Electrical!MFCB!CH1",
+		"name": "CH1",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1138",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1429",
+		"path": "!Metering-Monitoring!Electrical!Newell Smith!Powertrak Rm 1270",
+		"name": "Powertrak Rm 1270",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1139",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1430",
+		"path": "!Metering-Monitoring!Electrical!SOHE!CVM-01",
+		"name": "CVM-01",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1140",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1431",
+		"path": "!Metering-Monitoring!Electrical!SOHE!CVM-02",
+		"name": "CVM-02",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1140",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1432",
+		"path": "!Metering-Monitoring!Electrical!SOHE!CVM-03",
+		"name": "CVM-03",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1140",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1433",
+		"path": "!Metering-Monitoring!Electrical!SOHE!CVM-04",
+		"name": "CVM-04",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1140",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1434",
+		"path": "!Metering-Monitoring!Electrical!SOHE!CVM-05",
+		"name": "CVM-05",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1140",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1435",
+		"path": "!Metering-Monitoring!Electrical!SOHE!CVM-06",
+		"name": "CVM-06",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1140",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1436",
+		"path": "!Metering-Monitoring!Electrical!SOHE!PQM-E640",
+		"name": "PQM-E640",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1140",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1437",
+		"path": "!Metering-Monitoring!Electrical!Teachers Ed!Input Data",
+		"name": "Input Data",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1141",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1438",
+		"path": "!Metering-Monitoring!Electrical!Teachers Ed!Input Data!Powertrak Rm 168",
+		"name": "Powertrak Rm 168",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1437",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1439",
+		"path": "!Metering-Monitoring!Electrical!Union South!PQM-E631",
+		"name": "PQM-E631",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1142",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1440",
+		"path": "!Metering-Monitoring!Electrical!Vet Diag Lab!PQM-E571",
+		"name": "PQM-E571",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1143",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1441",
+		"path": "!Metering-Monitoring!Electrical!Vet Diag Lab!Shark E608",
+		"name": "Shark E608",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1143",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1442",
+		"path": "!Metering-Monitoring!Electrical!WARF!Input Data",
+		"name": "Input Data",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1144",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1443",
+		"path": "!Metering-Monitoring!Electrical!WEI!PQM-E654",
+		"name": "PQM-E654",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1145",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1444",
+		"path": "!Metering-Monitoring!Electrical!WEI!PQM-E655",
+		"name": "PQM-E655",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1145",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1445",
+		"path": "!Metering-Monitoring!Electrical!WEI!PQM-E656",
+		"name": "PQM-E656",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1145",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1446",
+		"path": "!Metering-Monitoring!Electrical!WEI!PQM-E657",
+		"name": "PQM-E657",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1145",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1447",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E593 SUB CL2NU1 Rm 2400A",
+		"name": "PQM-E593 SUB CL2NU1 Rm 2400A",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1448",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E594 SUB CL2CU1 Rm 2400B",
+		"name": "PQM-E594 SUB CL2CU1 Rm 2400B",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1449",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E595 SUB CL2SU1 Rm 2400B",
+		"name": "PQM-E595 SUB CL2SU1 Rm 2400B",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1450",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E596 SUB EL2NU1 Rm 2120",
+		"name": "PQM-E596 SUB EL2NU1 Rm 2120",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1451",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E597 SUB EL2NU2 Rm 2120",
+		"name": "PQM-E597 SUB EL2NU2 Rm 2120",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1452",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E599 SUB EL1CU1 Rm 1140",
+		"name": "PQM-E599 SUB EL1CU1 Rm 1140",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1453",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E600 SUB EL1SU1 Rm 1140",
+		"name": "PQM-E600 SUB EL1SU1 Rm 1140",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1454",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E601 UT-1 Feeder Mgmt Relay Rm B1160",
+		"name": "PQM-E601 UT-1 Feeder Mgmt Relay Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1455",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E602 Gen-1 Mgmt Relay Rm B1160",
+		"name": "PQM-E602 Gen-1 Mgmt Relay Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1456",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E603 Gen-2 Mgmt Relay Rm B1160",
+		"name": "PQM-E603 Gen-2 Mgmt Relay Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1457",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E604 Gen-3 Mgmt Relay Rm B1160",
+		"name": "PQM-E604 Gen-3 Mgmt Relay Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1458",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E605 Main Feed Rm B1160",
+		"name": "PQM-E605 Main Feed Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1459",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E606 UT-2 Feeder Mgmt Relay Rm B1160",
+		"name": "PQM-E606 UT-2 Feeder Mgmt Relay Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1460",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E632 SUB EL1SU2",
+		"name": "PQM-E632 SUB EL1SU2",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1461",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E643 SUB CL2NU2",
+		"name": "PQM-E643 SUB CL2NU2",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1462",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E710 Surg Path",
+		"name": "PQM-E710 Surg Path",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1463",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E711 Surg Path",
+		"name": "PQM-E711 Surg Path",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1464",
+		"path": "!Metering-Monitoring!Electrical!WIMR!PQM-E712 Surg Path",
+		"name": "PQM-E712 Surg Path",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1146",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1465",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!Campus Peak Demand Total",
+		"name": "Campus Peak Demand Total",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1466",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!Cam Randal Peak Demand Total",
+		"name": "Cam Randal Peak Demand Total",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1467",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!Charter Peak Demand",
+		"name": "Charter Peak Demand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1468",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!ECampMall Peak Demand",
+		"name": "ECampMall Peak Demand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1469",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!Fluno Peak Demand",
+		"name": "Fluno Peak Demand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1470",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!LaBahn Peak Demand",
+		"name": "LaBahn Peak Demand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1471",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!Serf Peak Demand",
+		"name": "Serf Peak Demand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1472",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!Vet Med Peak Demand",
+		"name": "Vet Med Peak Demand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1473",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!Walnut Sub Peak Demand",
+		"name": "Walnut Sub Peak Demand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1474",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!WARF Peak Demand",
+		"name": "WARF Peak Demand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1475",
+		"path": "!Metering-Monitoring!Electrical Substation!Camp Randall!PQM-13 B-USS/PB MTR Rm 1264",
+		"name": "PQM-13 B-USS/PB MTR Rm 1264",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1148",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1476",
+		"path": "!Metering-Monitoring!Electrical Substation!Camp Randall!PQM-14 B-USS/PA MTR Rm 1264",
+		"name": "PQM-14 B-USS/PA MTR Rm 1264",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1148",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1477",
+		"path": "!Metering-Monitoring!Electrical Substation!Camp Randall!PQM-15 E543 C-MSM/PB Rm 1334",
+		"name": "PQM-15 E543 C-MSM/PB Rm 1334",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1148",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1478",
+		"path": "!Metering-Monitoring!Electrical Substation!Camp Randall!PQM-16 E542 C-MSB/PC Rm 1334",
+		"name": "PQM-16 E542 C-MSB/PC Rm 1334",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1148",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1479",
+		"path": "!Metering-Monitoring!Electrical Substation!Camp Randall!MISC",
+		"name": "MISC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1148",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1480",
+		"path": "!Metering-Monitoring!Electrical Substation!Charter Sub!Charter 5kV Sub",
+		"name": "Charter 5kV Sub",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1149",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1481",
+		"path": "!Metering-Monitoring!Electrical Substation!Charter Sub!Charter 15kV Sub",
+		"name": "Charter 15kV Sub",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1149",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1482",
+		"path": "!Metering-Monitoring!Electrical Substation!Charter Sub!Charter Peak Demand",
+		"name": "Charter Peak Demand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1149",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1483",
+		"path": "!Metering-Monitoring!Electrical Substation!10 Megawatt Generator!Generator",
+		"name": "Generator",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1150",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1484",
+		"path": "!Metering-Monitoring!Electrical Substation!CSC!ION 7300",
+		"name": "ION 7300",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1151",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1485",
+		"path": "!Metering-Monitoring!Electrical Substation!CSC Generator!Gen Rm #?",
+		"name": "Gen Rm #?",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1152",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1486",
+		"path": "!Metering-Monitoring!Electrical Substation!Daniels Sub!PQM-E314 Rm B1866",
+		"name": "PQM-E314 Rm B1866",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1153",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1487",
+		"path": "!Metering-Monitoring!Electrical Substation!Field House!PQM-E505 MTR Rm 102 FLD-HSE",
+		"name": "PQM-E505 MTR Rm 102 FLD-HSE",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1155",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1488",
+		"path": "!Metering-Monitoring!Electrical Substation!Kellner Hall!PQM-E506 B-USS/PC Rm B1115",
+		"name": "PQM-E506 B-USS/PC Rm B1115",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1156",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1489",
+		"path": "!Metering-Monitoring!Electrical Substation!Kellner Hall!PQM-E535B-USS/PD Rm B1115",
+		"name": "PQM-E535B-USS/PD Rm B1115",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1156",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1490",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!SPARE: PQM-E457",
+		"name": "SPARE: PQM-E457",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1491",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!CKT: 1580 21 N. PARK PQM-E458",
+		"name": "CKT: 1580 21 N. PARK PQM-E458",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1492",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!CKT: 1560 GRAINGER PQM-E459",
+		"name": "CKT: 1560 GRAINGER PQM-E459",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1493",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!CKT:1540 LABAHN PQM-E460",
+		"name": "CKT:1540 LABAHN PQM-E460",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1494",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!CKT: 1520 RADIO HALL PQM-E461",
+		"name": "CKT: 1520 RADIO HALL PQM-E461",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1495",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!MGE: PQM-E462",
+		"name": "MGE: PQM-E462",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1496",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!MGE: PQM-E463",
+		"name": "MGE: PQM-E463",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1497",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!CKT: 1510 MECH ENG PQM-E464",
+		"name": "CKT: 1510 MECH ENG PQM-E464",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1498",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!CKT: 1530 KOHL WEST PQM-E465",
+		"name": "CKT: 1530 KOHL WEST PQM-E465",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1499",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!CKT: 1550 OGG HALL PQM-E466",
+		"name": "CKT: 1550 OGG HALL PQM-E466",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1500",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!SPARE: PQM-E467",
+		"name": "SPARE: PQM-E467",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1501",
+		"path": "!Metering-Monitoring!Electrical Substation!LaBahn!SPARE: PQM-E468",
+		"name": "SPARE: PQM-E468",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1157",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1502",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial!PQM-USS/B Rm B2315",
+		"name": "PQM-USS/B Rm B2315",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1158",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1503",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial!PQM-USS/C Rm 7325",
+		"name": "PQM-USS/C Rm 7325",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1158",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1504",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial!PQM-USS/D Rm B2315",
+		"name": "PQM-USS/D Rm B2315",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1158",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1505",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!15kV",
+		"name": "15kV",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1159",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1506",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV",
+		"name": "5kV",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1159",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1507",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!Misc",
+		"name": "Misc",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1159",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1508",
+		"path": "!Metering-Monitoring!Electrical Substation!Radio Hall Sub!15kV",
+		"name": "15kV",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1160",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1509",
+		"path": "!Metering-Monitoring!Electrical Substation!Radio Hall Sub!5kV",
+		"name": "5kV",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1160",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1510",
+		"path": "!Metering-Monitoring!Electrical Substation!Radio Hall Sub!Misc",
+		"name": "Misc",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1160",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1511",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1290 CUBICAL 1 WIMR PQM-E436",
+		"name": "CKT: 1290 CUBICAL 1 WIMR PQM-E436",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1512",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1270 CUBICAL 2 VET.DIAG.LAB PQM-E437",
+		"name": "CKT: 1270 CUBICAL 2 VET.DIAG.LAB PQM-E437",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1513",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1250 CUBICAL 3 HSLC PQM-E412",
+		"name": "CKT: 1250 CUBICAL 3 HSLC PQM-E412",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1514",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1230 CUBICAL 4 CSC RAMP PQM-E413",
+		"name": "CKT: 1230 CUBICAL 4 CSC RAMP PQM-E413",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1515",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1390 CUBICAL 5 MAIN FROM WALNUT PQM-E414",
+		"name": "CKT: 1390 CUBICAL 5 MAIN FROM WALNUT PQM-E414",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1516",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1210 CUBICAL 6 SS/A PQM-E415",
+		"name": "CKT: 1210 CUBICAL 6 SS/A PQM-E415",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1517",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1120 CUBICAL 8 SS/A PQM-E416",
+		"name": "CKT: 1120 CUBICAL 8 SS/A PQM-E416",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1518",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1340 CUBICAL 9 MAIN FROM WALNUT PQM-E417",
+		"name": "CKT: 1340 CUBICAL 9 MAIN FROM WALNUT PQM-E417",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1519",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1240 CUBICAL 10 NIELSON TENNIS PQM-E418",
+		"name": "CKT: 1240 CUBICAL 10 NIELSON TENNIS PQM-E418",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1520",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1260 CUBICAL 11 MFCB PQM-E419",
+		"name": "CKT: 1260 CUBICAL 11 MFCB PQM-E419",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1521",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1280 CUBICAL 12 DEJOPE DORM PQM-E420",
+		"name": "CKT: 1280 CUBICAL 12 DEJOPE DORM PQM-E420",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1522",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!CKT: 1200 CUBICAL 13 WIMR PQM-E421",
+		"name": "CKT: 1200 CUBICAL 13 WIMR PQM-E421",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1523",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!BATTERY CHARGER",
+		"name": "BATTERY CHARGER",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1524",
+		"path": "!Metering-Monitoring!Electrical Substation!Rennebohm Switch!WATER BUGS",
+		"name": "WATER BUGS",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1161",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1528",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!15kV!CKT: 1350 E484 - Walnut Heating",
+		"name": "CKT: 1350 E484 - Walnut Heating",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1505",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1529",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!15kV!CKT: 1360 E480 - Walnut Heating",
+		"name": "CKT: 1360 E480 - Walnut Heating",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1505",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1530",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!15kV!CKT: 1600 E449 - Charter Plant",
+		"name": "CKT: 1600 E449 - Charter Plant",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1505",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1531",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!15kV!CKT: 1700 E483 - Radio Hall",
+		"name": "CKT: 1700 E483 - Radio Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1505",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1532",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!15kV!CKT: 1710 E481 - Microbial",
+		"name": "CKT: 1710 E481 - Microbial",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1505",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1533",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!15kV!CKT: 1720 E448",
+		"name": "CKT: 1720 E448",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1505",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1534",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!15kV!XFR1 E479",
+		"name": "XFR1 E479",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1505",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1535",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!15kV!XFR 2 E485",
+		"name": "XFR 2 E485",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1505",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1536",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!15kV!XFR 3 E450",
+		"name": "XFR 3 E450",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1505",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1537",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5110 E507 - Plant Sci",
+		"name": "CKT: 5110 E507 - Plant Sci",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1538",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5120 E508 - Steenbock",
+		"name": "CKT: 5120 E508 - Steenbock",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1539",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5130 E456 - Linden Dr",
+		"name": "CKT: 5130 E456 - Linden Dr",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1540",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5140 E454 - MSC/Bardeen",
+		"name": "CKT: 5140 E454 - MSC/Bardeen",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1541",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5150 E455 - Ag Hall",
+		"name": "CKT: 5150 E455 - Ag Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1542",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5160 E510 - BioChem",
+		"name": "CKT: 5160 E510 - BioChem",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1543",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5210 E111 - Hort Moore",
+		"name": "CKT: 5210 E111 - Hort Moore",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1544",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5220 E511 - Eng Hall",
+		"name": "CKT: 5220 E511 - Eng Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1545",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5230 E513 - Stoval",
+		"name": "CKT: 5230 E513 - Stoval",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1546",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5240 E512 - Mat Sci",
+		"name": "CKT: 5240 E512 - Mat Sci",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1547",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5310 E580 - Mid Lib",
+		"name": "CKT: 5310 E580 - Mid Lib",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1548",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5340 E453",
+		"name": "CKT: 5340 E453",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1549",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!TIE BRK #1 E451",
+		"name": "TIE BRK #1 E451",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1550",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!TIE BRK #2 E509",
+		"name": "TIE BRK #2 E509",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1551",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!TIE BRK #3 E482",
+		"name": "TIE BRK #3 E482",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1552",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!XFR 3 E452 - Main",
+		"name": "XFR 3 E452 - Main",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1553",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation!Rm Temps",
+		"name": "Rm Temps",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1162",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1554",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation!CKT: 1310 CSC-A SEL-E489",
+		"name": "CKT: 1310 CSC-A SEL-E489",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1162",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1555",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation!CKT: 1420 BioChem SEL-E648",
+		"name": "CKT: 1420 BioChem SEL-E648",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1162",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1556",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation!CKT: 1320 Heating Plant SEL-E664",
+		"name": "CKT: 1320 Heating Plant SEL-E664",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1162",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1557",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation!CKT: 1390 Rennebohm-West SEL-E666",
+		"name": "CKT: 1390 Rennebohm-West SEL-E666",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1162",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1558",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation!CKT: 1410 Heating Plant SEL-E672",
+		"name": "CKT: 1410 Heating Plant SEL-E672",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1162",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1559",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation!CKT: 1330 CSC-B SEL-E674",
+		"name": "CKT: 1330 CSC-B SEL-E674",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1162",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1560",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation!CKT: 1340 Rennebohm-East SEL-E676",
+		"name": "CKT: 1340 Rennebohm-East SEL-E676",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1162",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1561",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation!CKT: 1360 Bacty-N SEL-E678",
+		"name": "CKT: 1360 Bacty-N SEL-E678",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1162",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1562",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E593 SUB CL2NU1 Rm 2400A",
+		"name": "PQM-E593 SUB CL2NU1 Rm 2400A",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1563",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E594 SUB CL2CU1 Rm 2400B",
+		"name": "PQM-E594 SUB CL2CU1 Rm 2400B",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1564",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E595 SUB CL2SU1 Rm 2400B",
+		"name": "PQM-E595 SUB CL2SU1 Rm 2400B",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1565",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E596 SUB EL2NU1 Rm 2120",
+		"name": "PQM-E596 SUB EL2NU1 Rm 2120",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1566",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E597 SUB EL2NU2 Rm 2120",
+		"name": "PQM-E597 SUB EL2NU2 Rm 2120",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1567",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E599 SUB EL1CU1 Rm 1140",
+		"name": "PQM-E599 SUB EL1CU1 Rm 1140",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1568",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E600 SUB EL1SU1 Rm 1140",
+		"name": "PQM-E600 SUB EL1SU1 Rm 1140",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1569",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E601 UT-1 Feeder Mgmt Relay Rm B1160",
+		"name": "PQM-E601 UT-1 Feeder Mgmt Relay Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1570",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E602 Gen-1 Mgmt Relay Rm B1160",
+		"name": "PQM-E602 Gen-1 Mgmt Relay Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1571",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E603 Gen-2 Mgmt Relay Rm B1160",
+		"name": "PQM-E603 Gen-2 Mgmt Relay Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1572",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E604 Gen-3 Mgmt Relay Rm B1160",
+		"name": "PQM-E604 Gen-3 Mgmt Relay Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1573",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E606 UT-2 Feeder Mgmt Relay Rm B1160",
+		"name": "PQM-E606 UT-2 Feeder Mgmt Relay Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1574",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E605 Main Feed Rm B1160",
+		"name": "PQM-E605 Main Feed Rm B1160",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1575",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E632 SUB EL1SU2",
+		"name": "PQM-E632 SUB EL1SU2",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1576",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E643 SUB CL2NU2",
+		"name": "PQM-E643 SUB CL2NU2",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1577",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E710 Surg Path",
+		"name": "PQM-E710 Surg Path",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1578",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E711 Surg Path",
+		"name": "PQM-E711 Surg Path",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1579",
+		"path": "!Metering-Monitoring!Electrical Substation!WIMR!PQM-E712 Surg Path",
+		"name": "PQM-E712 Surg Path",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1164",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1580",
+		"path": "!Metering-Monitoring!Electrical Substation!Walnut Substation!CKT: 1350 Bacty-S SEL-E668",
+		"name": "CKT: 1350 Bacty-S SEL-E668",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1162",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1581",
+		"path": "!Metering-Monitoring!Hot Water!Cooper Hall!BTU Rm B1233",
+		"name": "BTU Rm B1233",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1165",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1582",
+		"path": "!Metering-Monitoring!Hot Water!Genetics!BTU-Rm",
+		"name": "BTU-Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1166",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1583",
+		"path": "!Metering-Monitoring!Hot Water!MFCB!BTU-3",
+		"name": "BTU-3",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1167",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1584",
+		"path": "!Metering-Monitoring!Hot Water!WIMR!Surge Path Rm 2703",
+		"name": "Surge Path Rm 2703",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1168",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1585",
+		"path": "!Metering-Monitoring!Hot Water!WIMR!CT",
+		"name": "CT",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1168",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1586",
+		"path": "!Metering-Monitoring!Steam-Condensate!1410 Engineering Drive!Rm B15",
+		"name": "Rm B15",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1170",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1587",
+		"path": "!Metering-Monitoring!Steam-Condensate!1410 Engineering Drive!Rm 56",
+		"name": "Rm 56",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1170",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1588",
+		"path": "!Metering-Monitoring!Steam-Condensate!Adams!Rm B5A",
+		"name": "Rm B5A",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1172",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1589",
+		"path": "!Metering-Monitoring!Steam-Condensate!21 N Park!Rm 1050",
+		"name": "Rm 1050",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1171",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1590",
+		"path": "!Metering-Monitoring!Steam-Condensate!Ag Bulletin!Rm Basement",
+		"name": "Rm Basement",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1173",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1591",
+		"path": "!Metering-Monitoring!Steam-Condensate!Ag Engineering Bldg!RTA-KEP",
+		"name": "RTA-KEP",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1174",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1592",
+		"path": "!Metering-Monitoring!Steam-Condensate!Ag Hall!Rm 19",
+		"name": "Rm 19",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1175",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1593",
+		"path": "!Metering-Monitoring!Steam-Condensate!AFCH!RTA-KEP",
+		"name": "RTA-KEP",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1176",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1594",
+		"path": "!Metering-Monitoring!Steam-Condensate!AFCH!Misc-shared Points",
+		"name": "Misc-shared Points",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1176",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1595",
+		"path": "!Metering-Monitoring!Steam-Condensate!Animal Sciences!Rm 122",
+		"name": "Rm 122",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1177",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1596",
+		"path": "!Metering-Monitoring!Steam-Condensate!AOSS!Rm B3",
+		"name": "Rm B3",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1178",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1597",
+		"path": "!Metering-Monitoring!Steam-Condensate!Babcock!Rm B146",
+		"name": "Rm B146",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1179",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1598",
+		"path": "!Metering-Monitoring!Steam-Condensate!Bascom Hall!Rm 2C",
+		"name": "Rm 2C",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1180",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1599",
+		"path": "!Metering-Monitoring!Steam-Condensate!Bascom Hall!Rm 98S",
+		"name": "Rm 98S",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1180",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1600",
+		"path": "!Metering-Monitoring!Steam-Condensate!BioChem Addition!Rm",
+		"name": "Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1181",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1601",
+		"path": "!Metering-Monitoring!Steam-Condensate!BioChem Sci (204)!Rm SB3250",
+		"name": "Rm SB3250",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1182",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1602",
+		"path": "!Metering-Monitoring!Steam-Condensate!BioTech!KEP Rm B1212",
+		"name": "KEP Rm B1212",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1183",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1603",
+		"path": "!Metering-Monitoring!Steam-Condensate!BioTech!RIM 10 Rm B1212",
+		"name": "RIM 10 Rm B1212",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1183",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1604",
+		"path": "!Metering-Monitoring!Steam-Condensate!BioTech!Misc",
+		"name": "Misc",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1183",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1605",
+		"path": "!Metering-Monitoring!Steam-Condensate!Biotron!Rm 173",
+		"name": "Rm 173",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1184",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1606",
+		"path": "!Metering-Monitoring!Steam-Condensate!Birge Hall!Rm B401",
+		"name": "Rm B401",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1185",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1607",
+		"path": "!Metering-Monitoring!Steam-Condensate!Bradley!Rm 198",
+		"name": "Rm 198",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1186",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1608",
+		"path": "!Metering-Monitoring!Steam-Condensate!Carson Gully!Rm B141",
+		"name": "Rm B141",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1187",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1609",
+		"path": "!Metering-Monitoring!Steam-Condensate!Cereal Crops!Rm",
+		"name": "Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1188",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1610",
+		"path": "!Metering-Monitoring!Steam-Condensate!Chadbourne!Rm B12B",
+		"name": "Rm B12B",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1189",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1611",
+		"path": "!Metering-Monitoring!Steam-Condensate!Cham House!Rm B110A",
+		"name": "Rm B110A",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1191",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1612",
+		"path": "!Metering-Monitoring!Steam-Condensate!Chamberlin Hall!Steam 1 Rm 1126",
+		"name": "Steam 1 Rm 1126",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1190",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1613",
+		"path": "!Metering-Monitoring!Steam-Condensate!Chamberlin Hall!Steam 2 Rm 1256",
+		"name": "Steam 2 Rm 1256",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1190",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1614",
+		"path": "!Metering-Monitoring!Steam-Condensate!Chazen!Rm L171",
+		"name": "Rm L171",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1192",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1615",
+		"path": "!Metering-Monitoring!Steam-Condensate!Chemistry!Rm B124",
+		"name": "Rm B124",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1193",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1616",
+		"path": "!Metering-Monitoring!Steam-Condensate!Chemistry!Rm S201",
+		"name": "Rm S201",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1193",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1617",
+		"path": "!Metering-Monitoring!Steam-Condensate!Cole Hall!Rm B120",
+		"name": "Rm B120",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1194",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1618",
+		"path": "!Metering-Monitoring!Steam-Condensate!Computer Sci!Rm B268",
+		"name": "Rm B268",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1195",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1619",
+		"path": "!Metering-Monitoring!Steam-Condensate!Cooper Hall!Rm 1233",
+		"name": "Rm 1233",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1196",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1620",
+		"path": "!Metering-Monitoring!Steam-Condensate!CSC!Input Data-East RTA",
+		"name": "Input Data-East RTA",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1197",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1621",
+		"path": "!Metering-Monitoring!Steam-Condensate!CSC!Input Data-West RTA",
+		"name": "Input Data-West RTA",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1197",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1622",
+		"path": "!Metering-Monitoring!Steam-Condensate!Dairy Cattle!Rm",
+		"name": "Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1198",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1623",
+		"path": "!Metering-Monitoring!Steam-Condensate!Dejope!Rm B1204",
+		"name": "Rm B1204",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1199",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1624",
+		"path": "!Metering-Monitoring!Steam-Condensate!ECB!RTA-KEP Rm B1028",
+		"name": "RTA-KEP Rm B1028",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1202",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1625",
+		"path": "!Metering-Monitoring!Steam-Condensate!ECB!MSIC-Rm B1028",
+		"name": "MSIC-Rm B1028",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1202",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1626",
+		"path": "!Metering-Monitoring!Steam-Condensate!Education!RTA-KEP",
+		"name": "RTA-KEP",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1200",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1627",
+		"path": "!Metering-Monitoring!Steam-Condensate!Education Sciences!Rm 155A",
+		"name": "Rm 155A",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1201",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1628",
+		"path": "!Metering-Monitoring!Steam-Condensate!Education Sciences!Rm 119",
+		"name": "Rm 119",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1201",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1629",
+		"path": "!Metering-Monitoring!Steam-Condensate!Eng Research Bldg!Rm B165",
+		"name": "Rm B165",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1204",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1630",
+		"path": "!Metering-Monitoring!Steam-Condensate!Engineering Hall!Rm B660",
+		"name": "Rm B660",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1203",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1631",
+		"path": "!Metering-Monitoring!Steam-Condensate!Fleet!Toolo Rm",
+		"name": "Toolo Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1205",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1632",
+		"path": "!Metering-Monitoring!Steam-Condensate!FPL Bldg #1!RTA-KEP/RIM10",
+		"name": "RTA-KEP/RIM10",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1206",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1633",
+		"path": "!Metering-Monitoring!Steam-Condensate!FPL Bldg #1!Misc Rm 14",
+		"name": "Misc Rm 14",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1206",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1634",
+		"path": "!Metering-Monitoring!Steam-Condensate!FPL Multi Use #50!eDNA",
+		"name": "eDNA",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1207",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1635",
+		"path": "!Metering-Monitoring!Steam-Condensate!Genetics!Rm B50",
+		"name": "Rm B50",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1208",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1636",
+		"path": "!Metering-Monitoring!Steam-Condensate!Goodnight Hall!Rm 23",
+		"name": "Rm 23",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1209",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1637",
+		"path": "!Metering-Monitoring!Steam-Condensate!Gordon Commons!Rm B150",
+		"name": "Rm B150",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1210",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1638",
+		"path": "!Metering-Monitoring!Steam-Condensate!Grainger Hall!Meters",
+		"name": "Meters",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1211",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1639",
+		"path": "!Metering-Monitoring!Steam-Condensate!HC White!Rm B210 West",
+		"name": "Rm B210 West",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1212",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1640",
+		"path": "!Metering-Monitoring!Steam-Condensate!HC White!Rm B210 East",
+		"name": "Rm B210 East",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1212",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1641",
+		"path": "!Metering-Monitoring!Steam-Condensate!Hiram Annex!Rm B3",
+		"name": "Rm B3",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1214",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1642",
+		"path": "!Metering-Monitoring!Steam-Condensate!Hiram Smith Hall!Rm",
+		"name": "Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1213",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1643",
+		"path": "!Metering-Monitoring!Steam-Condensate!Historical Society!Rm B126",
+		"name": "Rm B126",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1215",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1644",
+		"path": "!Metering-Monitoring!Steam-Condensate!HSLC!Rm B1220",
+		"name": "Rm B1220",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1216",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1645",
+		"path": "!Metering-Monitoring!Steam-Condensate!Humphrey!Rm B102",
+		"name": "Rm B102",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1217",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1646",
+		"path": "!Metering-Monitoring!Steam-Condensate!Jorns Hall!Rm B115",
+		"name": "Rm B115",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1218",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1647",
+		"path": "!Metering-Monitoring!Steam-Condensate!Kohl Center!Rm LL 1461",
+		"name": "Rm LL 1461",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1219",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1648",
+		"path": "!Metering-Monitoring!Steam-Condensate!LaBahn Arena!Rm LL 1744",
+		"name": "Rm LL 1744",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1220",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1649",
+		"path": "!Metering-Monitoring!Steam-Condensate!LAH!Rm B153",
+		"name": "Rm B153",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1221",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1650",
+		"path": "!Metering-Monitoring!Steam-Condensate!Law!Rm 1325",
+		"name": "Rm 1325",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1222",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1651",
+		"path": "!Metering-Monitoring!Steam-Condensate!Limnology!Rm B3A",
+		"name": "Rm B3A",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1223",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1652",
+		"path": "!Metering-Monitoring!Steam-Condensate!Material Sciences!RTA-KEP",
+		"name": "RTA-KEP",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1224",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1653",
+		"path": "!Metering-Monitoring!Steam-Condensate!McArdle Labs!Located in Tunnel",
+		"name": "Located in Tunnel",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1225",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1654",
+		"path": "!Metering-Monitoring!Steam-Condensate!McArdle Labs!Rm",
+		"name": "Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1225",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1655",
+		"path": "!Metering-Monitoring!Steam-Condensate!Meat &amp; Muscle!Rm 119",
+		"name": "Rm 119",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1226",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1656",
+		"path": "!Metering-Monitoring!Steam-Condensate!Mechanical Engineering!RTA-KEP Rm B1139",
+		"name": "RTA-KEP Rm B1139",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1227",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1657",
+		"path": "!Metering-Monitoring!Steam-Condensate!Memorial Library!Rm B120",
+		"name": "Rm B120",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1228",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1658",
+		"path": "!Metering-Monitoring!Steam-Condensate!Memorial Union!RTA-KEP Rm",
+		"name": "RTA-KEP Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1229",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1659",
+		"path": "!Metering-Monitoring!Steam-Condensate!MFCB!Rm 1135",
+		"name": "Rm 1135",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1232",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1660",
+		"path": "!Metering-Monitoring!Steam-Condensate!Microbial Sciences!RTA-KEP Rm B2305",
+		"name": "RTA-KEP Rm B2305",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1230",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1661",
+		"path": "!Metering-Monitoring!Steam-Condensate!Middleton Library!Rm B15",
+		"name": "Rm B15",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1231",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1662",
+		"path": "!Metering-Monitoring!Steam-Condensate!Music Hall!Rm B1-A",
+		"name": "Rm B1-A",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1233",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1663",
+		"path": "!Metering-Monitoring!Steam-Condensate!Natatorium!Rm B90",
+		"name": "Rm B90",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1234",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1664",
+		"path": "!Metering-Monitoring!Steam-Condensate!Newell Smith!Rm 1240",
+		"name": "Rm 1240",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1235",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1665",
+		"path": "!Metering-Monitoring!Steam-Condensate!Noland Hall!Rm B179",
+		"name": "Rm B179",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1236",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1666",
+		"path": "!Metering-Monitoring!Steam-Condensate!Observatory Hill!Rm",
+		"name": "Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1237",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1667",
+		"path": "!Metering-Monitoring!Steam-Condensate!Ogg Hall!Rm 3040",
+		"name": "Rm 3040",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1238",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1668",
+		"path": "!Metering-Monitoring!Steam-Condensate!Old Heating Plant!ServBldg Rm",
+		"name": "ServBldg Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1239",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1669",
+		"path": "!Metering-Monitoring!Steam-Condensate!Primate Annex (0782)!Rm B122",
+		"name": "Rm B122",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1240",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1670",
+		"path": "!Metering-Monitoring!Steam-Condensate!Primate Center (0526)!Rm B15",
+		"name": "Rm B15",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1241",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1671",
+		"path": "!Metering-Monitoring!Steam-Condensate!Pyle Center!Rm L07",
+		"name": "Rm L07",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1242",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1672",
+		"path": "!Metering-Monitoring!Steam-Condensate!Radio Hall!Rm B126",
+		"name": "Rm B126",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1243",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1673",
+		"path": "!Metering-Monitoring!Steam-Condensate!Red Gym!Pit 31/12",
+		"name": "Pit 31/12",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1244",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1674",
+		"path": "!Metering-Monitoring!Steam-Condensate!Rennebohm!Rm 1437",
+		"name": "Rm 1437",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1245",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1675",
+		"path": "!Metering-Monitoring!Steam-Condensate!Russel Labs!Rm B84 &amp; A85",
+		"name": "Rm B84 &amp; A85",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1246",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1676",
+		"path": "!Metering-Monitoring!Steam-Condensate!Social Science!Rm 4308",
+		"name": "Rm 4308",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1247",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1677",
+		"path": "!Metering-Monitoring!Steam-Condensate!SOHE!Rm B1249",
+		"name": "Rm B1249",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1248",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1678",
+		"path": "!Metering-Monitoring!Steam-Condensate!South Hall!Rm 1A",
+		"name": "Rm 1A",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1249",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1679",
+		"path": "!Metering-Monitoring!Steam-Condensate!Steenbock Library!Rm B140",
+		"name": "Rm B140",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1250",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1680",
+		"path": "!Metering-Monitoring!Steam-Condensate!Sterling Hall!Meter Rm",
+		"name": "Meter Rm",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1251",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1681",
+		"path": "!Metering-Monitoring!Steam-Condensate!Stock Pavilion!Rm 103",
+		"name": "Rm 103",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1252",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1682",
+		"path": "!Metering-Monitoring!Steam-Condensate!Union South!Rm B289",
+		"name": "Rm B289",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1253",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1683",
+		"path": "!Metering-Monitoring!Steam-Condensate!University Club!Rm B3",
+		"name": "Rm B3",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1254",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1684",
+		"path": "!Metering-Monitoring!Steam-Condensate!VA!RT-KEP",
+		"name": "RT-KEP",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1255",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1685",
+		"path": "!Metering-Monitoring!Steam-Condensate!Van Hise!Rm 170",
+		"name": "Rm 170",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1256",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1686",
+		"path": "!Metering-Monitoring!Steam-Condensate!Vet Diag Lab!RTA-RIM 10 Rm 1107",
+		"name": "RTA-RIM 10 Rm 1107",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1257",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1687",
+		"path": "!Metering-Monitoring!Steam-Condensate!Vet Med!KEP-LPS",
+		"name": "KEP-LPS",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1258",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1688",
+		"path": "!Metering-Monitoring!Steam-Condensate!Waisman Center!RTA-RIM 20 Rm 177",
+		"name": "RTA-RIM 20 Rm 177",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1259",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1689",
+		"path": "!Metering-Monitoring!Steam-Condensate!Walnut Greenhouse!Rm 125",
+		"name": "Rm 125",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1260",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1690",
+		"path": "!Metering-Monitoring!Steam-Condensate!WARF!RTA-KEP-02",
+		"name": "RTA-KEP-02",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1261",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1691",
+		"path": "!Metering-Monitoring!Steam-Condensate!WEI!Rm B1180",
+		"name": "Rm B1180",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1262",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1692",
+		"path": "!Metering-Monitoring!Steam-Condensate!WID!Vivarium",
+		"name": "Vivarium",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1263",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1693",
+		"path": "!Metering-Monitoring!Steam-Condensate!WID!Building",
+		"name": "Building",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1263",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1694",
+		"path": "!Metering-Monitoring!Steam-Condensate!WID!Heat Total Record",
+		"name": "Heat Total Record",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1263",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1695",
+		"path": "!Metering-Monitoring!Steam-Condensate!WIMR!CT HPS Building",
+		"name": "CT HPS Building",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1264",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1697",
+		"path": "!Metering-Monitoring!Steam-Condensate!WIMR!CT-pressure",
+		"name": "CT-pressure",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1264",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1698",
+		"path": "!Metering-Monitoring!Steam-Condensate!WIMR!RTX (radio therapy expansion) WIMR",
+		"name": "RTX (radio therapy expansion) WIMR",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1264",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1699",
+		"path": "!Metering-Monitoring!Steam-Condensate!WIMR!CT - condensate",
+		"name": "CT - condensate",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1264",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1700",
+		"path": "!Metering-Monitoring!Steam-Condensate!WIMR!Surg Path LPS WIMR WW",
+		"name": "Surg Path LPS WIMR WW",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1264",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1701",
+		"path": "!Metering-Monitoring!Steam-Condensate!WIMR!Surge Path - Condensate",
+		"name": "Surge Path - Condensate",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1264",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1702",
+		"path": "!Metering-Monitoring!Steam-Condensate!Witte Hall!Rm B10",
+		"name": "Rm B10",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1265",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1703",
+		"path": "!Metering-Monitoring!Steam-Condensate!Zoo Research!Rm 15",
+		"name": "Rm 15",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1266",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1704",
+		"path": "!Metering-Monitoring!Steam-Condensate!CSC!Misc-shared Points",
+		"name": "Misc-shared Points",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1197",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1705",
+		"path": "!Metering-Monitoring!Steam-Condensate!CSC!Rm 155",
+		"name": "Rm 155",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1197",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1706",
+		"path": "!Metering-Monitoring!Steam-Condensate!Grainger Hall!Meters!Grainger Addition Rm B1306",
+		"name": "Grainger Addition Rm B1306",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1638",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1707",
+		"path": "!Metering-Monitoring!Steam-Condensate!Grainger Hall!Meters!Grainger Existing Rm P130",
+		"name": "Grainger Existing Rm P130",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1638",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1708",
+		"path": "!Metering-Monitoring!Steam-Condensate!Mechanical Engineering!Meter Rm B1139",
+		"name": "Meter Rm B1139",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1227",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1709",
+		"path": "!Metering-Monitoring!Steam-Condensate!Microbial Sciences!Meter Rm B2305",
+		"name": "Meter Rm B2305",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1230",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1711",
+		"path": "!Metering-Monitoring!Steam-Condensate!WID!Building!LPS-KEP-03",
+		"name": "LPS-KEP-03",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1693",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1712",
+		"path": "!Metering-Monitoring!Steam-Condensate!WID!Building!HPS-KEP-04",
+		"name": "HPS-KEP-04",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1693",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1713",
+		"path": "!Metering-Monitoring!Steam-Condensate!WID!Vivarium!LPS-KEP-01",
+		"name": "LPS-KEP-01",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1692",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1714",
+		"path": "!Metering-Monitoring!Steam-Condensate!WID!Vivarium!LPS-KEP-02",
+		"name": "LPS-KEP-02",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1692",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1717",
+		"path": "!Metering-Monitoring!Steam-Condensate!MFCB!Misc-shared Points",
+		"name": "Misc-shared Points",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1232",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1718",
+		"path": "!Metering-Monitoring!Steam-Condensate!Vet Med!KEP MPS",
+		"name": "KEP MPS",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1258",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1723",
+		"path": "!Metering-Monitoring!Chilled Water!Wendt Library",
+		"name": "Wendt Library",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1724",
+		"path": "!Metering-Monitoring!Chilled Water!Wendt Library!Penthouse",
+		"name": "Penthouse",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1723",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1725",
+		"path": "!Metering-Monitoring!Steam-Condensate!Zoo Research!Rm B179",
+		"name": "Rm B179",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1266",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1729",
+		"path": "!Metering-Monitoring!Chilled Water!AG Hall",
+		"name": "AG Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1730",
+		"path": "!Metering-Monitoring!Chilled Water!CSC!Turbine Generator",
+		"name": "Turbine Generator",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1049",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1731",
+		"path": "!Metering-Monitoring!Chilled Water!Vet Med",
+		"name": "Vet Med",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1733",
+		"path": "!Metering-Monitoring!Electrical!Ogg Hall",
+		"name": "Ogg Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1734",
+		"path": "!Metering-Monitoring!Electrical!Ogg Hall!Powertrak Rm 1270",
+		"name": "Powertrak Rm 1270",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1733",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1735",
+		"path": "!Metering-Monitoring!Electrical!Charter St.",
+		"name": "Charter St.",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1736",
+		"path": "!Metering-Monitoring!Electrical!Charter St.!Rm B12B",
+		"name": "Rm B12B",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1735",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1737",
+		"path": "!Metering-Monitoring!Chilled Water!Ed Sciences",
+		"name": "Ed Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1738",
+		"path": "!Metering-Monitoring!Chilled Water!Vilas",
+		"name": "Vilas",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1739",
+		"path": "!Metering-Monitoring!Chilled Water!Social Sciences",
+		"name": "Social Sciences",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1740",
+		"path": "!Metering-Monitoring!Chilled Water!Social Sciences!BTU Rm",
+		"name": "BTU Rm",
+		"classname": "CHaD Class",
+		"classid": "14",
+		"parentid": "1739",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1742",
+		"path": "!Metering-Monitoring!Chilled Water!Lathrop Hall",
+		"name": "Lathrop Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1743",
+		"path": "!Metering-Monitoring!Chilled Water!Law",
+		"name": "Law",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1744",
+		"path": "!Metering-Monitoring!Chilled Water!Ingraham",
+		"name": "Ingraham",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1745",
+		"path": "!Metering-Monitoring!Chilled Water!Humanities",
+		"name": "Humanities",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1746",
+		"path": "!Metering-Monitoring!Chilled Water!Red Gym",
+		"name": "Red Gym",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1747",
+		"path": "!Metering-Monitoring!Chilled Water!Camp Randal",
+		"name": "Camp Randal",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1748",
+		"path": "!Metering-Monitoring!Steam-Condensate!Porter Boat",
+		"name": "Porter Boat",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1749",
+		"path": "!Metering-Monitoring!Chilled Water!Russell Lab",
+		"name": "Russell Lab",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1750",
+		"path": "!Metering-Monitoring!Steam-Condensate!WIMR!ET - condensate (1)",
+		"name": "ET - condensate (1)",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1264",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1752",
+		"path": "!Metering-Monitoring!Chilled Water!Primate Annex",
+		"name": "Primate Annex ",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1753",
+		"path": "!Metering-Monitoring!Chilled Water!Athletic operation",
+		"name": "Athletic operation ",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1754",
+		"path": "!Metering-Monitoring!Steam-Condensate!Meat &amp; Muscle!Rm B190",
+		"name": "Rm B190",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1226",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1755",
+		"path": "!Metering-Monitoring!Chilled Water!Washburn",
+		"name": "Washburn",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1757",
+		"path": "!Metering-Monitoring!Steam-Condensate!Alumni Center",
+		"name": "Alumni Center",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1758",
+		"path": "!Metering-Monitoring!Steam-Condensate!Science Hall",
+		"name": "Science Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1759",
+		"path": "!Metering-Monitoring!Steam-Condensate!Ingraham",
+		"name": "Ingraham",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1760",
+		"path": "!Metering-Monitoring!Steam-Condensate!Tripp",
+		"name": "Tripp",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1761",
+		"path": "!Metering-Monitoring!Steam-Condensate!Gilman House",
+		"name": "Gilman House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1762",
+		"path": "!Metering-Monitoring!Steam-Condensate!Jones House",
+		"name": "Jones House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1763",
+		"path": "!Metering-Monitoring!Steam-Condensate!Conover Hall",
+		"name": "Conover Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1764",
+		"path": "!Metering-Monitoring!Steam-Condensate!Showerman Hall",
+		"name": "Showerman Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1765",
+		"path": "!Metering-Monitoring!Steam-Condensate!Mack House",
+		"name": "Mack House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1766",
+		"path": "!Metering-Monitoring!Steam-Condensate!Slichter House",
+		"name": "Slichter House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1767",
+		"path": "!Metering-Monitoring!Steam-Condensate!Sullivan House",
+		"name": "Sullivan House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1768",
+		"path": "!Metering-Monitoring!Steam-Condensate!Swenson House",
+		"name": "Swenson House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1769",
+		"path": "!Metering-Monitoring!Steam-Condensate!Turner House",
+		"name": "Turner House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1770",
+		"path": "!Metering-Monitoring!Steam-Condensate!Witte Hall!Rm B37",
+		"name": "Rm B37",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1265",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1771",
+		"path": "!Metering-Monitoring!Steam-Condensate!Sellery",
+		"name": "Sellery ",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1772",
+		"path": "!Metering-Monitoring!Chilled Water!HC White",
+		"name": "HC White",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1773",
+		"path": "!Metering-Monitoring!Steam-Condensate!Merit House",
+		"name": "Merit House",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1775",
+		"path": "!Metering-Monitoring!Electrical!Dejope",
+		"name": "Dejope",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1776",
+		"path": "!Metering-Monitoring!Steam-Condensate!Phillips",
+		"name": "Phillips",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1777",
+		"path": "!Metering-Monitoring!Chilled Water!Leopold",
+		"name": "Leopold",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1953",
+		"path": "!Metering-Monitoring!Weather",
+		"name": "Weather",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1954",
+		"path": "!Metering-Monitoring!Weather!Chemistry",
+		"name": "Chemistry",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1953",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1956",
+		"path": "!Metering-Monitoring!Air Handling Units",
+		"name": "Air Handling Units",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1957",
+		"path": "!Metering-Monitoring!Air Handling Units!Bock Labs",
+		"name": "Bock Labs",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1956",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1958",
+		"path": "!Metering-Monitoring!Air Handling Units!Biotech",
+		"name": "Biotech",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1956",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1959",
+		"path": "!Metering-Monitoring!Air Handling Units!BioChem Add",
+		"name": "BioChem Add",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1956",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1962",
+		"path": "!Metering-Monitoring!Air Handling Units!Atmospheric",
+		"name": "Atmospheric",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1956",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1963",
+		"path": "!Metering-Monitoring!Air Handling Units!Atmospheric!AC-1",
+		"name": "AC-1",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1962",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1965",
+		"path": "!Metering-Monitoring!Air Handling Units!Atmospheric!F-1",
+		"name": "F-1",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1962",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1966",
+		"path": "!Metering-Monitoring!Air Handling Units!Atmospheric!F-2",
+		"name": "F-2",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1962",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1967",
+		"path": "!Metering-Monitoring!Steam-Condensate!Kronshage",
+		"name": "Kronshage",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1968",
+		"path": "!Metering-Monitoring!Steam-Condensate!Holt",
+		"name": "Holt",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1969",
+		"path": "!Metering-Monitoring!Steam-Condensate!McClain",
+		"name": "McClain",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1970",
+		"path": "!Metering-Monitoring!Chilled Water!McClain",
+		"name": "McClain",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1971",
+		"path": "!Metering-Monitoring!Steam-Condensate!MSC",
+		"name": "MSC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1972",
+		"path": "!Metering-Monitoring!Steam-Condensate!Taylor Hall",
+		"name": "Taylor Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1973",
+		"path": "!Metering-Monitoring!Cooling Towers",
+		"name": "Cooling Towers",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1974",
+		"path": "!Metering-Monitoring!Cooling Towers!Arts Loft",
+		"name": "Arts Loft",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1975",
+		"path": "!Metering-Monitoring!Cooling Towers!E. Campus Mall",
+		"name": "E. Campus Mall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1976",
+		"path": "!Metering-Monitoring!Cooling Towers!Primate Lab",
+		"name": "Primate Lab",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1977",
+		"path": "!Metering-Monitoring!Cooling Towers!Lowell Hall",
+		"name": "Lowell Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1978",
+		"path": "!Metering-Monitoring!Cooling Towers!Safety",
+		"name": "Safety",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1979",
+		"path": "!Metering-Monitoring!Cooling Towers!LaBahn Hall",
+		"name": "LaBahn Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1980",
+		"path": "!Metering-Monitoring!Cooling Towers!Nielson",
+		"name": "Nielson",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1981",
+		"path": "!Metering-Monitoring!Cooling Towers!Goodnight Hall",
+		"name": "Goodnight Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1982",
+		"path": "!Metering-Monitoring!Cooling Towers!Meat Science",
+		"name": "Meat Science",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1983",
+		"path": "!Metering-Monitoring!Cooling Towers!Enzyme",
+		"name": "Enzyme",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1984",
+		"path": "!Metering-Monitoring!Cooling Towers!Extention",
+		"name": "Extention",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1985",
+		"path": "!Metering-Monitoring!Cooling Towers!Charmany Farms",
+		"name": "Charmany Farms",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1973",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1987",
+		"path": "!Metering-Monitoring!Chilled Water!Memorial Union",
+		"name": "Memorial Union",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1988",
+		"path": "!Metering-Monitoring!Chilled Water!Memorial Union!West",
+		"name": "West",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1987",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1989",
+		"path": "!Metering-Monitoring!Chilled Water!University Club",
+		"name": "University Club",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1990",
+		"path": "!Metering-Monitoring!Chilled Water!Psychology",
+		"name": "Psychology",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1991",
+		"path": "!Metering-Monitoring!Chilled Water!AHABS",
+		"name": "AHABS",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1992",
+		"path": "!Metering-Monitoring!Electrical Substation!Campus Peak Demand Metering!Ogg Peak Demand",
+		"name": "Ogg Peak Demand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1147",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1993",
+		"path": "!Metering-Monitoring!Chilled Water!South Hall",
+		"name": "South Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1994",
+		"path": "!Metering-Monitoring!Bock Labs Misc",
+		"name": "Bock Labs Misc",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1995",
+		"path": "!Metering-Monitoring!Bock Labs Misc!Fume Hood Monitoring",
+		"name": "Fume Hood Monitoring",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1994",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1996",
+		"path": "!Metering-Monitoring!Bock Labs Misc!Occupancy Status",
+		"name": "Occupancy Status",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1994",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1997",
+		"path": "!Metering-Monitoring!Bock Labs Misc!Zone Temp.",
+		"name": "Zone Temp.",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1994",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "1999",
+		"path": "!Metering-Monitoring!Air Handling Units!Bock Labs!AHU-1",
+		"name": "AHU-1",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1957",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2000",
+		"path": "!Metering-Monitoring!Exhaust",
+		"name": "Exhaust",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2001",
+		"path": "!Metering-Monitoring!Exhaust!Bock Labs",
+		"name": "Bock Labs",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2000",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2002",
+		"path": "!Metering-Monitoring!Air Handling Units!Bock Labs!AHU-2",
+		"name": "AHU-2",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1957",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2003",
+		"path": "!Metering-Monitoring!Steam-Condensate!Liz Water",
+		"name": "Liz Water",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2004",
+		"path": "!Metering-Monitoring!Electrical!Memorial Union!PQM-E730",
+		"name": "PQM-E730",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1136",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2005",
+		"path": "!Metering-Monitoring!Weather!AOSS",
+		"name": "AOSS",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1953",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2006",
+		"path": "!Metering-Monitoring!Chilled Water!McArdle",
+		"name": "McArdle",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2007",
+		"path": "!Metering-Monitoring!Chilled Water!Middleton",
+		"name": "Middleton",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1020",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2008",
+		"path": "!Metering-Monitoring!Orival CHW Filters",
+		"name": "Orival CHW Filters",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2009",
+		"path": "!Metering-Monitoring!Electrical!Microbial Sciences!PQM-E581",
+		"name": "PQM-E581",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1137",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2010",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5330 ROTC",
+		"name": "CKT: 5330 ROTC",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2011",
+		"path": "!Metering-Monitoring!Electrical Substation!Microbial Substations!5kV!CKT: 5320 - Gilman",
+		"name": "CKT: 5320 - Gilman",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1506",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2012",
+		"path": "!Metering-Monitoring!Electrical!Bock Labs",
+		"name": "Bock Labs",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2013",
+		"path": "!Metering-Monitoring!Air Handling Units!VetMed",
+		"name": "VetMed",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1956",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2014",
+		"path": "!Metering-Monitoring!Air Handling Units!WIMR ET",
+		"name": "WIMR ET ",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1956",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2015",
+		"path": "!Metering-Monitoring!Hot Water!Vet Med",
+		"name": "Vet Med",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1025",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2016",
+		"path": "!Metering-Monitoring!Hot Water!McArdle",
+		"name": "McArdle",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1025",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2017",
+		"path": "!Metering-Monitoring!Electrical Substation!Charter Sub!Charter RTA",
+		"name": "Charter RTA",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1149",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2018",
+		"path": "!Metering-Monitoring!Electrical!WID",
+		"name": "WID",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1023",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2019",
+		"path": "!Metering-Monitoring!Electrical!WID!MIR",
+		"name": "MIR",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2020",
+		"path": "!Metering-Monitoring!Steam-Condensate!Kellner Hall",
+		"name": "Kellner Hall",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2022",
+		"path": "!Metering-Monitoring!VedMed Misc",
+		"name": "VedMed Misc",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2023",
+		"path": "!Metering-Monitoring!VedMed Misc!Fume Hood Status",
+		"name": "Fume Hood Status",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2022",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2024",
+		"path": "!Metering-Monitoring!VedMed Misc!Room Temp.",
+		"name": "Room Temp.",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2022",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2025",
+		"path": "!Metering-Monitoring!VedMed Misc!Occupancy",
+		"name": "Occupancy ",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2022",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2026",
+		"path": "!Metering-Monitoring!WIMR Misc",
+		"name": "WIMR Misc",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2027",
+		"path": "!Metering-Monitoring!WIMR Misc!Occupancy Status",
+		"name": "Occupancy Status",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2028",
+		"path": "!Metering-Monitoring!WIMR Misc!Zone Temp.",
+		"name": "Zone Temp.",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2029",
+		"path": "!Metering-Monitoring!WIMR Misc!Fume Hood Comand",
+		"name": "Fume Hood Comand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2030",
+		"path": "!Metering-Monitoring!WIMR Misc!Zone Presence Sensor",
+		"name": "Zone Presence Sensor",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2026",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2031",
+		"path": "!Metering-Monitoring!McArdle Misc",
+		"name": "McArdle Misc",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1018",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2032",
+		"path": "!Metering-Monitoring!McArdle Misc!Fume Hood Comand",
+		"name": "Fume Hood Comand",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2031",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2033",
+		"path": "!Metering-Monitoring!McArdle Misc!Zone Temp.",
+		"name": "Zone Temp.",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2031",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2034",
+		"path": "!Metering-Monitoring!McArdle Misc!Occupancy Status",
+		"name": "Occupancy Status",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "2031",
+		"readsheet": "0"
+	},
+	{
+		"instanceid": "2035",
+		"path": "!Metering-Monitoring!Air Handling Units!McArdle",
+		"name": "McArdle",
+		"classname": "CHaD Class",
+		"classid": "13",
+		"parentid": "1956",
+		"readsheet": "0"
+	}
+]
