@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-/*
-Supply temperature
-differential pressure
-Steam pressure
-Compressed air pressure
-Chilled water flow
-*/
+
 class Toolbar extends Component {
 	constructor(props) {
 		super(props);
@@ -18,7 +12,7 @@ class Toolbar extends Component {
 	}
 
 	checked(event) {
-		this.props.toggleLayer(event.target.id, event.target.parentElement.parentElement.id, event.target.checked);
+		this.props.updateLayers(event.target.parentElement.parentElement.id, event.target.id, event.target.checked);
 	}
 
 	render() {
@@ -29,12 +23,16 @@ class Toolbar extends Component {
 						Chillers
 						<ul className="dropdown-items" id="chillers">
 							<li>
-								<input type="checkbox" id="supply-temperature" onChange={this.checked} />
-								<label htmlFor="chillers-supply-temperature" className="toolbar-label">Supply temperature</label>
+								<input type="checkbox" id="supply-temp" onChange={this.checked} />
+								<label htmlFor="chillers-supply-temp" className="toolbar-label">Supply temperature</label>
 							</li>
 							<li>
 								<input type="checkbox" id="water-flow" onChange={this.checked} />
 								<label htmlFor="chillers-water-flow" className="toolbar-label">Water flow</label>
+							</li>
+							<li>
+								<input type="checkbox" id="return-temp" onChange={this.checked} />
+								<label htmlFor="chillers-return-temp" className="toolbar-label">Return Temp</label>
 							</li>
 						</ul>
 					</li>
@@ -42,8 +40,17 @@ class Toolbar extends Component {
 						Compressed Air
 						<ul className="dropdown-items" id="compressors">
 							<li>
-								<input type="checkbox" id="air-pressure" onChange={this.checked} />
-								<label htmlFor="compressed-air-pressure" className="toolbar-label">Compressed air pressure</label>
+								<input type="checkbox" id="pressure" onChange={this.checked} />
+								<label htmlFor="pressure" className="toolbar-label">Compressed air pressure</label>
+							</li>
+						</ul>
+					</li>
+					<li id="city-water" className="dropdown" onClick={this.toggleDropdown}>
+						Hot Water
+						<ul className="dropdown-items" id="hotwater">
+							<li>
+								<input type="checkbox" id="return-temp" onChange={this.checked} />
+								<label htmlFor="city-water-return-temp" className="toolbar-label">Return Temp</label>
 							</li>
 						</ul>
 					</li>

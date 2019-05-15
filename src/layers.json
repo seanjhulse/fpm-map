@@ -1,0 +1,89 @@
+{
+	"circles": {
+		"type": "circle",
+		"paint": {
+			"circle-color": "#ff1d1d",
+			"circle-radius": [
+				"/",
+				["get", "Value"],
+				5
+			],
+			"circle-opacity": 0.25
+		}
+	},
+	"dots": {
+		"type": "circle",
+		"paint": {
+			"circle-color": "#ff1d1d"
+		}
+	},
+	"labels": {
+		"type": "symbol",
+		"cluster": false,
+		"layout": {
+			"text-field": ["format",
+				["get", "Description"],
+				{
+					"font-scale": 1.25,
+					"text-color": "rgba(255,255,255,1)",
+					"text-font": ["literal",
+						["DIN Offc Pro Italic", "Arial Unicode MS Regular"]
+					]
+				}
+			]
+		}
+	},
+	"heatmap": {
+		"type": "heatmap",
+		"paint": {
+				"heatmap-weight": {
+					"property": "Value",
+					"type": "exponential",
+					"stops": [
+					[38,0],
+					[55,1]
+				]
+			},
+			"heatmap-intensity": {
+				"stops": [
+					[12,1],
+					[17,2],
+					[22,3]
+				]
+			},
+			"heatmap-color": [
+				"interpolate",
+				["linear"],
+				["heatmap-density"],
+				0,"rgba(33,102,172,0)",
+				0.2,"rgb(103,169,207)",
+				0.4,"rgb(209,229,240)",
+				0.6,"rgb(253,219,199)",
+				0.8,"rgb(239,138,98)",
+				1,"rgb(178,24,43)"
+			],
+			"heatmap-radius": {
+				"stops": [
+				[10,100],
+				[22,150]
+			]},
+			"heatmap-opacity": {
+				"default": 1,
+				"stops": [
+					[8,1],
+					[22,0.5]
+				]
+			}
+		}
+	},
+	"extrusion": {
+		"type": "fill-extrusion",
+			"paint": {
+				"fill-extrusion-color": "#ff1d1d",
+				"fill-extrusion-height": ["get", "Value"],
+				"fill-extrusion-base": 0,
+				"fill-extrusion-opacity": 0.5
+			}
+	}
+
+}

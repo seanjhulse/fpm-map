@@ -35,6 +35,17 @@ ul {
   border: 2px solid #969696;
 	box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.14);
 	padding: 25px;
+	overflow-y: scroll;
+}
+.building-name {
+	font-size: 16px;
+}
+.button {
+	border-radius: 5px;
+	background: #c5050c;
+	color: white;
+	font-size: 16px;
+	padding: 3px 5px;
 }
 .dropdown {
 	margin-bottom: 10px;

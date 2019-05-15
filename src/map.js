@@ -1,12 +1,17 @@
 import React from 'react';
+
+// import context
 import { MapContext } from './map_context';
-import API from './api';
+
+// import classes
+import Building from './building';
+import Services from './services';
 import Toolbar from './toolbar';
-import Layers from './layers/layers';
-import buildings from './data/buildings.json';
-import chad_points from './data/chad_points.json';
-import chads from './data/chads.json';
-import geojson from './data/geojson.json';
+
+// import data
+import buildings from './data/real/buildings.json';
+import geojson from './data/real/geojson.json';
+import layers from './layers.json';
 
 class Map extends React.Component {
 	constructor(props) {
@@ -14,16 +19,34 @@ class Map extends React.Component {
 
 		this.state = {
 			loading: true,
-			layer: undefined,
-			layer_type: undefined,
 			buildings: buildings,
-			popup: undefined
+			services: {},
+			building_id: undefined
 		}
 
-		this.toggleLayer = this.toggleLayer.bind(this);
 		this.initMapFeatures = this.initMapFeatures.bind(this);
+		this.toggleLayer = this.toggleLayer.bind(this);
+		this.updateLayers = this.updateLayers.bind(this);
 		this.clickHandler = this.clickHandler.bind(this);
-		this.createPopup = this.createPopup.bind(this);
+		this.hoverHandler = this.hoverHandler.bind(this);
+	}
+
+	componentDidMount() {
+		mapboxgl.accessToken = 'pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA';
+
+		this.map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/light-v9',
+			center: [-89.396127, 43.071299],
+			zoom: 12,
+			hash: true
+		});
+
+		this.map.on('load', this.initMapFeatures);
+	}
+
+	componentWillUnmount() {
+		this.map.remove();
 	}
 
 	initMapFeatures() {
@@ -44,96 +67,197 @@ class Map extends React.Component {
 				"fill-opacity": 0.15
 			}
 		});
-		this.map.on('mousemove', this.clickHandler);
+		this.map.addSource("dane-country-regional-airport", {
+			"type": "image",
+			"url": "ParkingMap.png",
+			"coordinates": [
+				[-89.350331325, 43.139526080],
+				[-89.34316356461, 43.13931344052],
+				[-89.3435008941, 43.1280687150],
+				[-89.3506683081, 43.1280797150],
+			]
+		})
+
+		this.map.addLayer({
+			"id": "overlay",
+			"source": "dane-country-regional-airport",
+			"type": "raster",
+			"paint": {
+				"raster-opacity": 0.75
+			}
+		});
+
+
+		this.map.on('mousemove', this.hoverHandler);
+		this.map.on('click', this.clickHandler);
+		this.map.addHeatMap = this.addHeatMap.bind(this);
+		this.map.addCircles = this.addCircles.bind(this);
+		this.map.addDots = this.addDots.bind(this);
+		this.map.addExtrudedDots = this.addExtrudedDots.bind(this);
+	}
+
+	addCircles(features, layer) {
+		this.map.addSource(`${layer}`, {
+			'type': 'geojson',
+			'data': {
+				"type": "FeatureCollection",
+				"features": features
+			}
+		});
+
+		this.map.addLayer({
+			"id": `${layer}-layer-0`,
+			"source": `${layer}`,
+			...layers.circles
+		});
+
+		this.map.addLayer({
+			"id": `${layer}-layer-1`,
+			"source": `${layer}`,
+			...layers.labels
+		});
+	}
+
+	addDots(features, layer) {
+		this.map.addSource(`${layer}`, {
+			'type': 'geojson',
+			'data': {
+				"type": "FeatureCollection",
+				"features": features
+			}
+		});
+
+		this.map.addLayer({
+			"id": `${layer}-layer-0`,
+			"source": `${layer}`,
+			...layers.dots
+		});
+
+		this.map.addLayer({
+			"id": `${layer}-layer-1`,
+			"source": `${layer}`,
+			...layers.labels
+		});
+	}
+
+	addExtrudedDots(features, layer) {
+		// generate polygons around point
+		let polygons = features.map(tempFeature => {
+			let feature = {
+				type: "Feature",
+				properties: tempFeature.properties
+			};
+
+			let coordinates = tempFeature.geometry.coordinates;
+			let offset = 0.0001;
+			let n = offset * Math.sqrt(2) / 2;
+			let topLeft = [coordinates[0] + n, coordinates[1] + n];
+			let topRight = [coordinates[0] + n, coordinates[1] - n];
+			let botLeft = [coordinates[0] - n, coordinates[1] + n];
+			let botRight = [coordinates[0] - n, coordinates[1] - n];
+			
+			feature = {
+				...feature,
+				geometry: {
+					type: "Polygon",
+					coordinates: [
+						[
+							topLeft,
+							topRight,
+							botRight,
+							botLeft,
+							topLeft
+						]
+					]
+				}
+			};
+
+			return feature;
+		})
+
+		this.map.addSource(`${layer}`, {
+			type: 'geojson',
+			data: {
+				type: 'FeatureCollection',
+				features: polygons,
+			}
+		});
+
+		this.map.addLayer({
+			id: `${layer}-layer-0`,
+			source: `${layer}`,
+			...layers.extrusion
+		});
+	}
+
+	addHeatMap(features, layer) {
+		this.map.addSource(`${layer}`, {
+			'type': 'geojson',
+			'data': {
+				"type": "FeatureCollection",
+				"features": features
+			}
+		});
+
+		this.map.addLayer({
+			"id": `${layer}-layer-0`,
+			"source": `${layer}`,
+			...layers.heatmap
+		});
+
+		this.map.addLayer({
+			"id": `${layer}-layer-1`,
+			"source": `${layer}`,
+			...layers.labels,
+		});
 	}
 
 	clickHandler(e) {
 		var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
 		var features = this.map.queryRenderedFeatures(bbox);
-		var nearestFeature = features[0];
-		if (nearestFeature.properties.key) {
-			if (this.state.popup) this.state.popup.remove();
-			this.createPopup(e.lngLat, nearestFeature.properties.key);
+		var nearestFeature = features.filter(feature => feature.layer.source === 'fpm-buildings')[0];
+		if (nearestFeature && nearestFeature.properties.id) {
+			this.setState({ building_id: nearestFeature.properties.id, coordinates: e.lngLat });
+		} else {
+			this.setState({ building: undefined, coordinates: undefined });
 		}
 	}
 
-	createPopup(coordinates, key) {
-		let map = this.map;
-		let that = this;
-		this.findCHaDPoints(key.split("/")[0])
-			.then(chads => chads.filter(chad => chad)) // remove undefined
-			.then(chads => this.findChads(chads)) // grabs chads based on id
-			.then(chads => {
-				let html = chads.map(chad => {
-					let path = chad.path;
-					path = path.split("!").slice(2)
-					return `<div class="fpm-popup">
-							<h1><span class="popup-title">${path[0]}</span></h1>
-							<p>
-								${path[1]} - ${path[2]}
-								<br/>
-								${chad.name}
-							</p>
-						</div>`;
-				})
-				if (html.length <= 0) {
-					html = ["We couldn't find any information about this point"]
-				}
-				let popup = new mapboxgl.Popup()
-					.setLngLat(coordinates)
-					.setHTML(`<div class="fpm-popup-container">${html.join("")}</div>`)
-					.addTo(map);
-				that.setState({ popup: popup });
-			})
-			.catch(error => console.error(error));
+	hoverHandler(e) {
+		var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
+		var features = this.map.queryRenderedFeatures(bbox);
+		var nearestFeature = features.filter(feature => feature.properties && feature.properties.key)[0];
+		if (nearestFeature && nearestFeature.properties.key) {
+			if (this.state.hoverPopup) this.state.hoverPopup.remove();
+			// this.createHoverPopup(e.lngLat, features);
+		}
 	}
 
-	findChads(chadInstances) {
-		return new Promise(function (resolve, reject) {
-			resolve(chads.filter(chad => chadInstances.includes(chad.instanceid)))
-		})
+	updateLayers(type, subtype, active) {
+		const services = {
+			...this.state.services,
+			[type + subtype]: {
+				type: type, subtype: subtype
+			}
+		};
+		this.setState({ services: services });
+		this.toggleLayer(type + subtype, active);
 	}
 
-	findCHaDPoints(pointname) {
-		console.log("searching for", pointname);
-		return new Promise(function (resolve, reject) {
-			let keys = Object.keys(chad_points).map(chadInstanceId => {
-				let chad = chad_points[chadInstanceId];
-				if (chad && chad[0] && chad[0].ptcode.indexOf(pointname) !== -1) {
-					return chadInstanceId;
-				}
-			})
-			resolve(keys);
-		});
-	}
+	toggleLayer(layer, active) {
+		let layerCount = 0;
+		let currentLayer = `${layer}-layer-${layerCount}`;
+		let layerExists = this.map.getLayer(currentLayer);
 
-	componentDidMount() {
-		mapboxgl.accessToken = 'pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA';
-
-		this.map = new mapboxgl.Map({
-			container: 'map',
-			style: 'mapbox://styles/mapbox/light-v9',
-			center: [-89.396127, 43.071299],
-			zoom: 12,
-			hash: true
-		});
-		this.map.on('load', this.initMapFeatures);
-	}
-
-	componentWillUnmount() {
-		this.map.remove();
-	}
-
-	toggleLayer(layer, layer_type, active) {
-		if (!active) {
-			console.log("Removing", layer);
-			this.map.removeLayer(layer + '-layer');
-			this.map.removeLayer(layer + '-points');
-			this.map.removeLayer(layer + '-labels');
-			this.map.removeSource(layer);
-			this.setState({ layer: undefined, layer_type: undefined });
-		} else {
-			this.setState({ layer: layer, layer_type: layer_type });
+		while (layerExists) {
+			if (active) {
+				this.map.setLayoutProperty(currentLayer, 'visibility', 'visible');
+			} else {
+				this.map.setLayoutProperty(currentLayer, 'visibility', 'none');
+			}
+			layerCount = layerCount + 1;
+			currentLayer = `${layer}-layer-${layerCount}`;
+			layerExists = this.map.getLayer(currentLayer);
 		}
 	}
 
@@ -142,10 +266,15 @@ class Map extends React.Component {
 			return (
 				<div>
 					<div id="map"></div>
-					<Toolbar toggleLayer={this.toggleLayer} />
+					<Toolbar updateLayers={this.updateLayers} />
+
 					<MapContext.Provider value={this.map}>
-						<Layers layer_type={this.state.layer_type} layer={this.state.layer} buildings={this.state.buildings} />
+						<Building building_id={this.state.building_id} buildings={this.state.buildings} />
+						{Object.values(this.state.services).map(service => {
+							return <Services type={service.type} subtype={service.subtype} key={service.type + service.subtype} />
+						})}
 					</MapContext.Provider>
+
 				</div>
 			);
 		} else {
