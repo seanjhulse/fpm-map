@@ -5,11 +5,6 @@ body {
 input[type=checkbox]:hover {
 	cursor: pointer;
 }
-ul {
-	margin-left: 0;
-	padding-left: 0;
-	list-style: none;
-}
 #map { 
 	position:absolute; 
 	top:0; 
@@ -25,7 +20,7 @@ ul {
 	background: transparent;
 	transform: translate(-50%, -50%);
 }
-#toolbar {
+.toolbar {
   position: fixed;
   background: white;
   height: 400px;
@@ -77,4 +72,70 @@ ul {
 }
 .popup-title {
 	font-size: 16px;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	width: 400px;
+	height: 100%;
+	background: white;
+	z-index: 2;
+	border-left: 1px solid black;
+	transition: 0.25s right cubic-bezier(0.77, 0, 0.175, 1);
+	box-shadow: -3px 0px 3px 0px #cacaca;
+}
+[data-state-open="true"] {
+	right: 0;
+}
+[data-state-open="false"] {
+	right: -400px;
+}
+.sidebar-header {
+	position: relative;
+	min-height: 250px;
+}
+.sidebar-header-image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+.sidebar-header-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(0,0,0,0.33);
+	top: 0;
+	left: 0;
+}
+.sidebar-header-text {
+	color: white;
+	position: absolute;
+	width: 95%;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	transform: translate(-50%, -50%);
+}
+.sidebar-tab {
+	position: absolute;
+	bottom: 1rem;
+	left: -30px;
+	height: 50px;
+	width: 30px;
+	background: white;
+	border-radius: 7px;
+	border: 1px solid black;
+	z-index: 1;
+	cursor: pointer;
+	border-right: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	box-shadow: -6px 0px 6px 0px #cacaca;
+}
+.services {
+	padding: 1rem;
 }

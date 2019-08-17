@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import ServicesAPI from '../api/services';
+import { connect } from 'react-redux';
 
 class Layer extends Component {
 	constructor(props) {
 		super(props);
 
-		let map = this.props.context;
+		let { map } = this.props;
 		this.state = {
-			layers: {
+			mapFunctions: {
 				"addCircles": map.addCircles,
 				"addDots": map.addDots,
 				"addExtrudedDots": map.addExtrudedDots,
@@ -19,16 +19,16 @@ class Layer extends Component {
 	}
 
 	componentDidMount() {
-		ServicesAPI.get(this.props.serviceType, this.props.subType.split("-").join(" ").replace(/\b\w/g, l => l.toUpperCase()))
-			.then(features => this.addLayer(features))
+		console.log(this);
 	}
 
 	addLayer(features) {
-		const layerName = this.props.type + this.props.subType;
-		const layerFunc = this.state.layers[this.props.layerType];
+		const layerName = this.props.type + this.props.subtype;
+		const mapFunction = this.state.mapFunctions[this.props.layertype];
 
-		if (!layerFunc) console.error("Function DNE. Please check layer file, maps.js, and layers.json to ensure the function exists.");
-		layerFunc(features, layerName);
+		if (!mapFunction) console.error("Function does not exist. Please check layer file, maps.js, and layers.json to ensure the function exists.");
+		console.log(layerName);
+		mapFunction(features, layerName);
 	}
 
 	render() {
@@ -36,4 +36,10 @@ class Layer extends Component {
 	}
 }
 
-export default Layer;
+const mapStateToProps = state => {
+	return {
+		map: state.map
+	}
+};
+
+export default connect(mapStateToProps)(Layer);

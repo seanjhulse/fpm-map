@@ -1,4 +1,4 @@
-import buildings from '../data/real/buildings.json';
+import buildings from '../../data/real/buildings.json';
 
 /**
  * Generically takes an array of XML nodes and creates a JSON array of it

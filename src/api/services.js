@@ -1,26 +1,127 @@
-import service_points from '../data/ideal/services_points.json';
-import pts from '../data/ideal/points.json';
-import Helpers from './helpers';
+import helpers from '../api/helpers';
+import config from './config.json';
+const parser = new DOMParser();
 
-const get = function (type=undefined, subtype=undefined) {
-	if (!type) {
-		console.error("Type must be specified");
-		return;
-	}
-	if (!subtype) return service_points[type];
+/**
+ * Gets the sub services for a service (Chilled Water has sub services of flow, supply temp, etc)
+ * @param {String} service
+ * @param {Function} callback
+ */
+const get_all_attributes = function (service, callback) {
+  let url = "/webservice/CHaD.asmx";
+  let headers = new Headers({
+    'SOAPAction': 'http://instepsoftware.com/webservices/GetCHaDClassAttributesByName',
+    ...config.headers
+  });
+  let body =
+    `<?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <GetCHaDClassAttributesByName xmlns="http://instepsoftware.com/webservices">
+            <ClassName>${service}</ClassName>
+          </GetCHaDClassAttributesByName>
+        </soap:Body>
+      </soap:Envelope>`;
+  fetch(url, {
+    headers: headers,
+    method: 'POST',
+    credentials: 'include',
+    body: body
+  })
+    .then(response => response.text())
+    .then(str => parser.parseFromString(str, 'text/xml'))
+    .then(xml => xml.querySelectorAll('CHaDAttribute'))
+    .then(xml => helpers.convertToJSON(xml))
+    .then(json => callback(json))
+    .catch(error => {
+      console.error(error);
+      callback(undefined);
+    });
+};
 
-	let results = [];
-	service_points[type].map(point => {
-		if (point.ExtendedDescription.indexOf(subtype) !== -1) {
-			results.push(pts[point.ExtendedID]);
-		}
-	});
+/**
+ * Gets the sub services for each service (Chilled Water has sub services of flow, supply temp, etc)
+ * @param {Object} service
+ * @param {Function} callback
+ */
+const get_service_by_building = function (service, callback) {
+  let url = "/webservice/CHaD.asmx";
+  let headers = new Headers({
+    'SOAPAction': 'http://instepsoftware.com/webservices/GetCHaDAttributeValueDataSet',
+    ...config.headers
+  });
+  let body =
+    `<?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <GetCHaDAttributeValueDataSet xmlns="http://instepsoftware.com/webservices">
+            <InstanceSearch>${service.path}*</InstanceSearch>
+            <ClassName>${service.name}</ClassName>
+            <AttributeName>*</AttributeName>
+            <FullValue>true</FullValue>
+          </GetCHaDAttributeValueDataSet>
+        </soap:Body>
+      </soap:Envelope>`;
+  fetch(url, {
+    headers: headers,
+    method: 'POST',
+    credentials: 'include',
+    body: body
+  })
+    .then(response => response.text())
+    .then(str => parser.parseFromString(str, 'text/xml'))
+    .then(xml => xml.querySelectorAll('CHaDInstanceAttributeValue'))
+    .then(xml => helpers.convertToJSON(xml))
+    .then(json => callback(json))
+    .catch(error => {
+      console.error(error);
+      callback(undefined);
+    });
+};
 
-	return new Promise(function (resolve, reject) {
-		resolve(Helpers.geocode(results))
-	})
-}
+/**
+ * Gets all instances of services flow, supply temp, etc
+ * @param {String} service_name
+ * @param {Function} callback
+ */
+const get_all_services = function (service_name, callback) {
+  let url = "/webservice/CHaD.asmx";
+  let headers = new Headers({
+    'SOAPAction': 'http://instepsoftware.com/webservices/GetCHaDAttributeValueDataSet',
+    ...config.headers
+  });
+  let body =
+    `<?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <GetCHaDAttributeValueDataSet xmlns="http://instepsoftware.com/webservices">
+            <InstanceSearch>!Campus Distribution!*</InstanceSearch>
+            <ClassName>*</ClassName>
+            <AttributeName>${service_name}</AttributeName>
+            <FullValue>true</FullValue>
+          </GetCHaDAttributeValueDataSet>
+        </soap:Body>
+      </soap:Envelope>`;
+  fetch(url, {
+    headers: headers,
+    method: 'POST',
+    credentials: 'include',
+    body: body
+  })
+    .then(response => response.text())
+    .then(str => parser.parseFromString(str, 'text/xml'))
+    .then(xml => xml.querySelectorAll('CHaDInstanceAttributeValue'))
+    .then(xml => helpers.convertToJSON(xml))
+    .then(json => callback(json))
+    .catch(error => {
+      console.error(error);
+      callback(undefined);
+    });
+};
+
 
 export default {
-	get
+  get_service_by_building,
+  get_all_services,
+  get_all_attributes,
 }

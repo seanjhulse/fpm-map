@@ -1,16 +1,20 @@
 import React from 'react';
 
-// import context
-import { MapContext } from './map_context';
-
 // import classes
-import Building from './building';
-import Services from './services';
-import Toolbar from './toolbar';
+import Building from './components/building';
+import Toolbar from './components/toolbar';
+import Subservices from './components/subservice';
+
+// import redux
+import { connect } from 'react-redux'
+import { loadMap, updateBuilding, updateBuildingId, updateCoordinates } from './store/actions';
+
+// import api
+import UserAPI from './api/user';
 
 // import data
-import buildings from './data/real/buildings.json';
-import geojson from './data/real/geojson.json';
+import buildings from '../data/real/buildings.json';
+import geojson from '../data/real/geojson.json';
 import layers from './layers.json';
 
 class Map extends React.Component {
@@ -20,8 +24,6 @@ class Map extends React.Component {
 		this.state = {
 			loading: true,
 			buildings: buildings,
-			services: {},
-			building_id: undefined
 		}
 
 		this.initMapFeatures = this.initMapFeatures.bind(this);
@@ -31,18 +33,35 @@ class Map extends React.Component {
 		this.hoverHandler = this.hoverHandler.bind(this);
 	}
 
+	/**
+	 * Initialize the app with a map instance
+	 */
 	componentDidMount() {
+		// login
+		UserAPI.login();
+
 		mapboxgl.accessToken = 'pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA';
 
-		this.map = new mapboxgl.Map({
+		const map = new mapboxgl.Map({
 			container: 'map',
 			style: 'mapbox://styles/mapbox/light-v9',
 			center: [-89.396127, 43.071299],
 			zoom: 12,
 			hash: true
 		});
+		this.props.loadMap(map);
 
-		this.map.on('load', this.initMapFeatures);
+		// add map functions
+		map.on('mousemove', this.hoverHandler);
+		map.on('click', this.clickHandler);
+		map.addHeatMap = this.addHeatMap.bind(this);
+		map.addCircles = this.addCircles.bind(this);
+		map.addDots = this.addDots.bind(this);
+		map.addExtrudedDots = this.addExtrudedDots.bind(this);
+		map.addPopup = this.addPopup.bind(this);
+
+		// load other features once map has loaded
+		map.on('load', this.initMapFeatures);
 	}
 
 	componentWillUnmount() {
@@ -50,15 +69,13 @@ class Map extends React.Component {
 	}
 
 	initMapFeatures() {
-		this.setState({ loading: false });
-
 		// add the building to the actual map
-		this.map.addSource("fpm-buildings", {
+		this.props.map.addSource("fpm-buildings", {
 			"type": "geojson",
 			"data": geojson,
 			"tolerance": 2
 		});
-		this.map.addLayer({
+		this.props.map.addLayer({
 			"id": "fpm-buildings-layer",
 			"type": "fill",
 			"source": "fpm-buildings",
@@ -67,7 +84,7 @@ class Map extends React.Component {
 				"fill-opacity": 0.15
 			}
 		});
-		this.map.addSource("dane-country-regional-airport", {
+		this.props.map.addSource("dane-country-regional-airport", {
 			"type": "image",
 			"url": "ParkingMap.png",
 			"coordinates": [
@@ -76,9 +93,8 @@ class Map extends React.Component {
 				[-89.3435008941, 43.1280687150],
 				[-89.3506683081, 43.1280797150],
 			]
-		})
-
-		this.map.addLayer({
+		});
+		this.props.map.addLayer({
 			"id": "overlay",
 			"source": "dane-country-regional-airport",
 			"type": "raster",
@@ -86,18 +102,11 @@ class Map extends React.Component {
 				"raster-opacity": 0.75
 			}
 		});
-
-
-		this.map.on('mousemove', this.hoverHandler);
-		this.map.on('click', this.clickHandler);
-		this.map.addHeatMap = this.addHeatMap.bind(this);
-		this.map.addCircles = this.addCircles.bind(this);
-		this.map.addDots = this.addDots.bind(this);
-		this.map.addExtrudedDots = this.addExtrudedDots.bind(this);
+		this.setState({ loading: false });
 	}
 
 	addCircles(features, layer) {
-		this.map.addSource(`${layer}`, {
+		this.props.map.addSource(`${layer}`, {
 			'type': 'geojson',
 			'data': {
 				"type": "FeatureCollection",
@@ -105,13 +114,13 @@ class Map extends React.Component {
 			}
 		});
 
-		this.map.addLayer({
+		this.props.map.addLayer({
 			"id": `${layer}-layer-0`,
 			"source": `${layer}`,
 			...layers.circles
 		});
 
-		this.map.addLayer({
+		this.props.map.addLayer({
 			"id": `${layer}-layer-1`,
 			"source": `${layer}`,
 			...layers.labels
@@ -119,7 +128,7 @@ class Map extends React.Component {
 	}
 
 	addDots(features, layer) {
-		this.map.addSource(`${layer}`, {
+		this.props.map.addSource(`${layer}`, {
 			'type': 'geojson',
 			'data': {
 				"type": "FeatureCollection",
@@ -127,13 +136,13 @@ class Map extends React.Component {
 			}
 		});
 
-		this.map.addLayer({
+		this.props.map.addLayer({
 			"id": `${layer}-layer-0`,
 			"source": `${layer}`,
 			...layers.dots
 		});
 
-		this.map.addLayer({
+		this.props.map.addLayer({
 			"id": `${layer}-layer-1`,
 			"source": `${layer}`,
 			...layers.labels
@@ -175,7 +184,7 @@ class Map extends React.Component {
 			return feature;
 		})
 
-		this.map.addSource(`${layer}`, {
+		this.props.map.addSource(`${layer}`, {
 			type: 'geojson',
 			data: {
 				type: 'FeatureCollection',
@@ -183,7 +192,7 @@ class Map extends React.Component {
 			}
 		});
 
-		this.map.addLayer({
+		this.props.map.addLayer({
 			id: `${layer}-layer-0`,
 			source: `${layer}`,
 			...layers.extrusion
@@ -191,7 +200,7 @@ class Map extends React.Component {
 	}
 
 	addHeatMap(features, layer) {
-		this.map.addSource(`${layer}`, {
+		this.props.map.addSource(`${layer}`, {
 			'type': 'geojson',
 			'data': {
 				"type": "FeatureCollection",
@@ -199,33 +208,44 @@ class Map extends React.Component {
 			}
 		});
 
-		this.map.addLayer({
+		this.props.map.addLayer({
 			"id": `${layer}-layer-0`,
 			"source": `${layer}`,
 			...layers.heatmap
 		});
 
-		this.map.addLayer({
+		this.props.map.addLayer({
 			"id": `${layer}-layer-1`,
 			"source": `${layer}`,
 			...layers.labels,
 		});
 	}
 
+	addPopup(coordinates, html) {
+		new mapboxgl.Popup()
+			.setLngLat(coordinates)
+			.setHTML(
+				`<div>
+					${html}
+				</div>`
+			)
+			.addTo(this.props.map);
+	}
+
 	clickHandler(e) {
 		var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
-		var features = this.map.queryRenderedFeatures(bbox);
+		var features = this.props.map.queryRenderedFeatures(bbox);
 		var nearestFeature = features.filter(feature => feature.layer.source === 'fpm-buildings')[0];
 		if (nearestFeature && nearestFeature.properties.id) {
-			this.setState({ building_id: nearestFeature.properties.id, coordinates: e.lngLat });
-		} else {
-			this.setState({ building: undefined, coordinates: undefined });
+			this.props.updateBuilding(this.state.buildings[nearestFeature.properties.id]);
+			this.props.updateBuildingId(nearestFeature.properties.id);
+			this.props.updateCoordinates(e.lngLat);
 		}
 	}
 
 	hoverHandler(e) {
 		var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
-		var features = this.map.queryRenderedFeatures(bbox);
+		var features = this.props.map.queryRenderedFeatures(bbox);
 		var nearestFeature = features.filter(feature => feature.properties && feature.properties.key)[0];
 		if (nearestFeature && nearestFeature.properties.key) {
 			if (this.state.hoverPopup) this.state.hoverPopup.remove();
@@ -247,17 +267,17 @@ class Map extends React.Component {
 	toggleLayer(layer, active) {
 		let layerCount = 0;
 		let currentLayer = `${layer}-layer-${layerCount}`;
-		let layerExists = this.map.getLayer(currentLayer);
+		let layerExists = this.props.map.getLayer(currentLayer);
 
 		while (layerExists) {
 			if (active) {
-				this.map.setLayoutProperty(currentLayer, 'visibility', 'visible');
+				this.props.map.setLayoutProperty(currentLayer, 'visibility', 'visible');
 			} else {
-				this.map.setLayoutProperty(currentLayer, 'visibility', 'none');
+				this.props.map.setLayoutProperty(currentLayer, 'visibility', 'none');
 			}
 			layerCount = layerCount + 1;
 			currentLayer = `${layer}-layer-${layerCount}`;
-			layerExists = this.map.getLayer(currentLayer);
+			layerExists = this.props.map.getLayer(currentLayer);
 		}
 	}
 
@@ -266,15 +286,10 @@ class Map extends React.Component {
 			return (
 				<div>
 					<div id="map"></div>
-					<Toolbar updateLayers={this.updateLayers} />
-
-					<MapContext.Provider value={this.map}>
-						<Building building_id={this.state.building_id} buildings={this.state.buildings} />
-						{Object.values(this.state.services).map(service => {
-							return <Services type={service.type} subtype={service.subtype} key={service.type + service.subtype} />
-						})}
-					</MapContext.Provider>
-
+					{/* <Toolbar updateLayers={this.updateLayers} /> */}
+					<Building />
+					<Subservices />
+					<Toolbar />
 				</div>
 			);
 		} else {
@@ -288,5 +303,21 @@ class Map extends React.Component {
 	}
 };
 
+const mapDispatchToProps = dispatch => {
+	return {
+		loadMap: map => dispatch(loadMap(map)),
+		updateBuilding: building => dispatch(updateBuilding(building)),
+		updateBuildingId: building_id => dispatch(updateBuildingId(building_id)),
+		updateCoordinates: coordinates => dispatch(updateCoordinates(coordinates))
+	}
+}
 
-export default Map;
+const mapStateToProps = state => {
+	return {
+		map: state.map,
+		services: state.services,
+		building_id: state.building_id,
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Map);

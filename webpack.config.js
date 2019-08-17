@@ -18,6 +18,15 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: './public'
+        contentBase: './public',
+        proxy: {
+            '/webservice/**': {
+                target: 'http://ednaweb.fpm.wisc.edu/',
+                secure: false
+            }
+        }
+    },
+    node: {
+        fs: "empty"
     }
 };
