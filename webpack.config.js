@@ -21,8 +21,9 @@ module.exports = {
         contentBase: './public',
         proxy: {
             '/webservice/**': {
-                target: 'http://ednaweb.fpm.wisc.edu/',
-                secure: false
+                target: 'https://staging.www.wisc.edu/',
+                secure: false,
+                changeOrigin: true
             }
         }
     },

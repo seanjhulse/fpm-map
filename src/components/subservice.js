@@ -14,16 +14,7 @@ class Subservices extends Component {
     const { map } = this.props;
     let features = [];
     Object.values(this.props.subservices).map(subservice => {
-      features.push({
-        'type': 'Feature',
-        'geometry': {
-          'type': 'Point',
-          'coordinates': this.props.building.latlng
-        },
-        'properties': {
-          'value': `${subservice.curval} ${subservice.units}`
-        }
-      })
+      
     })
 
     map.addCircles(features, 'subservices');

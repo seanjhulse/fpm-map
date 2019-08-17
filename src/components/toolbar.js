@@ -26,7 +26,6 @@ class Toolbar extends Component {
   loadService(service_name) {
     const { map } = this.props;
     ServicesAPI.get_all_services(service_name, (subservices) => {
-      
     });
   }
 

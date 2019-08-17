@@ -8,7 +8,7 @@ class Sidebar extends Component {
     super(props);
 
     this.state = {
-      open: true
+      open: false
     }
 
     this.services = this.services.bind(this);
