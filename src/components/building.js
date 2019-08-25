@@ -22,9 +22,10 @@ class Building extends Component {
 					this.removeBuilding();
 					this.createBuilding();
 					this.flyToBuilding();
-					API.get_building_services(building.building_number, (services) => {
-						this.props.updateServices(services);
-					});
+					API.get_building_services(building.building_number)
+						.then(services => {
+							this.props.updateServices(services);
+						});
 				}
 			);
 		}

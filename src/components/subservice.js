@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import MapAPI from '../api/map';
 
 class Subservices extends Component {
   constructor(props) {
@@ -13,11 +14,7 @@ class Subservices extends Component {
 
     const { map } = this.props;
     let features = [];
-    Object.values(this.props.subservices).map(subservice => {
-      
-    })
-
-    map.addCircles(features, 'subservices');
+    MapAPI.addLayer(map, features, 'Circles', 'subservices');
   }
 
   removeSubservice() {

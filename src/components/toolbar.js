@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ServicesAPI from '../api/services';
+import BuildingsAPI from '../api/building';
 
 class Toolbar extends Component {
   constructor(props) {
@@ -22,17 +23,31 @@ class Toolbar extends Component {
 
   componentDidMount() {
     this.state.services.map(service => {
-      ServicesAPI.get_all_attributes(service, (subservices) => {
-        this.setState({ [service]: subservices });
-      });
+      ServicesAPI.get_all_attributes(service)
+        .then(subservices => {
+          this.setState({ [service]: subservices });
+        });
     });
   }
 
   loadService(service_name) {
     const { map } = this.props;
-    ServicesAPI.get_all_services(service_name, (subservices) => {
-      console.log(subservices);
-    });
+    const features = [];
+    ServicesAPI.get_all_services(service_name)
+      .then(subservices => {
+        const feature = {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [0, 0]
+          },
+          "properties": {
+            "name": "null island"
+          }
+        };
+        console.log(subservices);
+        features.push(feature);
+    })
   }
 
   render() {
