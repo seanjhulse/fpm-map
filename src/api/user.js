@@ -1,4 +1,5 @@
 import config from './config.json';
+import auth from './auth.json';
 
 const login = function () {
   let url = "/webservice/utility.asmx";
@@ -10,8 +11,8 @@ const login = function () {
   <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
     <soap:Body>
       <SetAuthUser xmlns="http://instepsoftware.com/webservices">
-        <UserId></UserId>
-        <Password></Password>
+        <UserId>${auth.user}</UserId>
+        <Password>${auth.pass}</Password>
       </SetAuthUser>
     </soap:Body>
   </soap:Envelope>`;

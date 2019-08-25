@@ -8,7 +8,12 @@ class Toolbar extends Component {
 
     this.state = {
       services: [
-        'Chilled Water'
+        'Chilled Water',
+        'Compressed Air',
+        'Condensate',
+        'Electric',
+        'HPS',
+        'LPS'
       ],
     }
 
@@ -26,6 +31,7 @@ class Toolbar extends Component {
   loadService(service_name) {
     const { map } = this.props;
     ServicesAPI.get_all_services(service_name, (subservices) => {
+      console.log(subservices);
     });
   }
 
