@@ -82,7 +82,6 @@ const get_all_services = function (service_name) {
   });
 };
 
-
 export default {
   get_service_by_building,
   get_all_services,

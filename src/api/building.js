@@ -1,5 +1,30 @@
+import buildings from '../../data/real/buildings.json';
 import request from './request';
 import config from './config.json';
+
+const get_building = function (building_number) {
+  return buildings[building_number];
+}
+
+const get_chad_instances = function (instance_id) {
+  return new Promise((resolve, reject) => {
+    let url = "/webservice/CHaD.asmx";
+    let headers = new Headers({
+      'SOAPAction': 'http://instepsoftware.com/webservices/GetCHaDInstance',
+      ...config.headers
+    });
+    let body =
+      `<?xml version="1.0" encoding="utf-8"?>
+        <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <GetCHaDInstance xmlns="http://instepsoftware.com/webservices">
+              <InstanceID>${instance_id}</InstanceID>
+            </GetCHaDInstance>
+          </soap:Body>
+        </soap:Envelope>`;
+    request(url, body, headers, 'GetCHaDInstanceResult', resolve, reject);
+  });
+};
 
 /**
  * Gets CHaDInstance ID
@@ -103,12 +128,12 @@ const get_building_number = function (building_path) {
         <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
           <soap:Body>
             <GetCHaDAttributeValue xmlns="http://instepsoftware.com/webservices">
-              <AttributeName>${building_path}</AttributeName>
+              <AttributeName>${building_path}.Building Number</AttributeName>
               <FullValue>true</FullValue>
             </GetCHaDAttributeValue>
           </soap:Body>
         </soap:Envelope>`;
-    request(url, body, headers, 'CHaDInstance', resolve, reject);
+    request(url, body, headers, 'CHaDAttributeValue', resolve, reject);
   });
 }
 
@@ -128,10 +153,12 @@ const get_building_services = function (building_id) {
 }
 
 export default {
+  get_chad_instances,
   get_chad_instance_by_attribute_value,
-  get_building_number,
   get_chad_instance_data_points,
   get_chad_instance_by_parent_name,
   get_chad_attribute_value_data_set,
-  get_building_services
+  get_building,
+  get_building_number,
+  get_building_services,
 };

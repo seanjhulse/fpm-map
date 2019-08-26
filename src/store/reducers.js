@@ -1,11 +1,6 @@
 import {
   LOAD_MAP,
-  UPDATE_BUILDING,
-  UPDATE_BUILDING_ID,
-  UPDATE_SERVICES,
-  UPDATE_SIDEBAR,
-  UPDATE_COORDINATES,
-  UPDATE_SUBSERVICES,
+  UPDATE,
 } from './actions';
 
 const reducers = (state = {
@@ -14,6 +9,13 @@ const reducers = (state = {
   coordinates: null,
   services: {},
   subservices: {},
+  colors: [
+    '#bd0000',
+    '#8f398f',
+    '#00628c'
+  ],
+  current_color: 0,
+  layers: {},
   building: null,
   building_id: null,
   sidebar_content: null
@@ -24,35 +26,10 @@ const reducers = (state = {
         ...state,
         map: action.map
       }
-    case UPDATE_COORDINATES:
+    case UPDATE:
       return {
         ...state,
-        coordinates: action.coordinates
-      }
-    case UPDATE_BUILDING:
-      return {
-        ...state,
-        building: action.building
-      }
-    case UPDATE_BUILDING_ID:
-      return {
-        ...state,
-        building_id: action.building_id
-      }
-    case UPDATE_SERVICES:
-      return {
-        ...state,
-        services: action.services
-      }
-    case UPDATE_SUBSERVICES:
-      return {
-        ...state,
-        subservices: action.subservices
-      }
-    case UPDATE_SIDEBAR:
-      return {
-        ...state,
-        sidebar_content: action.sidebar_content
+        [action.key]: action.value
       }
     default:
       return state

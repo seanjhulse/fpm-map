@@ -6,7 +6,7 @@ import Toolbar from './components/toolbar';
 
 // import redux
 import { connect } from 'react-redux'
-import { loadMap, updateBuilding, updateBuildingId, updateCoordinates } from './store/actions';
+import { loadMap, update } from './store/actions';
 
 // import api
 import UserAPI from './api/user';
@@ -56,7 +56,7 @@ class Map extends React.Component {
 	}
 
 	componentWillUnmount() {
-		this.map.remove();
+		this.props.map.remove();
 	}
 
 	initMapFeatures() {
@@ -101,9 +101,9 @@ class Map extends React.Component {
 		var features = this.props.map.queryRenderedFeatures(bbox);
 		var nearestFeature = features.filter(feature => feature.layer.source === 'fpm-buildings')[0];
 		if (nearestFeature && nearestFeature.properties.id) {
-			this.props.updateBuilding(this.state.buildings[nearestFeature.properties.id]);
-			this.props.updateBuildingId(nearestFeature.properties.id);
-			this.props.updateCoordinates(e.lngLat);
+			this.props.update('building', this.state.buildings[nearestFeature.properties.id]);
+			this.props.update('building_id', nearestFeature.properties.id);
+			this.props.update('coordinates', e.lngLat);
 		}
 	}
 
@@ -141,9 +141,7 @@ class Map extends React.Component {
 const mapDispatchToProps = dispatch => {
 	return {
 		loadMap: map => dispatch(loadMap(map)),
-		updateBuilding: building => dispatch(updateBuilding(building)),
-		updateBuildingId: building_id => dispatch(updateBuildingId(building_id)),
-		updateCoordinates: coordinates => dispatch(updateCoordinates(coordinates))
+		update: (key, value) => dispatch(update(key, value)),
 	}
 }
 

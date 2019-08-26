@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateSubservices } from '../store/actions';
+import { update } from '../store/actions';
 import ServicesAPI from '../api/services';
 
 class Sidebar extends Component {
@@ -34,7 +34,7 @@ class Sidebar extends Component {
 
   subservices(service) {
     ServicesAPI.get_service_by_building(service, (subservices) => {
-      this.props.updateSubservices(subservices);
+      this.props.update('subservices', subservices);
     });
   }
 
@@ -61,7 +61,7 @@ class Sidebar extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateSubservices: subservices => dispatch(updateSubservices(subservices)),
+    update: (key, value) => dispatch(update(key, value)),
   }
 }
 

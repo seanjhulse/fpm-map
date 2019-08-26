@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import API from '../api/building';
-import { updateSidebar, updateServices, updateBuilding } from '../store/actions';
+import { update } from '../store/actions';
 
 class Building extends Component {
 	constructor(props) {
@@ -24,7 +24,7 @@ class Building extends Component {
 					this.flyToBuilding();
 					API.get_building_services(building.building_number)
 						.then(services => {
-							this.props.updateServices(services);
+							this.props.update('services', services);
 						});
 				}
 			);
@@ -113,9 +113,7 @@ class Building extends Component {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		updateSidebar: sidebar_content => dispatch(updateSidebar(sidebar_content)),
-		updateServices: services => dispatch(updateServices(services)),
-		updateBuilding: building => dispatch(updateBuilding(building)),
+		update: (key, value) => dispatch(update(key, value))
 	}
 }
 
