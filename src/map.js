@@ -1,6 +1,7 @@
 import React from 'react';
 
 // import classes
+import Layer from './components/Layer';
 import Building from './components/building';
 import Toolbar from './components/toolbar';
 
@@ -123,6 +124,7 @@ class Map extends React.Component {
 				<div>
 					<div id="map"></div>
 					{/* <Toolbar updateLayers={this.updateLayers} /> */}
+					<Layer />
 					<Building />
 					<Toolbar />
 				</div>

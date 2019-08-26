@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ServicesAPI from '../api/services';
 import BuildingsAPI from '../api/building';
-import MapAPI from '../api/map';
+import { update, updateLayers } from '../store/actions';
 
 class Toolbar extends Component {
   constructor(props) {
@@ -31,48 +31,10 @@ class Toolbar extends Component {
     });
   }
 
-  loadService(service_name) {
-    const { map } = this.props;
-    const features = [];
+  loadService(service_name, service_id) {
+    this.props.update('layer', service_id);
     ServicesAPI.get_all_services(service_name)
-      .then(subservices => {
-        return subservices.map(subservice => {
-          return new Promise((resolve, reject) => {
-            const name = subservice.instancename.split('!');
-            const path = `!${name[1].trim()}!${name[2].trim()}`
-            try {
-              BuildingsAPI.get_building_number(path)
-                .then(building_instance => {
-                  const building_number = building_instance[0].attvalue;
-                  try {
-                    const building = BuildingsAPI.get_building(building_number);
-                    const feature = {
-                      "type": "Feature",
-                      "geometry": {
-                        "type": "Point",
-                        "coordinates": building.latlng.reverse(),
-                      },
-                      "properties": {
-                        "Value": Number(subservice.curval),
-                        "Description": `${building.name}: ${subservice.curval} ${subservice.units}`
-                      }
-                    };
-                    features.push(feature);
-                    resolve(feature);
-                  } catch (error) {
-                    resolve({})
-                  }
-                });
-            } catch (error) {
-              reject({ error: 'Failed to find building instance with path ' + path });
-            }
-          });
-        });
-      })
-      .then(promises => Promise.all(promises))
-      .then(() => {
-        MapAPI.toggleLayer(map, features, 'heatmap', service_name);
-      });
+      .then(subservices => this.props.update('subservices', subservices))
   }
 
   render() {
@@ -87,7 +49,7 @@ class Toolbar extends Component {
                 <ul>
                   {Object.values(this.state[service]).map(subservice => {
                     return (
-                      <li onClick={() => this.loadService(subservice.name)} key={subservice.name}>{subservice.name}</li>
+                      <li onClick={() => this.loadService(subservice.name, `${service}-${subservice.name}`)} key={subservice.name}>{subservice.name}</li>
                     )
                   })}
                 </ul>
@@ -100,11 +62,17 @@ class Toolbar extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapDispatchToProps = dispatch => {
   return {
-    map: state.map,
-    service_data: state.service_data
+    update: (key, value) => dispatch(update(key, value)),
+    updateLayers: (key, value) => dispatch(updateLayers(key, value)),
   }
 }
 
-export default connect(mapStateToProps)(Toolbar);
+const mapStateToProps = state => {
+  return {
+    map: state.map,
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Toolbar);

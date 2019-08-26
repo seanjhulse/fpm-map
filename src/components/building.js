@@ -57,7 +57,8 @@ class Building extends Component {
 				"fill-extrusion-opacity": 0.25
 			}
 		});
-		this.props.updateSidebar(
+		this.props.update(
+			'sidebar_content',
 			<div className="sidebar-header">
 				{building.images.medium ?
 					<img className="sidebar-header-image" src={building.images.medium} />
