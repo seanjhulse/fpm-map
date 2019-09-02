@@ -12,8 +12,9 @@ export const update = (key, value) => ({
 });
 
 export const UPDATE_LAYERS = 'UPDATE_LAYERS';
-export const updateLayers = (key, value) => ({
+export const updateLayers = (layerKey, serviceKey, value) => ({
   type: UPDATE_LAYERS,
-  key,
+  layerKey,
+  serviceKey,
   value
 });

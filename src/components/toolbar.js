@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ServicesAPI from '../api/services';
-import BuildingsAPI from '../api/building';
+import { Accordion, Card, Form } from 'react-bootstrap';
 import { update, updateLayers } from '../store/actions';
 
 class Toolbar extends Component {
@@ -31,32 +31,49 @@ class Toolbar extends Component {
     });
   }
 
-  loadService(service_name, service_id) {
-    this.props.update('layer', service_id);
-    ServicesAPI.get_all_services(service_name)
-      .then(subservices => this.props.update('subservices', subservices))
+  loadService(subservice, layerKey, serviceKey) {
+    ServicesAPI.get_all_services(subservice)
+      .then(subservices => {
+        this.props.updateLayers(layerKey, serviceKey, {
+          active: true,
+          data: subservices,
+        });
+      });
   }
 
   render() {
+    let eventKey = 0;
     return (
       <div className="toolbar">
-        <ul className="toolbar-services-list">
+        <h2 className="toolbar-label">All UW Services</h2>
+        <Accordion>
           {Object.values(this.state.services).map(service => {
             if (!this.state[service]) return null;
+            eventKey = eventKey + 1;
             return (
-              <li key={service}>
-                {service}
-                <ul>
-                  {Object.values(this.state[service]).map(subservice => {
-                    return (
-                      <li onClick={() => this.loadService(subservice.name, `${service}-${subservice.name}`)} key={subservice.name}>{subservice.name}</li>
-                    )
-                  })}
-                </ul>
-              </li>
+              <Card key={service}>
+                <Accordion.Toggle as={Card.Header} variant="link" eventKey={eventKey}>
+                  {service}
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey={eventKey}>
+                  <Card.Body>
+                    <ul className="toolbar-subservices-list">
+                      {Object.values(this.state[service]).map(subservice => {
+                        return (
+                          <Form.Check onClick={() => this.loadService(subservice.name, service, subservice.name)}
+                            key={service + subservice.name}
+                            className="toolbar-subservice"
+                            label={subservice.name}
+                            id={`inline-${subservice.name}`} />
+                        )
+                      })}
+                    </ul>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
             )
           })}
-        </ul>
+        </Accordion>
       </div>
     );
   }
@@ -65,7 +82,7 @@ class Toolbar extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     update: (key, value) => dispatch(update(key, value)),
-    updateLayers: (key, value) => dispatch(updateLayers(key, value)),
+    updateLayers: (layerKey, serviceKey, value) => dispatch(updateLayers(layerKey, serviceKey, value)),
   }
 }
 

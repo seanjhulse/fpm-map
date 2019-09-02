@@ -19,7 +19,6 @@ const reducers = (state = {
   number_of_layers: 0,
   features: [],
   type: '',
-  layer: null,
   layers: {},
   remove_layer: false,
   add_layer: false,
@@ -43,7 +42,10 @@ const reducers = (state = {
         ...state,
         layers: {
           ...state.layers,
-          [action.key]: action.value
+          [action.layerKey]: {
+            ...state.layers[action.layerKey],
+            [action.serviceKey]: action.value
+          }
         }
       }
     default:

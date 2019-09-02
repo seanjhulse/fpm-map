@@ -2,6 +2,9 @@ body {
 	margin:0; 
 	padding:0; 
 }
+h1, h2, h3, h4, h5, h6 {
+	color: #555;
+}
 input[type=checkbox]:hover {
 	cursor: pointer;
 }
@@ -21,16 +24,30 @@ input[type=checkbox]:hover {
 	transform: translate(-50%, -50%);
 }
 .toolbar {
-  position: fixed;
-  background: white;
-  height: 400px;
-  width: 300px;
-  display: block;
-  margin: 2vw;
-  border: 2px solid #969696;
-	box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.14);
-	padding: 25px;
+	position: fixed;
+	background: #f8f8f8;
+	width: 300px;
+	border-radius: 5px;
+	max-height: 50vh;
+	display: block;
+	margin: 2vw;
+	box-shadow: -5px 6px 2px 0px rgba(0, 0, 0, 0.25);
 	overflow-y: scroll;
+}
+.toolbar-label {
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 0.5rem 1rem 0;
+}
+.toolbar-subservices-list {
+	margin: 0;
+	padding: 0;
+}
+.card-header:hover,
+.card-header:active {
+	cursor: pointer;
+	background: #f1f1f1;
 }
 .building-name {
 	font-size: 16px;

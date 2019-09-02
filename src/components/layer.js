@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import layers from '../api/layers.json';
+import layersConfig from '../api/layers.json';
 import BuildingsAPI from '../api/building';
 import {
   update,
@@ -22,18 +22,22 @@ class Layer extends Component {
     this.loadSubservices = this.loadSubservices.bind(this);
   }
 
+  componentDidMount() {
+    this.loadSubservices();
+  }
+
   componentDidUpdate() {
-    const { subservices, layer, map } = this.props;
-    if (subservices.length > 0) {
-      this.loadSubservices();
-    } else {
+    const { layers, layer, subservice } = this.props;
+    const currentLayer = layers[layer][subservice];
+    if (currentLayer.loaded) {
       this.toggleLayer();
     }
   }
 
   loadSubservices() {
-    const { subservices } = this.props
-    const promises = subservices.map(subservice => {
+    const { layers, layer, subservice } = this.props;
+    const currentLayer = layers[layer][subservice];
+    const promises = currentLayer.data.map(subservice => {
       return new Promise((resolve, reject) => {
         const name = subservice.instancename.split('!');
         const path = `!${name[1].trim()}!${name[2].trim()}`
@@ -69,23 +73,28 @@ class Layer extends Component {
     });
     Promise.all(promises)
       .then(features => {
-        this.props.update('subservices', []);
-        this.props.update('features', features);
-      })
+        this.props.updateLayers(layer, subservice, {
+          ...currentLayer,
+          features: features,
+          loaded: true,
+          addLayer: true,
+        });
+      });
   }
 
   /**
    * Toggle map layer
    */
   toggleLayer() {
-    const { map, layer } = this.props;
-    const mapSource = map.getSource(layer);
-    if (typeof mapSource !== 'undefined') {
+    const { map, layers, layer, subservice } = this.props;
+    const currentLayer = layers[layer][subservice];
+    const mapSource = map.getSource(`${layer}-${subservice}`);
+    if (typeof mapSource !== 'undefined' && currentLayer.removeLayer) {
       // Remove map layer & source.
       this.removeLayer();
       return;
     }
-    if (layer) {
+    if (currentLayer.addLayer) {
       this.addLayer();
     }
   };
@@ -95,11 +104,13 @@ class Layer extends Component {
    * Adds a new layer to the map
    */
   addLayer() {
-    const { type, layer, colors, current_color, number_of_layers } = this.props;
+    const { type, colors, layers, layer, subservice, current_color, number_of_layers } = this.props;
+    const currentLayer = layers[layer][subservice];
     if (number_of_layers >= 3) {
       console.error("You've exceeded the number of possible layers (3)");
       return;
     }
+
     switch (type.toLowerCase().trim()) {
       case 'circles':
         this.addCircles(colors[current_color]);
@@ -114,28 +125,32 @@ class Layer extends Component {
         this.addDots(colors[current_color]);
         break;
     }
-    this.props.updateLayers(layer, {
-      color: colors[current_color],
-      type: type
-    })
     this.props.update('current_color', current_color + 1);
     this.props.update('number_of_layers', number_of_layers + 1);
+    this.props.updateLayers(layer, subservice, {
+      ...currentLayer,
+      addLayer: false,
+    });
   };
 
   /**
    * Removes a layer from the map
    */
   removeLayer() {
-    const { map, layer, current_color, number_of_layers } = this.props;
+    const { map, layer, subservice, current_color, number_of_layers } = this.props;
     let count = 0;
-    let mapLayer = map.getLayer(`${layer}-layer-${count}`);
+    let mapLayer = map.getLayer(`${layer}-${subservice}-layer-${count}`);
     while (mapLayer) {
-      map.removeLayer(`${layer}-layer-${count}`);
+      map.removeLayer(`${layer}-${subservice}-layer-${count}`);
       count = count + 1;
-      mapLayer = map.getLayer(`${layer}-layer-${count}`);
+      mapLayer = map.getLayer(`${layer}-${subservice}-layer-${count}`);
     }
-    map.removeSource(layer);
-    this.props.updateLayers(layer, null);
+    map.removeSource(`${layer}-${subservice}`);
+    this.props.updateLayers(layer, subservice, {
+      active: false,
+      data: null,
+      features: null,
+    });
     this.props.update('current_color', current_color - 1);
     this.props.update('number_of_layers', number_of_layers - 1);
   };
@@ -154,61 +169,66 @@ class Layer extends Component {
 
 
   addCircles(color) {
-    const { map, layer, features } = this.props;
-    map.addSource(`${layer}`, {
+    const { map, layers, layer, subservice } = this.props;
+    const currentLayer = layers[layer][subservice];
+    map.addSource(`${layer}-${subservice}`, {
       'type': 'geojson',
       'data': {
         "type": "FeatureCollection",
-        "features": features
+        "features": currentLayer.features
       }
     });
 
     map.addLayer({
-      "id": `${layer}-layer-0`,
-      "source": `${layer}`,
-      ...layers.circles,
+      "id": `${layer}-${subservice}-layer-0`,
+      "source": `${layer}-${subservice}`,
+      ...layersConfig.circles,
       "paint": {
         "circle-color": color
       }
     });
 
     map.addLayer({
-      "id": `${layer}-layer-1`,
-      "source": `${layer}`,
-      ...layers.labels
+      "id": `${layer}-${subservice}-layer-1`,
+      "source": `${layer}-${subservice}`,
+      ...layersConfig.labels
     });
   }
 
   addDots(color) {
-    const { map, layer, features } = this.props;
-    map.addSource(`${layer}`, {
+    const { map, layers, layer, subservice } = this.props;
+    const currentLayer = layers[layer][subservice];
+
+    map.addSource(`${layer}-${subservice}`, {
       'type': 'geojson',
       'data': {
         "type": "FeatureCollection",
-        "features": features
+        "features": currentLayer.features
       }
     });
 
     map.addLayer({
-      "id": `${layer}-layer-0`,
-      "source": `${layer}`,
-      ...layers.dots,
+      "id": `${layer}-${subservice}-layer-0`,
+      "source": `${layer}-${subservice}`,
+      ...layersConfig.dots,
       "paint": {
         "circle-color": color
       }
     });
 
     map.addLayer({
-      "id": `${layer}-layer-1`,
-      "source": `${layer}`,
-      ...layers.labels
+      "id": `${layer}-${subservice}-layer-1`,
+      "source": `${layer}-${subservice}`,
+      ...layersConfig.labels
     });
   }
 
   addExtrudedDots(color) {
-    const { map, layer, features } = this.props;
+    const { map, layers, layer, subservice } = this.props;
+    const currentLayer = layers[layer][subservice];
+
     // generate polygons around point
-    let polygons = features.map(tempFeature => {
+    let polygons = currentLayer.features.map(tempFeature => {
       let feature = {
         type: "Feature",
         properties: tempFeature.properties
@@ -241,7 +261,7 @@ class Layer extends Component {
       return feature;
     })
 
-    map.addSource(`${layer}`, {
+    map.addSource(`${layer}-${subservice}`, {
       type: 'geojson',
       data: {
         type: 'FeatureCollection',
@@ -250,9 +270,9 @@ class Layer extends Component {
     });
 
     map.addLayer({
-      id: `${layer}-layer-0`,
-      source: `${layer}`,
-      ...layers.extrusion,
+      id: `${layer}-${subservice}-layer-0`,
+      source: `${layer}-${subservice}`,
+      ...layersConfig.extrusion,
       "paint": {
         "fill-extrusion-color": color
       }
@@ -260,19 +280,21 @@ class Layer extends Component {
   }
 
   addHeatMap(color) {
-    const { map, layer, features } = this.props;
-    map.addSource(`${layer}`, {
+    const { map, layers, layer, subservice } = this.props;
+    const currentLayer = layers[layer][subservice];
+
+    map.addSource(`${layer}-${subservice}`, {
       'type': 'geojson',
       'data': {
         "type": "FeatureCollection",
-        "features": features
+        "features": currentLayer.features
       }
     });
 
     map.addLayer({
-      "id": `${layer}-layer-0`,
-      "source": `${layer}`,
-      ...layers.heatmap,
+      "id": `${layer}-${subservice}-layer-0`,
+      "source": `${layer}-${subservice}`,
+      ...layersConfig.heatmap,
       "paint": {
         "heatmap-color": [
           "interpolate",
@@ -285,9 +307,9 @@ class Layer extends Component {
     });
 
     map.addLayer({
-      "id": `${layer}-layer-1`,
-      "source": `${layer}`,
-      ...layers.labels,
+      "id": `${layer}-${subservice}-layer-1`,
+      "source": `${layer}-${subservice}`,
+      ...layersConfig.labels,
     });
   }
 
@@ -300,7 +322,7 @@ class Layer extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     update: (key, value) => dispatch(update(key, value)),
-    updateLayers: (key, value) => dispatch(updateLayers(key, value)),
+    updateLayers: (layerKey, serviceKey, value) => dispatch(updateLayers(layerKey, serviceKey, value)),
   }
 }
 
@@ -308,14 +330,10 @@ const mapStateToProps = state => {
   return {
     colors: state.colors,
     current_color: state.current_color,
-    features: state.features,
-    layer: state.layer,
     layers: state.layers,
     map: state.map,
-    subservices: state.subservices,
     number_of_layers: state.number_of_layers,
     type: state.type,
-    update_layer: state.update_layer,
   }
 }
 

@@ -22,6 +22,9 @@ const login = function () {
     credentials: 'include',
     body: body
   })
+    .catch(error => {
+      console.error(error);
+    });
 };
 
 export default {
