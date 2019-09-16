@@ -13,7 +13,7 @@ class Subservices extends Component {
     this.removeSubservice();
 
     const { map } = this.props;
-    let features = [];
+    const features = [];
     MapAPI.addLayer(map, features, 'Circles', 'subservices');
   }
 
@@ -25,7 +25,7 @@ class Subservices extends Component {
 
     while (layerExists) {
       map.removeLayer(currentLayer);
-      layerCount = layerCount + 1;
+      layerCount += 1;
       currentLayer = `subservices-layer-${layerCount}`;
       layerExists = map.getLayer(currentLayer);
     }
@@ -38,14 +38,12 @@ class Subservices extends Component {
   render() {
     return null;
   }
-};
+}
 
-const mapStateToProps = state => {
-  return {
+const mapStateToProps = (state) => ({
     subservices: state.subservices,
     map: state.map,
     building: state.building,
-  }
-}
+  });
 
 export default connect(mapStateToProps)(Subservices);

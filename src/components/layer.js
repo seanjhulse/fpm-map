@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import layersConfig from '../api/layers.json';
 import BuildingsAPI from '../api/building';
 import {
   update,
-  updateLayers
 } from '../store/actions';
 
 class Layer extends Component {
   constructor(props) {
     super(props);
-    this.toggleLayer = this.toggleLayer.bind(this);
+    this.getColor = this.getColor.bind(this);
+    this.layerExists = this.layerExists.bind(this);
+
+    this.message = this.message.bind(this);
     this.addLayer = this.addLayer.bind(this);
     this.removeLayer = this.removeLayer.bind(this);
     this.addCircles = this.addCircles.bind(this);
@@ -23,294 +26,295 @@ class Layer extends Component {
   }
 
   componentDidMount() {
+    const { number_of_layers } = this.props;
+    if (number_of_layers >= 3) {
+      this.message('info', 'You\'ve exceeded the number of possible layers (3)');
+      return;
+    }
     this.loadSubservices();
   }
 
-  componentDidUpdate() {
-    const { layers, layer, subservice } = this.props;
-    const currentLayer = layers[layer][subservice];
-    if (currentLayer.loaded) {
-      this.toggleLayer();
-    }
+  componentWillUnmount() {
+    this.removeLayer();
   }
 
-  loadSubservices() {
-    const { layers, layer, subservice } = this.props;
-    const currentLayer = layers[layer][subservice];
-    const promises = currentLayer.data.map(subservice => {
-      return new Promise((resolve, reject) => {
-        const name = subservice.instancename.split('!');
-        const path = `!${name[1].trim()}!${name[2].trim()}`
-        try {
-          BuildingsAPI.get_building_number(path)
-            .then(building_instance => {
-              const building_number = building_instance[0].attvalue;
-              try {
-                const building = BuildingsAPI.get_building(building_number);
-                if (!building) {
-                  resolve({});
-                }
-                const feature = {
-                  "type": "Feature",
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": building.latlng.reverse(),
-                  },
-                  "properties": {
-                    "Value": Number(subservice.curval),
-                    "Description": `${building.name}: ${subservice.curval} ${subservice.units}`
-                  }
-                };
-                resolve(feature);
-              } catch (error) {
-                reject(error);
+  async loadSubservices() {
+    console.log('Loading');
+    const { subservices } = this.props;
+    const promises = subservices.map((subservice) => new Promise((resolve, reject) => {
+      const name = subservice.instancename.split('!');
+      const path = `!${name[1].trim()}!${name[2].trim()}`;
+      try {
+        BuildingsAPI.get_building_number(path)
+          .then((building_instance) => {
+            const building_number = building_instance[0].attvalue;
+            try {
+              const building = BuildingsAPI.get_building(building_number);
+              if (!building) {
+                resolve({});
               }
-            });
-        } catch (error) {
-          reject(error);
-        }
-      });
-    });
-    Promise.all(promises)
-      .then(features => {
-        this.props.updateLayers(layer, subservice, {
-          ...currentLayer,
-          features: features,
-          loaded: true,
-          addLayer: true,
-        });
-      });
+              const feature = {
+                type: 'Feature',
+                geometry: {
+                  type: 'Point',
+                  coordinates: building.latlng.reverse(),
+                },
+                properties: {
+                  Value: Number(subservice.curval),
+                  Description: `${building.name}: ${subservice.curval} ${subservice.units}`,
+                },
+              };
+              resolve(feature);
+            } catch (error) {
+              reject(error);
+            }
+          });
+      } catch (error) {
+        reject(error);
+      }
+    }));
+    let features = [];
+    await Promise.all(promises)
+      .then((tempFeatures) => {
+        console.log('Loaded');
+        features = tempFeatures;
+      })
+      .then(() => this.props.update('loading', false));
+    this.addLayer(features);
   }
-
-  /**
-   * Toggle map layer
-   */
-  toggleLayer() {
-    const { map, layers, layer, subservice } = this.props;
-    const currentLayer = layers[layer][subservice];
-    const mapSource = map.getSource(`${layer}-${subservice}`);
-    if (typeof mapSource !== 'undefined' && currentLayer.removeLayer) {
-      // Remove map layer & source.
-      this.removeLayer();
-      return;
-    }
-    if (currentLayer.addLayer) {
-      this.addLayer();
-    }
-  };
-
 
   /**
    * Adds a new layer to the map
    */
-  addLayer() {
-    const { type, colors, layers, layer, subservice, current_color, number_of_layers } = this.props;
-    const currentLayer = layers[layer][subservice];
-    if (number_of_layers >= 3) {
-      console.error("You've exceeded the number of possible layers (3)");
-      return;
-    }
-
-    switch (type.toLowerCase().trim()) {
+  addLayer(features) {
+    console.log('Added')
+    const { type, number_of_layers } = this.props;
+    switch (type.trim().toLowerCase()) {
       case 'circles':
-        this.addCircles(colors[current_color]);
+        this.addCircles(features);
         break;
       case 'heatmap':
-        this.addHeatMap(colors[current_color]);
+        this.addHeatMap(features);
         break;
       case 'extruded dots':
-        this.addExtrudedDots(colors[current_color]);
+        this.addExtrudedDots(features);
+        break;
+      case 'dots':
+        this.addDots(features);
         break;
       default:
-        this.addDots(colors[current_color]);
+        this.addDots(features);
         break;
     }
-    this.props.update('current_color', current_color + 1);
     this.props.update('number_of_layers', number_of_layers + 1);
-    this.props.updateLayers(layer, subservice, {
-      ...currentLayer,
-      addLayer: false,
-    });
-  };
+  }
 
   /**
    * Removes a layer from the map
    */
   removeLayer() {
-    const { map, layer, subservice, current_color, number_of_layers } = this.props;
+    const { map, layerName, number_of_layers } = this.props;
     let count = 0;
-    let mapLayer = map.getLayer(`${layer}-${subservice}-layer-${count}`);
+    let mapLayer = map.getLayer(`${layerName}-layer-${count}`);
     while (mapLayer) {
-      map.removeLayer(`${layer}-${subservice}-layer-${count}`);
-      count = count + 1;
-      mapLayer = map.getLayer(`${layer}-${subservice}-layer-${count}`);
+      const tempLayerName = `${layerName}-layer-${count}`;
+      if (map.getLayer(tempLayerName)) {
+        // map.removeLayer(tempLayerName);
+        map.setLayoutProperty(tempLayerName, 'visibility', 'none');
+      }
+      count += 1;
+      mapLayer = map.getLayer(tempLayerName);
     }
-    map.removeSource(`${layer}-${subservice}`);
-    this.props.updateLayers(layer, subservice, {
-      active: false,
-      data: null,
-      features: null,
-    });
-    this.props.update('current_color', current_color - 1);
-    this.props.update('number_of_layers', number_of_layers - 1);
-  };
+    if (map.getSource(layerName)) {
+      this.props.update('number_of_layers', number_of_layers - 1);
+    }
+  }
 
   addPopup(coordinates, html) {
-    const { map } = this.props
+    const { map } = this.props;
     new mapboxgl.Popup()
       .setLngLat(coordinates)
       .setHTML(
         `<div>
-					${html}
-				</div>`
+          ${html}
+        </div>`,
       )
       .addTo(map);
   }
 
 
-  addCircles(color) {
-    const { map, layers, layer, subservice } = this.props;
-    const currentLayer = layers[layer][subservice];
-    map.addSource(`${layer}-${subservice}`, {
-      'type': 'geojson',
-      'data': {
-        "type": "FeatureCollection",
-        "features": currentLayer.features
-      }
+  addCircles(features) {
+    const { map, layerName } = this.props;
+    map.addSource(layerName, {
+      type: 'geojson',
+      data: {
+        type: 'FeatureCollection',
+        features,
+      },
     });
-
     map.addLayer({
-      "id": `${layer}-${subservice}-layer-0`,
-      "source": `${layer}-${subservice}`,
+      id: `${layerName}-layer-0`,
+      source: `${layerName}`,
       ...layersConfig.circles,
-      "paint": {
-        "circle-color": color
-      }
+      paint: {
+        'circle-color': this.getColor(),
+      },
     });
-
     map.addLayer({
-      "id": `${layer}-${subservice}-layer-1`,
-      "source": `${layer}-${subservice}`,
-      ...layersConfig.labels
+      id: `${layerName}-layer-1`,
+      source: `${layerName}`,
+      ...layersConfig.labels,
     });
   }
 
-  addDots(color) {
-    const { map, layers, layer, subservice } = this.props;
-    const currentLayer = layers[layer][subservice];
-
-    map.addSource(`${layer}-${subservice}`, {
-      'type': 'geojson',
-      'data': {
-        "type": "FeatureCollection",
-        "features": currentLayer.features
+  addDots(features) {
+    const { map, layerName } = this.props;
+    if (map.getSource(layerName)) {
+      map.getSource(layerName).setData(features);
+      console.log('Set visibility for ' + layerName + ' to visible');
+      let count = 0;
+      let mapLayer = map.getLayer(`${layerName}-layer-${count}`);
+      while (mapLayer) {
+        const tempLayerName = `${layerName}-layer-${count}`;
+        if (map.getLayer(tempLayerName)) {
+          // map.removeLayer(tempLayerName);
+          map.setLayoutProperty(tempLayerName, 'visibility', 'visible');
+        }
+        count += 1;
+        mapLayer = map.getLayer(tempLayerName);
       }
+      return;
+    }
+    map.addSource(`${layerName}`, {
+      type: 'geojson',
+      data: {
+        type: 'FeatureCollection',
+        features,
+      },
     });
-
     map.addLayer({
-      "id": `${layer}-${subservice}-layer-0`,
-      "source": `${layer}-${subservice}`,
+      id: `${layerName}-layer-0`,
+      source: `${layerName}`,
       ...layersConfig.dots,
-      "paint": {
-        "circle-color": color
-      }
+      paint: {
+        'circle-color': this.getColor(),
+      },
     });
-
     map.addLayer({
-      "id": `${layer}-${subservice}-layer-1`,
-      "source": `${layer}-${subservice}`,
-      ...layersConfig.labels
+      id: `${layerName}-layer-1`,
+      source: `${layerName}`,
+      ...layersConfig.labels,
     });
   }
 
-  addExtrudedDots(color) {
-    const { map, layers, layer, subservice } = this.props;
-    const currentLayer = layers[layer][subservice];
-
+  addExtrudedDots(features) {
+    const { map, layerName } = this.props;
     // generate polygons around point
-    let polygons = currentLayer.features.map(tempFeature => {
+    const polygons = features.map((tempFeature) => {
       let feature = {
-        type: "Feature",
-        properties: tempFeature.properties
+        type: 'Feature',
+        properties: tempFeature.properties,
       };
 
-      let coordinates = tempFeature.geometry.coordinates;
-      let offset = 0.0001;
-      let n = offset * Math.sqrt(2) / 2;
-      let topLeft = [coordinates[0] + n, coordinates[1] + n];
-      let topRight = [coordinates[0] + n, coordinates[1] - n];
-      let botLeft = [coordinates[0] - n, coordinates[1] + n];
-      let botRight = [coordinates[0] - n, coordinates[1] - n];
+      const { coordinates } = tempFeature.geometry;
+      const offset = 0.0001;
+      const n = offset * (Math.sqrt(2) / 2);
+      const topLeft = [coordinates[0] + n, coordinates[1] + n];
+      const topRight = [coordinates[0] + n, coordinates[1] - n];
+      const botLeft = [coordinates[0] - n, coordinates[1] + n];
+      const botRight = [coordinates[0] - n, coordinates[1] - n];
 
       feature = {
         ...feature,
         geometry: {
-          type: "Polygon",
+          type: 'Polygon',
           coordinates: [
             [
               topLeft,
               topRight,
               botRight,
               botLeft,
-              topLeft
-            ]
-          ]
-        }
+              topLeft,
+            ],
+          ],
+        },
       };
 
       return feature;
-    })
-
-    map.addSource(`${layer}-${subservice}`, {
+    });
+    map.addSource(`${layerName}`, {
       type: 'geojson',
       data: {
         type: 'FeatureCollection',
         features: polygons,
-      }
+      },
     });
-
     map.addLayer({
-      id: `${layer}-${subservice}-layer-0`,
-      source: `${layer}-${subservice}`,
+      id: `${layerName}-layer-0`,
+      source: `${layerName}`,
       ...layersConfig.extrusion,
-      "paint": {
-        "fill-extrusion-color": color
-      }
+      paint: {
+        'fill-extrusion-color': this.getColor(),
+      },
     });
   }
 
-  addHeatMap(color) {
-    const { map, layers, layer, subservice } = this.props;
-    const currentLayer = layers[layer][subservice];
-
-    map.addSource(`${layer}-${subservice}`, {
-      'type': 'geojson',
-      'data': {
-        "type": "FeatureCollection",
-        "features": currentLayer.features
-      }
+  addHeatMap(features) {
+    const { map, layerName } = this.props;
+    map.addSource(`${layerName}`, {
+      type: 'geojson',
+      data: {
+        type: 'FeatureCollection',
+        features,
+      },
     });
-
     map.addLayer({
-      "id": `${layer}-${subservice}-layer-0`,
-      "source": `${layer}-${subservice}`,
+      id: `${layerName}-layer-0`,
+      source: `${layerName}`,
       ...layersConfig.heatmap,
-      "paint": {
-        "heatmap-color": [
-          "interpolate",
-          ["linear"],
-          ["heatmap-density"],
-          0, "rgba(255,255,255,0)",
-          1, color
+      paint: {
+        'heatmap-color': [
+          'interpolate',
+          ['linear'],
+          ['heatmap-density'],
+          0, 'rgba(255,255,255,0)',
+          1, this.getColor(),
         ],
-      }
+      },
     });
-
     map.addLayer({
-      "id": `${layer}-${subservice}-layer-1`,
-      "source": `${layer}-${subservice}`,
+      id: `${layerName}-layer-1`,
+      source: `${layerName}`,
       ...layersConfig.labels,
     });
+  }
+
+  getColor() {
+    const { colors, number_of_layers } = this.props;
+    return colors[number_of_layers];
+  }
+
+  layerExists() {
+    const { map, layerName } = this.props;
+    const mapSource = map.getSource(`${layerName}`);
+    if (typeof mapSource !== 'undefined') {
+      // Remove map layer & source.
+      return true;
+    }
+    return false;
+  }
+
+  message(messageType, message) {
+    const { number_of_layers } = this.props;
+    if (number_of_layers >= 3) {
+      this.props.update('loading', false);
+      this.props.update('message', message);
+      this.props.update('messageType', messageType);
+      setTimeout(() => {
+        this.props.update('message', null);
+        this.props.update('messageType', null);
+      }, 3000);
+    }
   }
 
   render() {
@@ -318,23 +322,29 @@ class Layer extends Component {
   }
 }
 
+Layer.propTypes = {
+  map: PropTypes.object,
+  subservices: PropTypes.array,
+  layers: PropTypes.object,
+  type: PropTypes.string,
+  layerName: PropTypes.string,
+  number_of_layers: PropTypes.number,
+  colors: PropTypes.array,
+  getSource: PropTypes.func,
+  addLayer: PropTypes.func,
+  update: PropTypes.func,
+};
 
-const mapDispatchToProps = dispatch => {
-  return {
-    update: (key, value) => dispatch(update(key, value)),
-    updateLayers: (layerKey, serviceKey, value) => dispatch(updateLayers(layerKey, serviceKey, value)),
-  }
-}
+const mapDispatchToProps = (dispatch) => ({
+  update: (key, value) => dispatch(update(key, value)),
+});
 
-const mapStateToProps = state => {
-  return {
-    colors: state.colors,
-    current_color: state.current_color,
-    layers: state.layers,
-    map: state.map,
-    number_of_layers: state.number_of_layers,
-    type: state.type,
-  }
-}
+const mapStateToProps = (state) => ({
+  map: state.map,
+  type: state.type,
+  colors: state.colors,
+  layers: state.layers,
+  number_of_layers: state.number_of_layers,
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Layer);

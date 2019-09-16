@@ -1,20 +1,19 @@
 export const LOAD_MAP = 'LOAD_MAP';
-export const loadMap = map => ({
+export const loadMap = (map) => ({
   type: LOAD_MAP,
-  map
+  map,
 });
 
 export const UPDATE = 'UPDATE';
 export const update = (key, value) => ({
   type: UPDATE,
   key,
-  value
+  value,
 });
 
 export const UPDATE_LAYERS = 'UPDATE_LAYERS';
-export const updateLayers = (layerKey, serviceKey, value) => ({
+export const updateLayers = (key, value) => ({
   type: UPDATE_LAYERS,
-  layerKey,
-  serviceKey,
-  value
+  key,
+  value,
 });

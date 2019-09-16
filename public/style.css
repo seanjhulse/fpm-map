@@ -156,3 +156,21 @@ input[type=checkbox]:hover {
 .services {
 	padding: 1rem;
 }
+.loading-icon {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+.loading-text {
+  vertical-align: super;
+  padding-right: 1rem;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+}
+.message-container {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
