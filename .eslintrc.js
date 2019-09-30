@@ -5,6 +5,7 @@ module.exports = {
   ],
   "rules": {
     "camelcase": "off",
-    "react/forbid-prop-types": "off"
+    "react/forbid-prop-types": "off",
+    "class-methods-use-this": "off"
   }
 };

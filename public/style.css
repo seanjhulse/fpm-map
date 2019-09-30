@@ -26,13 +26,14 @@ input[type=checkbox]:hover {
 .toolbar {
 	position: fixed;
 	background: #f8f8f8;
-	width: 300px;
+	width: 400px;
 	border-radius: 5px;
 	max-height: 50vh;
-	display: block;
+  display: block;
+  padding: 0.75rem;
 	margin: 2vw;
 	box-shadow: -5px 6px 2px 0px rgba(0, 0, 0, 0.25);
-	overflow-y: scroll;
+  overflow-y: scroll;
 }
 .toolbar-label {
 	font-size: 20px;
@@ -43,6 +44,10 @@ input[type=checkbox]:hover {
 .toolbar-subservices-list {
 	margin: 0;
 	padding: 0;
+}
+.buttons-toolbar-container{
+  position: relative;
+  float: right;
 }
 .card-header:hover,
 .card-header:active {
@@ -58,6 +63,13 @@ input[type=checkbox]:hover {
 	color: white;
 	font-size: 16px;
 	padding: 3px 5px;
+}
+.circle-button {
+  border-radius: 50%;
+  padding: 0.2rem;
+  height: auto;
+  width: auto;
+  line-height: 0;
 }
 .dropdown {
 	margin-bottom: 10px;
@@ -158,8 +170,8 @@ input[type=checkbox]:hover {
 }
 .loading-icon {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  bottom: 3rem;
+  left: 0.5rem;
 }
 .loading-text {
   vertical-align: super;
@@ -173,4 +185,28 @@ input[type=checkbox]:hover {
   top: 1rem;
   left: 50%;
   transform: translateX(-50%);
+}
+.active-layers {
+  list-style: none;
+  margin: 0;
+  padding: 0 1rem;
+}
+.active-layer {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.active-layer-icon {
+  flex: 1;
+}
+.active-layer-name {
+  margin: 0;
+  flex: 6;
+}
+.active-layer form {
+  line-height: 1;
+}
+.active-layer form:hover {
+  cursor: pointer;
 }

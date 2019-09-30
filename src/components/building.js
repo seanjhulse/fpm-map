@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import API from '../api/building';
+import BuildingAPI from '../api/building';
 import { update } from '../store/actions';
 
 class Building extends Component {
@@ -22,7 +22,7 @@ class Building extends Component {
 					this.removeBuilding();
 					this.createBuilding();
 					this.flyToBuilding();
-					API.get_building_services(building.building_number)
+					BuildingAPI.get_building_services(building.building_number)
 						.then(services => {
 							this.props.update('services', services);
 						});
@@ -32,7 +32,7 @@ class Building extends Component {
 	}
 	
 	createBuilding() {
-		const { map, building } = this.props;
+    const { map, building } = this.props;
 		map.addSource('custom-building', {
 			"type": "geojson",
 			"data": building.geojson

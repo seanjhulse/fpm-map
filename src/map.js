@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -14,10 +15,7 @@ import { loadMap, update } from './store/actions';
 
 // import api
 import UserAPI from './api/user';
-
-// import data
-import buildings from '../data/real/buildings.json';
-import geojson from '../data/real/geojson.json';
+import BuildingAPI from './api/building';
 
 class Map extends React.Component {
   constructor(props) {
@@ -25,7 +23,6 @@ class Map extends React.Component {
 
     this.state = {
       loading: true,
-      buildings,
     };
 
     this.initMapFeatures = this.initMapFeatures.bind(this);
@@ -39,6 +36,10 @@ class Map extends React.Component {
   componentDidMount() {
     // login
     UserAPI.login();
+
+    // load the buildings data
+    BuildingAPI.load_buildings()
+      .then((buildings) => this.props.update('buildings', buildings));
 
     mapboxgl.accessToken = 'pk.eyJ1IjoidXdtYWRpc29uLXVjb21tIiwiYSI6InlSb2xNMmcifQ.QdGExUkysAJkvrS6B4U2WA';
     mapboxgl.workerCount = 6;
@@ -64,40 +65,43 @@ class Map extends React.Component {
   }
 
   initMapFeatures() {
-    // add the building to the actual map
-    this.props.map.addSource('fpm-buildings', {
-      type: 'geojson',
-      data: geojson,
-      tolerance: 2,
-    });
-    this.props.map.addLayer({
-      id: 'fpm-buildings-layer',
-      type: 'fill',
-      source: 'fpm-buildings',
-      paint: {
-        'fill-color': '#000',
-        'fill-opacity': 0.15,
-      },
-    });
-    this.props.map.addSource('dane-country-regional-airport', {
-      type: 'image',
-      url: 'ParkingMap.png',
-      coordinates: [
-        [-89.350331325, 43.139526080],
-        [-89.34316356461, 43.13931344052],
-        [-89.3435008941, 43.1280687150],
-        [-89.3506683081, 43.1280797150],
-      ],
-    });
-    this.props.map.addLayer({
-      id: 'overlay',
-      source: 'dane-country-regional-airport',
-      type: 'raster',
-      paint: {
-        'raster-opacity': 0.75,
-      },
-    });
-    this.setState({ loading: false });
+    BuildingAPI.get_buildings_geojson()
+      .then((geojson) => {
+        // add the building to the actual map
+        this.props.map.addSource('fpm-buildings', {
+          type: 'geojson',
+          data: geojson,
+          tolerance: 2,
+        });
+        this.props.map.addLayer({
+          id: 'fpm-buildings-layer',
+          type: 'fill',
+          source: 'fpm-buildings',
+          paint: {
+            'fill-color': '#000',
+            'fill-opacity': 0.15,
+          },
+        });
+        this.props.map.addSource('dane-country-regional-airport', {
+          type: 'image',
+          url: 'ParkingMap.png',
+          coordinates: [
+            [-89.350331325, 43.139526080],
+            [-89.34316356461, 43.13931344052],
+            [-89.3435008941, 43.1280687150],
+            [-89.3506683081, 43.1280797150],
+          ],
+        });
+        this.props.map.addLayer({
+          id: 'overlay',
+          source: 'dane-country-regional-airport',
+          type: 'raster',
+          paint: {
+            'raster-opacity': 0.75,
+          },
+        });
+        this.setState({ loading: false });
+      });
   }
 
   clickHandler(e) {
@@ -105,7 +109,7 @@ class Map extends React.Component {
     const features = this.props.map.queryRenderedFeatures(bbox);
     const nearestFeature = features.filter((feature) => feature.layer.source === 'fpm-buildings')[0];
     if (nearestFeature && nearestFeature.properties.id) {
-      this.props.update('building', this.state.buildings[nearestFeature.properties.id]);
+      this.props.update('building', this.props.buildings[nearestFeature.properties.id]);
       this.props.update('building_id', nearestFeature.properties.id);
       this.props.update('coordinates', e.lngLat);
     }
@@ -128,7 +132,6 @@ class Map extends React.Component {
       return (
         <div>
           <div id="map"></div>
-          {/* <Toolbar updateLayers={this.updateLayers} /> */}
           <Layers />
           <Building />
           <Toolbar />
@@ -148,6 +151,7 @@ class Map extends React.Component {
 
 Map.propTypes = {
   map: PropTypes.object,
+  buildings: PropTypes.object,
   queryRenderedFeatures: PropTypes.func,
   update: PropTypes.func,
   loadMap: PropTypes.func,
@@ -162,6 +166,7 @@ const mapStateToProps = (state) => ({
   map: state.map,
   services: state.services,
   building_id: state.building_id,
+  buildings: state.buildings,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Map);

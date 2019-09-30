@@ -23,14 +23,10 @@ class Layer extends Component {
     this.addPopup = this.addPopup.bind(this);
     this.addDots = this.addDots.bind(this);
     this.loadSubservices = this.loadSubservices.bind(this);
+    this.getRange = this.getRange.bind(this);
   }
 
   componentDidMount() {
-    const { number_of_layers } = this.props;
-    if (number_of_layers >= 3) {
-      this.message('info', 'You\'ve exceeded the number of possible layers (3)');
-      return;
-    }
     this.loadSubservices();
   }
 
@@ -38,21 +34,47 @@ class Layer extends Component {
     this.removeLayer();
   }
 
-  async loadSubservices() {
-    console.log('Loading');
+  loadSubservices() {
     const { subservices } = this.props;
-    const promises = subservices.map((subservice) => new Promise((resolve, reject) => {
+    const promises = subservices.map((subservice) => new Promise((resolve) => {
+      // grab the cached building
+      // eslint-disable-next-line no-undef
+      const cachedBuilding = JSON.parse(localStorage.getItem(subservice.instanceid));
+      if (cachedBuilding) {
+        const feature = {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: cachedBuilding.latlng.reverse(),
+          },
+          properties: {
+            Value: Number(subservice.curval),
+            Description: `${cachedBuilding.name}: ${subservice.curval} ${subservice.units}`,
+          },
+        };
+        // just use cached values if they exist
+        resolve(feature);
+        return;
+      }
+
+      // we don't have the subservice building cached. We need to get it.
       const name = subservice.instancename.split('!');
       const path = `!${name[1].trim()}!${name[2].trim()}`;
       try {
         BuildingsAPI.get_building_number(path)
           .then((building_instance) => {
             const building_number = building_instance[0].attvalue;
+            return this.props.buildings[building_number];
+          })
+          .then((building) => {
             try {
-              const building = BuildingsAPI.get_building(building_number);
               if (!building) {
-                resolve({});
+                throw new Error('Building ID does not exist');
               }
+
+              // eslint-disable-next-line no-undef
+              localStorage.setItem(subservice.instanceid, JSON.stringify(building));
+
               const feature = {
                 type: 'Feature',
                 geometry: {
@@ -64,30 +86,28 @@ class Layer extends Component {
                   Description: `${building.name}: ${subservice.curval} ${subservice.units}`,
                 },
               };
+
               resolve(feature);
             } catch (error) {
-              reject(error);
+              // we resolve an error with an empty object
+              resolve({});
             }
           });
       } catch (error) {
-        reject(error);
+        resolve({});
       }
     }));
-    let features = [];
-    await Promise.all(promises)
-      .then((tempFeatures) => {
-        console.log('Loaded');
-        features = tempFeatures;
-      })
-      .then(() => this.props.update('loading', false));
-    this.addLayer(features);
+    Promise.all(promises)
+      .then((features) => {
+        this.props.update('loading', false);
+        this.addLayer(features);
+      });
   }
 
   /**
    * Adds a new layer to the map
    */
   addLayer(features) {
-    console.log('Added')
     const { type, number_of_layers } = this.props;
     switch (type.trim().toLowerCase()) {
       case 'circles':
@@ -115,19 +135,18 @@ class Layer extends Component {
   removeLayer() {
     const { map, layerName, number_of_layers } = this.props;
     let count = 0;
-    let mapLayer = map.getLayer(`${layerName}-layer-${count}`);
+    let tempLayerName = `${layerName}-layer-${count}`;
+    let mapLayer = map.getLayer(tempLayerName);
     while (mapLayer) {
-      const tempLayerName = `${layerName}-layer-${count}`;
       if (map.getLayer(tempLayerName)) {
-        // map.removeLayer(tempLayerName);
-        map.setLayoutProperty(tempLayerName, 'visibility', 'none');
+        map.removeLayer(tempLayerName);
       }
       count += 1;
+      tempLayerName = `${layerName}-layer-${count}`;
       mapLayer = map.getLayer(tempLayerName);
     }
-    if (map.getSource(layerName)) {
-      this.props.update('number_of_layers', number_of_layers - 1);
-    }
+    map.removeSource(layerName);
+    this.props.update('number_of_layers', number_of_layers - 1);
   }
 
   addPopup(coordinates, html) {
@@ -145,6 +164,8 @@ class Layer extends Component {
 
   addCircles(features) {
     const { map, layerName } = this.props;
+    const { max, min } = this.getRange(features);
+
     map.addSource(layerName, {
       type: 'geojson',
       data: {
@@ -152,11 +173,15 @@ class Layer extends Component {
         features,
       },
     });
+
     map.addLayer({
       id: `${layerName}-layer-0`,
       source: `${layerName}`,
       ...layersConfig.circles,
       paint: {
+        ...layersConfig.circles.paint,
+        // ((value - min) / (max - min)) * 100
+        'circle-radius': ['*', ['/', ['-', ['get', 'Value'], min], ['-', max, min]], 100],
         'circle-color': this.getColor(),
       },
     });
@@ -169,22 +194,6 @@ class Layer extends Component {
 
   addDots(features) {
     const { map, layerName } = this.props;
-    if (map.getSource(layerName)) {
-      map.getSource(layerName).setData(features);
-      console.log('Set visibility for ' + layerName + ' to visible');
-      let count = 0;
-      let mapLayer = map.getLayer(`${layerName}-layer-${count}`);
-      while (mapLayer) {
-        const tempLayerName = `${layerName}-layer-${count}`;
-        if (map.getLayer(tempLayerName)) {
-          // map.removeLayer(tempLayerName);
-          map.setLayoutProperty(tempLayerName, 'visibility', 'visible');
-        }
-        count += 1;
-        mapLayer = map.getLayer(tempLayerName);
-      }
-      return;
-    }
     map.addSource(`${layerName}`, {
       type: 'geojson',
       data: {
@@ -197,6 +206,7 @@ class Layer extends Component {
       source: `${layerName}`,
       ...layersConfig.dots,
       paint: {
+        ...layersConfig.dots.paint,
         'circle-color': this.getColor(),
       },
     });
@@ -209,13 +219,18 @@ class Layer extends Component {
 
   addExtrudedDots(features) {
     const { map, layerName } = this.props;
+    const { max, min } = this.getRange(features);
+
     // generate polygons around point
-    const polygons = features.map((tempFeature) => {
-      let feature = {
+    const polygons = [];
+    features.forEach((tempFeature) => {
+      if (!tempFeature || !tempFeature.geometry) {
+        return;
+      }
+      const feature = {
         type: 'Feature',
         properties: tempFeature.properties,
       };
-
       const { coordinates } = tempFeature.geometry;
       const offset = 0.0001;
       const n = offset * (Math.sqrt(2) / 2);
@@ -224,7 +239,7 @@ class Layer extends Component {
       const botLeft = [coordinates[0] - n, coordinates[1] + n];
       const botRight = [coordinates[0] - n, coordinates[1] - n];
 
-      feature = {
+      polygons.push({
         ...feature,
         geometry: {
           type: 'Polygon',
@@ -238,9 +253,7 @@ class Layer extends Component {
             ],
           ],
         },
-      };
-
-      return feature;
+      });
     });
     map.addSource(`${layerName}`, {
       type: 'geojson',
@@ -254,6 +267,9 @@ class Layer extends Component {
       source: `${layerName}`,
       ...layersConfig.extrusion,
       paint: {
+        ...layersConfig.extrusion.paint,
+        // ((value - min) / (max - min)) * 300
+        'fill-extrusion-height': ['*', ['/', ['-', ['get', 'Value'], min], ['-', max, min]], 300],
         'fill-extrusion-color': this.getColor(),
       },
     });
@@ -261,6 +277,8 @@ class Layer extends Component {
 
   addHeatMap(features) {
     const { map, layerName } = this.props;
+    const { average, max, min } = this.getRange(features);
+
     map.addSource(`${layerName}`, {
       type: 'geojson',
       data: {
@@ -268,22 +286,72 @@ class Layer extends Component {
         features,
       },
     });
+
     map.addLayer({
       id: `${layerName}-layer-0`,
       source: `${layerName}`,
       ...layersConfig.heatmap,
       paint: {
-        'heatmap-color': [
+        ...layersConfig.heatmap.paint,
+        'heatmap-weight': [
           'interpolate',
           ['linear'],
-          ['heatmap-density'],
-          0, 'rgba(255,255,255,0)',
-          1, this.getColor(),
+          ['get', 'Value'],
+          min, 0.25,
+          average, 0.75,
+          max, 0.85,
+        ],
+      },
+    });
+
+    map.addLayer({
+      id: `${layerName}-layer-1`,
+      source: `${layerName}`,
+      ...layersConfig.heatmap_circles,
+      paint: {
+        'circle-radius': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          15, [
+            'interpolate',
+            ['linear'],
+            ['get', 'Value'],
+            Number(min), 1,
+            Number(average), 15,
+            Number(max), 20,
+          ],
+          20, [
+            'interpolate',
+            ['linear'],
+            ['get', 'Value'],
+            Number(min), 20,
+            Number(average), 35,
+            Number(max), 40,
+          ],
+        ],
+        'circle-color': [
+          'interpolate',
+          ['linear'],
+          ['get', 'Value'],
+          Number(min), 'rgba(33,102,172,0.25)',
+          Number(average), 'rgba(178,24,43,0.65)',
+          Number(max), 'rgba(178,24,43,0.85)',
+        ],
+        'circle-stroke-color': 'white',
+        'circle-stroke-width': 1,
+        'circle-opacity': [
+          'interpolate',
+          ['linear'],
+          ['get', 'Value'],
+          Number(min), 0.25,
+          Number(average), 0.75,
+          Number(max), 1,
         ],
       },
     });
     map.addLayer({
-      id: `${layerName}-layer-1`,
+      id: `${layerName}-layer-2`,
       source: `${layerName}`,
       ...layersConfig.labels,
     });
@@ -292,6 +360,44 @@ class Layer extends Component {
   getColor() {
     const { colors, number_of_layers } = this.props;
     return colors[number_of_layers];
+  }
+
+  /**
+   * Gets the minimum and maximum feature
+   * @param {Array} features
+   * @returns {Object} max and min as object
+   */
+  getRange(features) {
+    let max = Number.MIN_SAFE_INTEGER;
+    let min = Number.MAX_SAFE_INTEGER;
+    let total = 0;
+    let count = 0;
+    let average = 1;
+
+    features.forEach((feature) => {
+      if (!feature || !feature.properties) return;
+
+      const value = feature.properties.Value;
+      if (value < min && value > 0) {
+        min = value;
+      }
+      if (value > max) {
+        max = value;
+      }
+
+      if (value > 0) {
+        count += 1;
+        total += value;
+      }
+    });
+
+    // if the range isn't available, we want to keep it to just 1
+    if (max === Number.MIN_SAFE_INTEGER) max = 1;
+    if (min === Number.MAX_SAFE_INTEGER) min = 1;
+
+    average = total / count;
+
+    return { average, max, min };
   }
 
   layerExists() {
@@ -326,6 +432,7 @@ Layer.propTypes = {
   map: PropTypes.object,
   subservices: PropTypes.array,
   layers: PropTypes.object,
+  buildings: PropTypes.object,
   type: PropTypes.string,
   layerName: PropTypes.string,
   number_of_layers: PropTypes.number,
@@ -345,6 +452,7 @@ const mapStateToProps = (state) => ({
   colors: state.colors,
   layers: state.layers,
   number_of_layers: state.number_of_layers,
+  buildings: state.buildings,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Layer);
