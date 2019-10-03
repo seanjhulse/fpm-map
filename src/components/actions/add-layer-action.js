@@ -11,6 +11,7 @@ class AddLayerAction extends Component {
     this.state = {
       modalVisible: false,
       validated: false,
+      intervals: {},
       services: [
         'Chilled Water',
         'Compressed Air',
@@ -34,6 +35,7 @@ class AddLayerAction extends Component {
     this.serviceSelected = this.serviceSelected.bind(this);
     this.subserviceSelected = this.subserviceSelected.bind(this);
     this.layerTypeSelected = this.layerTypeSelected.bind(this);
+    this.load = this.load.bind(this);
   }
 
   toggleModal() {
@@ -85,13 +87,30 @@ class AddLayerAction extends Component {
     event.preventDefault();
 
     const { service, subservice } = this.state;
+
     // start loading
     this.props.update('loading', true);
     this.props.update('type', this.state.layerType);
     this.closeModal();
 
+    if (this.state.intervals[`${service}-${subservice}`]) {
+      window.clearInterval(this.state.intervals[`${service}-${subservice}`]);
+    }
+    this.load(service, subservice);
+    const interval = setInterval(() => {
+      this.load(service, subservice);
+    }, 10000);
+    this.setState({
+      intervals: {
+        ...this.state.intervals,
+        [`${service}-${subservice}`]: interval,
+      },
+    });
+  }
+
+  load(service, subservice) {
     // grab all the values
-    ServicesAPI.get_all_services(this.state.subservice)
+    ServicesAPI.get_all_services(subservice)
       .then((subserviceValues) => this.props.updateLayers(`${service}-${subservice}`, subserviceValues));
   }
 

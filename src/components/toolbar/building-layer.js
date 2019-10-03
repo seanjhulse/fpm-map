@@ -11,6 +11,7 @@ class BuildingLayer extends Component {
     super(props);
     this.state = {
       building_number: undefined,
+      interval: undefined,
     };
 
     this.load = this.load.bind(this);
@@ -19,7 +20,15 @@ class BuildingLayer extends Component {
   componentDidUpdate() {
     if (this.props.building.building_number !== this.state.building_number) {
       this.setState({ building_number: this.props.building.building_number, loading: true });
+      if (this.state.interval) {
+        // eslint-disable-next-line no-undef
+        window.clearInterval(this.state.interval);
+      }
       this.load();
+      const interval = setInterval(() => {
+        this.load();
+      }, 10000);
+      this.setState({ interval });
     }
   }
 

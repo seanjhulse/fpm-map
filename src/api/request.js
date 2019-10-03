@@ -14,6 +14,6 @@ export default function request(url, body, headers, selector, resolve, reject) {
     .then(xml => helpers.convertToJSON(xml))
     .then(json => resolve(json))
     .catch(error => {
-      reject({ error: error });
+      resolve({});
     });
 }

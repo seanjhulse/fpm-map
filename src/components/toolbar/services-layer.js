@@ -9,7 +9,6 @@ class ServicesLayer extends Component {
     if (!services) {
       return <p className='toolbar-empty-message'>No services available.</p>;
     }
-    console.log(services);
     return services.map((service) => {
       if (service[0]) {
         return (

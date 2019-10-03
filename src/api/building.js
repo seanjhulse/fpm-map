@@ -206,7 +206,7 @@ const get_building_services = (building_id) => new Promise((resolve, reject) => 
           resolve(services);
         });
     })
-    .catch((error) => reject(error));
+    .catch((error) => resolve([]));
 });
 
 export default {

@@ -10,9 +10,9 @@ import {
 class Layer extends Component {
   constructor(props) {
     super(props);
+
     this.getColor = this.getColor.bind(this);
     this.layerExists = this.layerExists.bind(this);
-
     this.message = this.message.bind(this);
     this.addLayer = this.addLayer.bind(this);
     this.removeLayer = this.removeLayer.bind(this);
@@ -30,7 +30,11 @@ class Layer extends Component {
     this.loadSubservices();
   }
 
+  componentDidUpdate() {
+  }
+
   componentWillUnmount() {
+    // eslint-disable-next-line no-undef
     this.removeLayer();
   }
 
@@ -57,7 +61,7 @@ class Layer extends Component {
         return;
       }
 
-      // we don't have the subservice building cached. We need to get it.
+      // we don't have the building cached. We need to get it.
       const name = subservice.instancename.split('!');
       const path = `!${name[1].trim()}!${name[2].trim()}`;
       try {
@@ -97,6 +101,7 @@ class Layer extends Component {
         resolve({});
       }
     }));
+    // now we want to add the features array we've loaded
     Promise.all(promises)
       .then((features) => {
         this.props.update('loading', false);
@@ -108,7 +113,18 @@ class Layer extends Component {
    * Adds a new layer to the map
    */
   addLayer(features) {
-    const { type, number_of_layers } = this.props;
+    const {
+      map,
+      type,
+      layerName,
+      number_of_layers,
+    } = this.props;
+
+    if (map.getSource(layerName)) {
+      this.updateLayer(features);
+      return;
+    }
+
     switch (type.trim().toLowerCase()) {
       case 'circles':
         this.addCircles(features);
@@ -126,7 +142,22 @@ class Layer extends Component {
         this.addDots(features);
         break;
     }
+
     this.props.update('number_of_layers', number_of_layers + 1);
+  }
+
+  /**
+   * Updates an existing layer
+   * @param {Array} features
+   */
+  updateLayer(features) {
+    const { map, layerName } = this.props;
+    if (map.getSource(layerName)) {
+      map.getSource(layerName).setData({
+        type: 'FeatureCollection',
+        features,
+      });
+    }
   }
 
   /**
@@ -445,6 +476,7 @@ Layer.propTypes = {
   getSource: PropTypes.func,
   addLayer: PropTypes.func,
   update: PropTypes.func,
+  loading: PropTypes.bool,
 };
 
 const mapDispatchToProps = (dispatch) => ({
@@ -456,6 +488,7 @@ const mapStateToProps = (state) => ({
   type: state.type,
   colors: state.colors,
   layers: state.layers,
+  loading: state.loading,
   number_of_layers: state.number_of_layers,
   buildings: state.buildings,
 });
