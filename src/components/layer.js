@@ -273,6 +273,11 @@ class Layer extends Component {
         'fill-extrusion-color': this.getColor(),
       },
     });
+    map.addLayer({
+      id: `${layerName}-layer-1`,
+      source: `${layerName}`,
+      ...layersConfig.labels,
+    });
   }
 
   addHeatMap(features) {

@@ -5,6 +5,9 @@ import ActiveLayer from './active-layer';
 
 class ActiveLayers extends Component {
   render() {
+    if (Object.keys(this.props.layers).length <= 0) {
+      return <p className='toolbar-empty-message'>No layers. Add (+) a layer.</p>;
+    }
     return (
       <ul className="active-layers">
         {Object.keys(this.props.layers).map((layerName) => {
