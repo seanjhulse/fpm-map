@@ -3,13 +3,20 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import layersConfig from '../api/layers.json';
 import BuildingsAPI from '../api/building';
+import ServicesAPI from '../api/services';
+
 import {
   update,
+  updateLayers,
 } from '../store/actions';
 
 class Layer extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      interval: undefined,
+    };
 
     this.getColor = this.getColor.bind(this);
     this.layerExists = this.layerExists.bind(this);
@@ -23,23 +30,50 @@ class Layer extends Component {
     this.addPopup = this.addPopup.bind(this);
     this.addDots = this.addDots.bind(this);
     this.loadSubservices = this.loadSubservices.bind(this);
+    this.loadData = this.loadData.bind(this);
     this.getRange = this.getRange.bind(this);
   }
 
   componentDidMount() {
     this.loadSubservices();
+
+    if (this.state.interval) {
+      window.clearInterval(this.state.interval);
+    }
+
+    // create a 10s interval that reloads the new subservices which should load new data
+    const interval = setInterval(() => {
+      this.loadSubservices();
+    }, 10000);
+
+    this.setState({ interval });
   }
 
   componentDidUpdate() {
+    const { subservices, layers, layerName } = this.props;
+    if (subservices.length && layers[layerName]) {
+      this.loadData();
+    }
   }
 
   componentWillUnmount() {
     // eslint-disable-next-line no-undef
     this.removeLayer();
+    window.clearInterval(this.state.interval);
   }
 
   loadSubservices() {
-    const { subservices } = this.props;
+    const { layers, layerName } = this.props;
+    ServicesAPI.get_all_services(layerName.split('-')[1])
+      .then((subserviceValues) => {
+        if (layers[layerName]) {
+          this.props.updateLayers(layerName, subserviceValues);
+        }
+      });
+  }
+
+  loadData() {
+    const { subservices, layerName } = this.props;
     const promises = subservices.map((subservice) => new Promise((resolve) => {
       // grab the cached building
       // eslint-disable-next-line no-undef
@@ -105,7 +139,10 @@ class Layer extends Component {
     Promise.all(promises)
       .then((features) => {
         this.props.update('loading', false);
-        this.addLayer(features);
+        // while we waited for these promises to resolve, the layer may have been removed
+        if (this.props.layers[layerName]) {
+          this.addLayer(features);
+        }
       });
   }
 
@@ -116,9 +153,14 @@ class Layer extends Component {
     const {
       map,
       type,
+      layers,
       layerName,
       number_of_layers,
     } = this.props;
+
+    if (!layers[layerName]) {
+      return;
+    }
 
     if (map.getSource(layerName)) {
       this.updateLayer(features);
@@ -476,11 +518,13 @@ Layer.propTypes = {
   getSource: PropTypes.func,
   addLayer: PropTypes.func,
   update: PropTypes.func,
+  updateLayers: PropTypes.func,
   loading: PropTypes.bool,
 };
 
 const mapDispatchToProps = (dispatch) => ({
   update: (key, value) => dispatch(update(key, value)),
+  updateLayers: (key, value) => dispatch(updateLayers(key, value)),
 });
 
 const mapStateToProps = (state) => ({

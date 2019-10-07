@@ -11,7 +11,6 @@ class AddLayerAction extends Component {
     this.state = {
       modalVisible: false,
       validated: false,
-      intervals: {},
       services: [
         'Chilled Water',
         'Compressed Air',
@@ -35,7 +34,6 @@ class AddLayerAction extends Component {
     this.serviceSelected = this.serviceSelected.bind(this);
     this.subserviceSelected = this.subserviceSelected.bind(this);
     this.layerTypeSelected = this.layerTypeSelected.bind(this);
-    this.load = this.load.bind(this);
   }
 
   toggleModal() {
@@ -93,25 +91,8 @@ class AddLayerAction extends Component {
     this.props.update('type', this.state.layerType);
     this.closeModal();
 
-    if (this.state.intervals[`${service}-${subservice}`]) {
-      window.clearInterval(this.state.intervals[`${service}-${subservice}`]);
-    }
-    this.load(service, subservice);
-    const interval = setInterval(() => {
-      this.load(service, subservice);
-    }, 10000);
-    this.setState({
-      intervals: {
-        ...this.state.intervals,
-        [`${service}-${subservice}`]: interval,
-      },
-    });
-  }
-
-  load(service, subservice) {
-    // grab all the values
-    ServicesAPI.get_all_services(subservice)
-      .then((subserviceValues) => this.props.updateLayers(`${service}-${subservice}`, subserviceValues));
+    // instantiate a layer with no services (we load them in the Layer.js class)
+    this.props.updateLayers(`${service}-${subservice}`, []);
   }
 
   render() {
@@ -123,11 +104,11 @@ class AddLayerAction extends Component {
       layerTypes,
     } = this.state;
 
-    const { number_of_layers } = this.props;
+    const { number_of_layers, loading } = this.props;
 
     return (
       <div className="buttons-toolbar-container">
-        <Button className="toggle-buttons-toolbar circle-button" variant="success" onClick={this.toggleModal} disabled={number_of_layers >= 3}>
+        <Button className="toggle-buttons-toolbar circle-button" variant="success" onClick={this.toggleModal} disabled={number_of_layers >= 3 || loading}>
           <i className="material-icons md-18">add</i>
         </Button>
         <Modal show={modalVisible} onHide={this.toggleModal}>

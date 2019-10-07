@@ -58,7 +58,7 @@ class BuildingLayer extends Component {
       <div className="building-layer">
         <img src={building.thumbnail} />
         <div className="building-details">
-          <h3 className="building-name">{building.name}</h3>
+          <p className="building-name">{building.name}</p>
           <p>{building.street_address}</p>
         </div>
         <ServicesLayer services={this.state.services} />

@@ -22,6 +22,7 @@ const reducers = (state = {
   message: '',
   messageType: '',
   layers: {},
+  plots: {},
   remove_layer: false,
   add_layer: false,
   loading: false,

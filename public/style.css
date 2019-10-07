@@ -64,6 +64,8 @@ input[type=checkbox]:hover {
 }
 .building-name {
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 .button {
 	border-radius: 5px;
@@ -242,7 +244,28 @@ input[type=checkbox]:hover {
 }
 .service-table-row {
   border-bottom: 1px solid #eee;
+  background: rgba(255,255,255,0);
+  transition: background 0.25s ease-in-out;
+}
+.service-table-row.updated {
+  background: rgba(140, 255, 130, 0.20);
 }
 .service-table-data {
   padding-right: 1rem;
+}
+#chart {
+  padding: 0.75rem;
+}
+.plot-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+.plot-inner {
+  display: block;
+  border: 2px solid #ccc;
+	border-radius: 3px;
+	box-shadow: -3px 3px 2px 0px rgba(0, 0, 0, 0.25);
+  background: white;
+  overflow-y: scroll;
 }

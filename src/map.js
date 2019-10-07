@@ -9,6 +9,7 @@ import Building from './components/building';
 import Toolbar from './components/toolbar';
 import Loading from './components/loading';
 import Message from './components/message';
+import Plot from './components/plot';
 
 // import redux
 import { loadMap, update } from './store/actions';
@@ -137,6 +138,7 @@ class Map extends React.Component {
           <Toolbar />
           <Loading />
           <Message />
+          <Plot />
         </div>
       );
     }
