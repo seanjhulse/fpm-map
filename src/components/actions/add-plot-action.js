@@ -45,9 +45,8 @@ class AddPlotAction extends Component {
           },
         });
       });
-    
+
     this.closeModal();
-    
   }
 
   addToPlot() {
@@ -65,7 +64,7 @@ class AddPlotAction extends Component {
           },
         });
       });
-    
+
     this.closeModal();
   }
 
